@@ -160,7 +160,11 @@ class FreeTypeFont(object):
 
     def getsize(self, text, direction=None, features=None):
         size, offset = self.font.getsize(text, direction, features)
-        return (size[0] + offset[0], size[1] + offset[1])
+        if direction is 'ttb':
+            return size
+        else:
+            return (size[0] + offset[0], size[1] + offset[1])
+
 
     def getsize_multiline(self, text, direction=None, spacing=4, features=None):
         max_width = 0

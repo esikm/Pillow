@@ -37,7 +37,7 @@ from . import Image, ImageColor
 from ._util import isStringType
 
 """
-A simple 2D drawing interface for PIL images.
+A simple 2D drawing interface for PIL2 images.
 <p>
 Application code should use the <b>Draw</b> factory, instead of
 directly.
@@ -339,7 +339,7 @@ class ImageDraw(object):
 
 def Draw(im, mode=None):
     """
-    A simple 2D drawing interface for PIL images.
+    A simple 2D drawing interface for PIL2 images.
 
     :param im: The image to draw in.
     :param mode: Optional mode to use for color values.  For RGB
@@ -363,7 +363,7 @@ except AttributeError:
 
 def getdraw(im=None, hints=None):
     """
-    (Experimental) A more advanced 2D drawing interface for PIL images,
+    (Experimental) A more advanced 2D drawing interface for PIL2 images,
     based on the WCK interface.
 
     :param im: The image to draw in.

@@ -4,7 +4,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# FlashPix support for PIL
+# FlashPix support for PIL2
 #
 # History:
 # 97-01-25 fl   Created (reads uncompressed RGB images only)

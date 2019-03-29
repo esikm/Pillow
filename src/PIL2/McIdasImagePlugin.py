@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# Basic McIdas support for PIL
+# Basic McIdas support for PIL2
 #
 # History:
 # 1997-05-05 fl  Created (8-bit images only)

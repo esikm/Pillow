@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# IFUNC IM file handling for PIL
+# IFUNC IM file handling for PIL2
 #
 # history:
 # 1995-09-01 fl   Created.

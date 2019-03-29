@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# Windows Cursor support for PIL
+# Windows Cursor support for PIL2
 #
 # notes:
 #       uses BmpImagePlugin.py to read the bitmap data.

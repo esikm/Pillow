@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# Microsoft Image Composer support for PIL
+# Microsoft Image Composer support for PIL2
 #
 # Notes:
 #       uses TiffImagePlugin.py to read the actual image streams

@@ -21,7 +21,7 @@
 # 1997-08-27 fl   Added support for rational tags (from Perry Stoll)
 # 1998-01-10 fl   Fixed seek/tell (from Jan Blom)
 # 1998-07-15 fl   Use private names for internal variables
-# 1999-06-13 fl   Rewritten for PIL 1.0 (1.0)
+# 1999-06-13 fl   Rewritten for PIL2 1.0 (1.0)
 # 2000-10-11 fl   Additional fixes for Python 2.0 (1.1)
 # 2001-04-17 fl   Fixed rewind support (seek to frame 0) (1.2)
 # 2001-05-12 fl   Added write support for more tags (from Greg Couch) (1.3)
@@ -429,7 +429,7 @@ class ImageFileDirectory_v2(MutableMapping):
 
     The tiff metadata type of each item is stored in a dictionary of
     tag types in
-    `~PIL.TiffImagePlugin.ImageFileDirectory_v2.tagtype`. The types
+    `~PIL2.TiffImagePlugin.ImageFileDirectory_v2.tagtype`. The types
     are read from a tiff file, guessed from the type added, or added
     manually.
 
@@ -439,7 +439,7 @@ class ImageFileDirectory_v2(MutableMapping):
 
           * Key: numerical tiff tag number
           * Value: integer corresponding to the data type from
-                   ~PIL.TiffTags.TYPES`
+                   ~PIL2.TiffTags.TYPES`
 
     .. versionadded:: 3.0.0
     """
@@ -778,7 +778,7 @@ class ImageFileDirectory_v2(MutableMapping):
     def save(self, fp):
 
         if fp.tell() == 0:  # skip TIFF header on subsequent pages
-            # tiff header -- PIL always starts the first IFD at offset 8
+            # tiff header -- PIL2 always starts the first IFD at offset 8
             fp.write(self._prefix + self._pack("HL", 42, 8))
 
         # FIXME What about tagdata?
@@ -867,7 +867,7 @@ class ImageFileDirectory_v1(ImageFileDirectory_v2):
         ('Some Data',)
 
     Also contains a dictionary of tag types as read from the tiff image file,
-    `~PIL.TiffImagePlugin.ImageFileDirectory_v1.tagtype`.
+    `~PIL2.TiffImagePlugin.ImageFileDirectory_v1.tagtype`.
 
     Values are returned as a tuple.
 
@@ -883,12 +883,12 @@ class ImageFileDirectory_v1(ImageFileDirectory_v2):
     @classmethod
     def from_v2(cls, original):
         """ Returns an
-        :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v1`
+        :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v1`
         instance with the same data as is contained in the original
-        :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2`
+        :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v2`
         instance.
 
-        :returns: :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v1`
+        :returns: :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v1`
 
         """
 
@@ -900,12 +900,12 @@ class ImageFileDirectory_v1(ImageFileDirectory_v2):
 
     def to_v2(self):
         """ Returns an
-        :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2`
+        :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v2`
         instance with the same data as is contained in the original
-        :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v1`
+        :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v1`
         instance.
 
-        :returns: :py:class:`~PIL.TiffImagePlugin.ImageFileDirectory_v2`
+        :returns: :py:class:`~PIL2.TiffImagePlugin.ImageFileDirectory_v2`
 
         """
 

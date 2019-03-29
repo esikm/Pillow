@@ -1,10 +1,10 @@
-/* PILusm, a gaussian blur and unsharp masking library for PIL
+/* PILusm, a gaussian blur and unsharp masking library for PIL2
    By Kevin Cazabon, copyright 2003
    kevin_cazabon@hotmail.com
    kevin@cazabon.com */
 
-/* Originally released under LGPL.  Graciously donated to PIL
-   for distribution under the standard PIL license in 2009." */
+/* Originally released under LGPL.  Graciously donated to PIL2
+   for distribution under the standard PIL2 license in 2009." */
 
 #include "Python.h"
 #include "Imaging.h"

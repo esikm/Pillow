@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# PIXAR raster support for PIL
+# PIXAR raster support for PIL2
 #
 # history:
 #       97-01-29 fl     Created

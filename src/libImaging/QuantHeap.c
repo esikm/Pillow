@@ -6,7 +6,7 @@
  *
  * history:
  * 98-09-10 tjs  Contributed
- * 98-12-29 fl   Added to PIL 1.0b1
+ * 98-12-29 fl   Added to PIL2 1.0b1
  *
  * Written by Toby J Sargeant <tjs@longford.cs.monash.edu.au>.
  *

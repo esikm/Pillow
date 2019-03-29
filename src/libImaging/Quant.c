@@ -6,7 +6,7 @@
  *
  * history:
  * 1998-09-10 tjs  Contributed
- * 1998-12-29 fl   Added to PIL 1.0b1
+ * 1998-12-29 fl   Added to PIL2 1.0b1
  * 2004-02-21 fl   Fixed bogus free() on quantization error
  * 2005-02-07 fl   Limit number of colors to 256
  *

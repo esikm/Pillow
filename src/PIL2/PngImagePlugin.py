@@ -257,7 +257,7 @@ class PngInfo(object):
 
         :param key: latin-1 encodable text key name
         :param value: value for this key, text or an
-           :py:class:`PIL.PngImagePlugin.iTXt` instance
+           :py:class:`PIL2.PngImagePlugin.iTXt` instance
         :param zip: compression flag
 
         """
@@ -647,7 +647,7 @@ class PngImageFile(ImageFile.ImageFile):
 # PNG writer
 
 _OUTMODES = {
-    # supported PIL modes, and corresponding rawmodes/bits/color combinations
+    # supported PIL2 modes, and corresponding rawmodes/bits/color combinations
     "1":    ("1",       b'\x01\x00'),
     "L;1":  ("L;1",     b'\x01\x00'),
     "L;2":  ("L;2",     b'\x02\x00'),

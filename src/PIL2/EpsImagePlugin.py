@@ -376,7 +376,7 @@ def _save(im, fp, filename, eps=1):
         #
         # write EPS header
         fp.write("%!PS-Adobe-3.0 EPSF-3.0\n")
-        fp.write("%%Creator: PIL 0.1 EpsEncode\n")
+        fp.write("%%Creator: PIL2 0.1 EpsEncode\n")
         # fp.write("%%CreationDate: %s"...)
         fp.write("%%%%BoundingBox: 0 0 %d %d\n" % im.size)
         fp.write("%%Pages: 1\n")

@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# PPM support for PIL
+# PPM support for PIL2
 #
 # History:
 #       96-03-24 fl     Created
@@ -31,7 +31,7 @@ MODES = {
     b"P6": "RGB",
     # extensions
     b"P0CMYK": "CMYK",
-    # PIL extensions (for test purposes only)
+    # PIL2 extensions (for test purposes only)
     b"PyP": "P",
     b"PyRGBA": "RGBA",
     b"PyCMYK": "CMYK"

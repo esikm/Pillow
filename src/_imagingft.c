@@ -1,7 +1,7 @@
 /*
- * PIL FreeType Driver
+ * PIL2 FreeType Driver
  *
- * a FreeType 2.X driver for PIL
+ * a FreeType 2.X driver for PIL2
  *
  * history:
  * 2001-02-17 fl  Created (based on old experimental freetype 1.0 code)

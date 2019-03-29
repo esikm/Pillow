@@ -5,8 +5,8 @@
 # a simple math add-on for the Python Imaging Library
 #
 # History:
-# 1999-02-15 fl   Original PIL Plus release
-# 2005-05-05 fl   Simplified and cleaned up for PIL 1.1.6
+# 1999-02-15 fl   Original PIL2 Plus release
+# 2005-05-05 fl   Simplified and cleaned up for PIL2 1.1.6
 # 2005-09-12 fl   Fixed int() and float() for Python 2.4.1
 #
 # Copyright (c) 1999-2005 by Secret Labs AB

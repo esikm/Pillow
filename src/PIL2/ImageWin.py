@@ -23,7 +23,7 @@ from . import Image
 class HDC(object):
     """
     Wraps an HDC integer. The resulting object can be passed to the
-    :py:meth:`~PIL.ImageWin.Dib.draw` and :py:meth:`~PIL.ImageWin.Dib.expose`
+    :py:meth:`~PIL2.ImageWin.Dib.draw` and :py:meth:`~PIL2.ImageWin.Dib.expose`
     methods.
     """
     def __init__(self, dc):
@@ -36,7 +36,7 @@ class HDC(object):
 class HWND(object):
     """
     Wraps an HWND integer. The resulting object can be passed to the
-    :py:meth:`~PIL.ImageWin.Dib.draw` and :py:meth:`~PIL.ImageWin.Dib.expose`
+    :py:meth:`~PIL2.ImageWin.Dib.draw` and :py:meth:`~PIL2.ImageWin.Dib.expose`
     methods, instead of a DC.
     """
     def __init__(self, wnd):
@@ -59,7 +59,7 @@ class Dib(object):
     To make sure that palettes work properly under Windows, you must call the
     **palette** method upon certain events from Windows.
 
-    :param image: Either a PIL image, or a mode string. If a mode string is
+    :param image: Either a PIL2 image, or a mode string. If a mode string is
                   used, a size must also be given.  The mode can be one of "1",
                   "L", "P", or "RGB".
     :param size: If the first argument is a mode string, this
@@ -148,9 +148,9 @@ class Dib(object):
 
     def paste(self, im, box=None):
         """
-        Paste a PIL image into the bitmap image.
+        Paste a PIL2 image into the bitmap image.
 
-        :param im: A PIL image.  The size must match the target region.
+        :param im: A PIL2 image.  The size must match the target region.
                    If the mode does not match, the image is converted to the
                    mode of the bitmap image.
         :param box: A 4-tuple defining the left, upper, right, and
@@ -187,7 +187,7 @@ class Dib(object):
 class Window(object):
     """Create a Window with the given title size."""
 
-    def __init__(self, title="PIL", width=None, height=None):
+    def __init__(self, title="PIL2", width=None, height=None):
         self.hwnd = Image.core.createwindow(
             title, self.__dispatcher, width or 0, height or 0
             )
@@ -217,7 +217,7 @@ class Window(object):
 class ImageWindow(Window):
     """Create an image window which displays the given image."""
 
-    def __init__(self, image, title="PIL"):
+    def __init__(self, image, title="PIL2"):
         if not isinstance(image, Dib):
             image = Dib(image)
         self.image = image

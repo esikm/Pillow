@@ -21,16 +21,16 @@ from . import Image
 def constant(image, value):
     """Fill a channel with a given grey level.
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     return Image.new("L", image.size, value)
 
 
 def duplicate(image):
-    """Copy a channel. Alias for :py:meth:`PIL.Image.Image.copy`.
+    """Copy a channel. Alias for :py:meth:`PIL2.Image.Image.copy`.
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     return image.copy()
@@ -44,7 +44,7 @@ def invert(image):
 
         out = MAX - image
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image.load()
@@ -60,7 +60,7 @@ def lighter(image1, image2):
 
         out = max(image1, image2)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -77,7 +77,7 @@ def darker(image1, image2):
 
         out = min(image1, image2)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -94,7 +94,7 @@ def difference(image1, image2):
 
         out = abs(image1 - image2)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -113,7 +113,7 @@ def multiply(image1, image2):
 
         out = image1 * image2 / MAX
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -129,7 +129,7 @@ def screen(image1, image2):
 
         out = MAX - ((MAX - image1) * (MAX - image2) / MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -146,7 +146,7 @@ def add(image1, image2, scale=1.0, offset=0):
 
         out = ((image1 + image2) / scale + offset)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -163,7 +163,7 @@ def subtract(image1, image2, scale=1.0, offset=0):
 
         out = ((image1 - image2) / scale + offset)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -178,7 +178,7 @@ def add_modulo(image1, image2):
 
         out = ((image1 + image2) % MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -193,7 +193,7 @@ def subtract_modulo(image1, image2):
 
         out = ((image1 - image2) % MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -208,7 +208,7 @@ def logical_and(image1, image2):
 
         out = ((image1 and image2) % MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -223,7 +223,7 @@ def logical_or(image1, image2):
 
         out = ((image1 or image2) % MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -238,7 +238,7 @@ def logical_xor(image1, image2):
 
         out = ((bool(image1) != bool(image2)) % MAX)
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     image1.load()
@@ -248,9 +248,9 @@ def logical_xor(image1, image2):
 
 def blend(image1, image2, alpha):
     """Blend images using constant transparency weight. Alias for
-    :py:meth:`PIL.Image.Image.blend`.
+    :py:meth:`PIL2.Image.Image.blend`.
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     return Image.blend(image1, image2, alpha)
@@ -258,9 +258,9 @@ def blend(image1, image2, alpha):
 
 def composite(image1, image2, mask):
     """Create composite using transparency mask. Alias for
-    :py:meth:`PIL.Image.Image.composite`.
+    :py:meth:`PIL2.Image.Image.composite`.
 
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     return Image.composite(image1, image2, mask)
@@ -274,7 +274,7 @@ def offset(image, xoffset, yoffset=None):
     :param xoffset: The horizontal distance.
     :param yoffset: The vertical distance.  If omitted, both
         distances are set to the same value.
-    :rtype: :py:class:`~PIL.Image.Image`
+    :rtype: :py:class:`~PIL2.Image.Image`
     """
 
     if yoffset is None:

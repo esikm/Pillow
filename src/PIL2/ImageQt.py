@@ -57,7 +57,7 @@ def rgb(r, g, b, a=255):
 
 def fromqimage(im):
     """
-    :param im: A PIL Image object, or a file name
+    :param im: A PIL2 Image object, or a file name
     (given either as Python string or a PyQt string object)
     """
     buffer = QBuffer()
@@ -177,10 +177,10 @@ if qt_is_installed:
 
         def __init__(self, im):
             """
-            An PIL image wrapper for Qt.  This is a subclass of PyQt's QImage
+            An PIL2 image wrapper for Qt.  This is a subclass of PyQt's QImage
             class.
 
-            :param im: A PIL Image object, or a file name (given either as Python
+            :param im: A PIL2 Image object, or a file name (given either as Python
                 string or a PyQt string object).
             """
             im_data = _toqclass_helper(im)

@@ -65,7 +65,7 @@ typedef struct ImagingOutlineInstance* ImagingOutline;
 typedef struct ImagingPaletteInstance* ImagingPalette;
 
 /* handle magics (used with PyCObject). */
-#define IMAGING_MAGIC "PIL Imaging"
+#define IMAGING_MAGIC "PIL2 Imaging"
 
 /* pixel types */
 #define IMAGING_TYPE_UINT8 0

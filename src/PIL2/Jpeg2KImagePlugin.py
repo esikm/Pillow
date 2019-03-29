@@ -22,7 +22,7 @@ __version__ = "0.1"
 
 def _parse_codestream(fp):
     """Parse the JPEG 2000 codestream to extract the size and component
-    count from the SIZ marker segment, returning a PIL (size, mode) tuple."""
+    count from the SIZ marker segment, returning a PIL2 (size, mode) tuple."""
 
     hdr = fp.read(2)
     lsiz = struct.unpack('>H', hdr)[0]
@@ -57,7 +57,7 @@ def _parse_codestream(fp):
 
 def _parse_jp2_header(fp):
     """Parse the JP2 header box to extract size, component count and
-    color space information, returning a PIL (size, mode) tuple."""
+    color space information, returning a PIL2 (size, mode) tuple."""
 
     # Find the JP2 header box
     header = None

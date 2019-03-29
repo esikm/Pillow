@@ -6,17 +6,17 @@
 #
 # partial release history:
 # 1995-09-09 fl   Created
-# 1996-03-11 fl   PIL release 0.0 (proof of concept)
-# 1996-04-30 fl   PIL release 0.1b1
-# 1999-07-28 fl   PIL release 1.0 final
-# 2000-06-07 fl   PIL release 1.1
-# 2000-10-20 fl   PIL release 1.1.1
-# 2001-05-07 fl   PIL release 1.1.2
-# 2002-03-15 fl   PIL release 1.1.3
-# 2003-05-10 fl   PIL release 1.1.4
-# 2005-03-28 fl   PIL release 1.1.5
-# 2006-12-02 fl   PIL release 1.1.6
-# 2009-11-15 fl   PIL release 1.1.7
+# 1996-03-11 fl   PIL2 release 0.0 (proof of concept)
+# 1996-04-30 fl   PIL2 release 0.1b1
+# 1999-07-28 fl   PIL2 release 1.0 final
+# 2000-06-07 fl   PIL2 release 1.1
+# 2000-10-20 fl   PIL2 release 1.1.1
+# 2001-05-07 fl   PIL2 release 1.1.2
+# 2002-03-15 fl   PIL2 release 1.1.3
+# 2003-05-10 fl   PIL2 release 1.1.4
+# 2005-03-28 fl   PIL2 release 1.1.5
+# 2006-12-02 fl   PIL2 release 1.1.6
+# 2009-11-15 fl   PIL2 release 1.1.7
 #
 # Copyright (c) 1997-2009 by Secret Labs AB.  All rights reserved.
 # Copyright (c) 1995-2009 by Fredrik Lundh.
@@ -64,7 +64,7 @@ try:
     from . import _imaging as core
     if __version__ != getattr(core, 'PILLOW_VERSION', None):
         raise ImportError("The _imaging extension was built for another "
-                          "version of Pillow or PIL:\n"
+                          "version of Pillow or PIL2:\n"
                           "Core version: %s\n"
                           "Pillow version: %s" %
                           (getattr(core, 'PILLOW_VERSION', None),
@@ -339,7 +339,7 @@ def getmodebandnames(mode):
     """
     Gets a list of individual band names.  Given a mode, this function returns
     a tuple containing the names of individual bands (use
-    :py:method:`~PIL.Image.getmodetype` to get the mode used to store each
+    :py:method:`~PIL2.Image.getmodetype` to get the mode used to store each
     individual band.
 
     :param mode: Input mode.
@@ -415,7 +415,7 @@ def init():
     for plugin in _plugins:
         try:
             logger.debug("Importing %s", plugin)
-            __import__("PIL.%s" % plugin, globals(), locals(), [])
+            __import__("PIL2.%s" % plugin, globals(), locals(), [])
         except ImportError as e:
             logger.debug("Image: failed to import %s: %s", plugin, e)
 
@@ -514,13 +514,13 @@ def _getscaleoffset(expr):
 class Image(object):
     """
     This class represents an image object.  To create
-    :py:class:`~PIL.Image.Image` objects, use the appropriate factory
+    :py:class:`~PIL2.Image.Image` objects, use the appropriate factory
     functions.  There's hardly ever any reason to call the Image constructor
     directly.
 
-    * :py:func:`~PIL.Image.open`
-    * :py:func:`~PIL.Image.new`
-    * :py:func:`~PIL.Image.frombytes`
+    * :py:func:`~PIL2.Image.open`
+    * :py:func:`~PIL2.Image.new`
+    * :py:func:`~PIL2.Image.frombytes`
     """
     format = None
     format_description = None
@@ -576,7 +576,7 @@ class Image(object):
 
         This function is only required to close images that have not
         had their file read and closed by the
-        :py:meth:`~PIL.Image.Image.load` method. See
+        :py:meth:`~PIL2.Image.Image.load` method. See
         :ref:`file-handling` for more information.
         """
         try:
@@ -776,7 +776,7 @@ class Image(object):
         """
         Loads this image with pixel data from a bytes object.
 
-        This method is similar to the :py:func:`~PIL.Image.frombytes` function,
+        This method is similar to the :py:func:`~PIL2.Image.frombytes` function,
         but loads data into this image instead of creating a new image object.
         """
 
@@ -813,7 +813,7 @@ class Image(object):
         :ref:`file-handling` for more information.
 
         :returns: An image access object.
-        :rtype: :ref:`PixelAccess` or :py:class:`PIL.PyAccess`
+        :rtype: :ref:`PixelAccess` or :py:class:`PIL2.PyAccess`
         """
         if self.im and self.palette and self.palette.dirty:
             # realize palette
@@ -870,7 +870,7 @@ class Image(object):
         image into a bilevel (mode "1") image uses Floyd-Steinberg
         dither to approximate the original image luminosity levels. If
         dither is NONE, all non-zero values are set to 255 (white). To
-        use other thresholds, use the :py:meth:`~PIL.Image.Image.point`
+        use other thresholds, use the :py:meth:`~PIL2.Image.Image.point`
         method.
 
         :param mode: The requested mode. See: :ref:`concept-modes`.
@@ -883,8 +883,8 @@ class Image(object):
            to "P".  Available palettes are WEB or ADAPTIVE.
         :param colors: Number of colors to use for the ADAPTIVE palette.
            Defaults to 256.
-        :rtype: :py:class:`~PIL.Image.Image`
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :rtype: :py:class:`~PIL2.Image.Image`
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         self.load()
@@ -1023,7 +1023,7 @@ class Image(object):
                        2 = fast octree
                        3 = libimagequant
         :param kmeans: Integer
-        :param palette: Quantize to the palette of given :py:class:`PIL.Image.Image`.
+        :param palette: Quantize to the palette of given :py:class:`PIL2.Image.Image`.
         :returns: A new image
 
         """
@@ -1061,8 +1061,8 @@ class Image(object):
         Copies this image. Use this method if you wish to paste things
         into an image, but still retain the original.
 
-        :rtype: :py:class:`~PIL.Image.Image`
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :rtype: :py:class:`~PIL2.Image.Image`
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
         self.load()
         return self._new(self.im.copy())
@@ -1078,8 +1078,8 @@ class Image(object):
         Note: Prior to Pillow 3.4.0, this was a lazy operation.
 
         :param box: The crop rectangle, as a (left, upper, right, lower)-tuple.
-        :rtype: :py:class:`~PIL.Image.Image`
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :rtype: :py:class:`~PIL2.Image.Image`
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         if box is None:
@@ -1119,7 +1119,7 @@ class Image(object):
         JPEG to greyscale while loading it, or to extract a 128x192
         version from a PCD file.
 
-        Note that this method modifies the :py:class:`~PIL.Image.Image` object
+        Note that this method modifies the :py:class:`~PIL2.Image.Image` object
         in place.  If the image has already been loaded, this method has no
         effect.
 
@@ -1140,10 +1140,10 @@ class Image(object):
     def filter(self, filter):
         """
         Filters this image using the given filter.  For a list of
-        available filters, see the :py:mod:`~PIL.ImageFilter` module.
+        available filters, see the :py:mod:`~PIL2.ImageFilter` module.
 
         :param filter: Filter kernel.
-        :returns: An :py:class:`~PIL.Image.Image` object.  """
+        :returns: An :py:class:`~PIL2.Image.Image` object.  """
 
         from . import ImageFilter
 
@@ -1219,7 +1219,7 @@ class Image(object):
         line zero, and so on.
 
         Note that the sequence object returned by this method is an
-        internal PIL data type, which only supports certain sequence
+        internal PIL2 data type, which only supports certain sequence
         operations.  To convert it to an ordinary sequence (e.g. for
         printing), use **list(im.getdata())**.
 
@@ -1348,7 +1348,7 @@ class Image(object):
         of the pasted image must match the size of the region.
 
         If the modes don't match, the pasted image is converted to the mode of
-        this image (see the :py:meth:`~PIL.Image.Image.convert` method for
+        this image (see the :py:meth:`~PIL2.Image.Image.convert` method for
         details).
 
         Instead of an image, the source can be a integer or tuple
@@ -1364,7 +1364,7 @@ class Image(object):
         values will mix the two images together, including their alpha
         channels if they have them.
 
-        See :py:meth:`~PIL.Image.Image.alpha_composite` if you want to
+        See :py:meth:`~PIL2.Image.Image.alpha_composite` if you want to
         combine images with respect to their alpha channels.
 
         :param im: Source image or pixel value (integer or tuple).
@@ -1482,7 +1482,7 @@ class Image(object):
            current version, this can only be used if the source image
            has mode "L" or "P", and the output has mode "1" or the
            source image mode is "I" and the output mode is "L".
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         self.load()
@@ -1616,14 +1616,14 @@ class Image(object):
         multi-band images.
 
         Note that this method is relatively slow.  For more extensive changes,
-        use :py:meth:`~PIL.Image.Image.paste` or the :py:mod:`~PIL.ImageDraw`
+        use :py:meth:`~PIL2.Image.Image.paste` or the :py:mod:`~PIL2.ImageDraw`
         module instead.
 
         See:
 
-        * :py:meth:`~PIL.Image.Image.paste`
-        * :py:meth:`~PIL.Image.Image.putdata`
-        * :py:mod:`~PIL.ImageDraw`
+        * :py:meth:`~PIL2.Image.Image.paste`
+        * :py:meth:`~PIL2.Image.Image.putdata`
+        * :py:mod:`~PIL2.ImageDraw`
 
         :param xy: The pixel coordinate, given as (x, y). See
            :ref:`coordinate-system`.
@@ -1646,7 +1646,7 @@ class Image(object):
            e.g. [1,0] would swap a two item palette, and list(range(255))
            is the identity transform.
         :param source_palette: Bytes or None.
-        :returns:  An :py:class:`~PIL.Image.Image` object.
+        :returns:  An :py:class:`~PIL2.Image.Image` object.
 
         """
         from . import ImagePalette
@@ -1721,17 +1721,17 @@ class Image(object):
         :param size: The requested size in pixels, as a 2-tuple:
            (width, height).
         :param resample: An optional resampling filter.  This can be
-           one of :py:attr:`PIL.Image.NEAREST`, :py:attr:`PIL.Image.BOX`,
-           :py:attr:`PIL.Image.BILINEAR`, :py:attr:`PIL.Image.HAMMING`,
-           :py:attr:`PIL.Image.BICUBIC` or :py:attr:`PIL.Image.LANCZOS`.
+           one of :py:attr:`PIL2.Image.NEAREST`, :py:attr:`PIL2.Image.BOX`,
+           :py:attr:`PIL2.Image.BILINEAR`, :py:attr:`PIL2.Image.HAMMING`,
+           :py:attr:`PIL2.Image.BICUBIC` or :py:attr:`PIL2.Image.LANCZOS`.
            If omitted, or if the image has mode "1" or "P", it is
-           set :py:attr:`PIL.Image.NEAREST`.
+           set :py:attr:`PIL2.Image.NEAREST`.
            See: :ref:`concept-filters`.
         :param box: An optional 4-tuple of floats giving the region
            of the source image which should be scaled.
            The values should be within (0, 0, width, height) rectangle.
            If omitted or None, the entire source is used.
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         if resample not in (
@@ -1771,12 +1771,12 @@ class Image(object):
 
         :param angle: In degrees counter clockwise.
         :param resample: An optional resampling filter.  This can be
-           one of :py:attr:`PIL.Image.NEAREST` (use nearest neighbour),
-           :py:attr:`PIL.Image.BILINEAR` (linear interpolation in a 2x2
-           environment), or :py:attr:`PIL.Image.BICUBIC`
+           one of :py:attr:`PIL2.Image.NEAREST` (use nearest neighbour),
+           :py:attr:`PIL2.Image.BILINEAR` (linear interpolation in a 2x2
+           environment), or :py:attr:`PIL2.Image.BICUBIC`
            (cubic spline interpolation in a 4x4 environment).
            If omitted, or if the image has mode "1" or "P", it is
-           set :py:attr:`PIL.Image.NEAREST`. See :ref:`concept-filters`.
+           set :py:attr:`PIL2.Image.NEAREST`. See :ref:`concept-filters`.
         :param expand: Optional expansion flag.  If true, expands the output
            image to make it large enough to hold the entire rotated image.
            If false or omitted, make the output image the same size as the
@@ -1786,7 +1786,7 @@ class Image(object):
            the upper left corner.  Default is the center of the image.
         :param translate: An optional post-rotate translation (a 2-tuple).
         :param fillcolor: An optional color for area outside the rotated image.
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         angle = angle % 360.0
@@ -1961,7 +1961,7 @@ class Image(object):
         Note that in the current version of the library, most sequence
         formats only allows you to seek to the next frame.
 
-        See :py:meth:`~PIL.Image.Image.tell`.
+        See :py:meth:`~PIL2.Image.Image.tell`.
 
         :param frame: Frame number, starting at 0.
         :exception EOFError: If the call attempts to seek beyond the end
@@ -2002,7 +2002,7 @@ class Image(object):
         containing a copy of one of the original bands (red, green,
         blue).
 
-        If you need only one band, :py:meth:`~PIL.Image.Image.getchannel`
+        If you need only one band, :py:meth:`~PIL2.Image.Image.getchannel`
         method can be more convenient and faster.
 
         :returns: A tuple containing bands.
@@ -2039,7 +2039,7 @@ class Image(object):
 
     def tell(self):
         """
-        Returns the current frame number. See :py:meth:`~PIL.Image.Image.seek`.
+        Returns the current frame number. See :py:meth:`~PIL2.Image.Image.seek`.
 
         :returns: Frame number, starting with 0.
         """
@@ -2051,20 +2051,20 @@ class Image(object):
         image to contain a thumbnail version of itself, no larger than
         the given size.  This method calculates an appropriate thumbnail
         size to preserve the aspect of the image, calls the
-        :py:meth:`~PIL.Image.Image.draft` method to configure the file reader
+        :py:meth:`~PIL2.Image.Image.draft` method to configure the file reader
         (where applicable), and finally resizes the image.
 
-        Note that this function modifies the :py:class:`~PIL.Image.Image`
+        Note that this function modifies the :py:class:`~PIL2.Image.Image`
         object in place.  If you need to use the full resolution image as well,
-        apply this method to a :py:meth:`~PIL.Image.Image.copy` of the original
+        apply this method to a :py:meth:`~PIL2.Image.Image.copy` of the original
         image.
 
         :param size: Requested size.
         :param resample: Optional resampling filter.  This can be one
-           of :py:attr:`PIL.Image.NEAREST`, :py:attr:`PIL.Image.BILINEAR`,
-           :py:attr:`PIL.Image.BICUBIC`, or :py:attr:`PIL.Image.LANCZOS`.
-           If omitted, it defaults to :py:attr:`PIL.Image.BICUBIC`.
-           (was :py:attr:`PIL.Image.NEAREST` prior to version 2.5.0)
+           of :py:attr:`PIL2.Image.NEAREST`, :py:attr:`PIL2.Image.BILINEAR`,
+           :py:attr:`PIL2.Image.BICUBIC`, or :py:attr:`PIL2.Image.LANCZOS`.
+           If omitted, it defaults to :py:attr:`PIL2.Image.BICUBIC`.
+           (was :py:attr:`PIL2.Image.NEAREST` prior to version 2.5.0)
         :returns: None
         """
 
@@ -2103,14 +2103,14 @@ class Image(object):
 
         :param size: The output size.
         :param method: The transformation method.  This is one of
-          :py:attr:`PIL.Image.EXTENT` (cut out a rectangular subregion),
-          :py:attr:`PIL.Image.AFFINE` (affine transform),
-          :py:attr:`PIL.Image.PERSPECTIVE` (perspective transform),
-          :py:attr:`PIL.Image.QUAD` (map a quadrilateral to a rectangle), or
-          :py:attr:`PIL.Image.MESH` (map a number of source quadrilaterals
+          :py:attr:`PIL2.Image.EXTENT` (cut out a rectangular subregion),
+          :py:attr:`PIL2.Image.AFFINE` (affine transform),
+          :py:attr:`PIL2.Image.PERSPECTIVE` (perspective transform),
+          :py:attr:`PIL2.Image.QUAD` (map a quadrilateral to a rectangle), or
+          :py:attr:`PIL2.Image.MESH` (map a number of source quadrilaterals
           in one operation).
 
-          It may also be an :py:class:`~PIL.Image.ImageTransformHandler`
+          It may also be an :py:class:`~PIL2.Image.ImageTransformHandler`
           object::
             class Example(Image.ImageTransformHandler):
                 def transform(size, method, data, resample, fill=1):
@@ -2125,17 +2125,17 @@ class Image(object):
                     return method, data
         :param data: Extra data to the transformation method.
         :param resample: Optional resampling filter.  It can be one of
-           :py:attr:`PIL.Image.NEAREST` (use nearest neighbour),
-           :py:attr:`PIL.Image.BILINEAR` (linear interpolation in a 2x2
-           environment), or :py:attr:`PIL.Image.BICUBIC` (cubic spline
+           :py:attr:`PIL2.Image.NEAREST` (use nearest neighbour),
+           :py:attr:`PIL2.Image.BILINEAR` (linear interpolation in a 2x2
+           environment), or :py:attr:`PIL2.Image.BICUBIC` (cubic spline
            interpolation in a 4x4 environment). If omitted, or if the image
-           has mode "1" or "P", it is set to :py:attr:`PIL.Image.NEAREST`.
+           has mode "1" or "P", it is set to :py:attr:`PIL2.Image.NEAREST`.
         :param fill: If **method** is an
-          :py:class:`~PIL.Image.ImageTransformHandler` object, this is one of
+          :py:class:`~PIL2.Image.ImageTransformHandler` object, this is one of
           the arguments passed to it. Otherwise, it is unused.
         :param fillcolor: Optional fill color for the area outside the transform
            in the output image.
-        :returns: An :py:class:`~PIL.Image.Image` object.
+        :returns: An :py:class:`~PIL2.Image.Image` object.
         """
 
         if self.mode == 'LA':
@@ -2221,10 +2221,10 @@ class Image(object):
         """
         Transpose image (flip or rotate in 90 degree steps)
 
-        :param method: One of :py:attr:`PIL.Image.FLIP_LEFT_RIGHT`,
-          :py:attr:`PIL.Image.FLIP_TOP_BOTTOM`, :py:attr:`PIL.Image.ROTATE_90`,
-          :py:attr:`PIL.Image.ROTATE_180`, :py:attr:`PIL.Image.ROTATE_270`,
-          :py:attr:`PIL.Image.TRANSPOSE` or :py:attr:`PIL.Image.TRANSVERSE`.
+        :param method: One of :py:attr:`PIL2.Image.FLIP_LEFT_RIGHT`,
+          :py:attr:`PIL2.Image.FLIP_TOP_BOTTOM`, :py:attr:`PIL2.Image.ROTATE_90`,
+          :py:attr:`PIL2.Image.ROTATE_180`, :py:attr:`PIL2.Image.ROTATE_270`,
+          :py:attr:`PIL2.Image.TRANSPOSE` or :py:attr:`PIL2.Image.TRANSVERSE`.
         :returns: Returns a flipped or rotated copy of this image.
         """
 
@@ -2311,7 +2311,7 @@ def new(mode, size, color=0):
        per band).  When creating RGB images, you can also use color
        strings as supported by the ImageColor module.  If the color is
        None, the image is not initialised.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     _check_size(size)
@@ -2336,13 +2336,13 @@ def frombytes(mode, size, data, decoder_name="raw", *args):
     In its simplest form, this function takes three arguments
     (mode, size, and unpacked pixel data).
 
-    You can also use any pixel decoder supported by PIL.  For more
+    You can also use any pixel decoder supported by PIL2.  For more
     information on available decoders, see the section
     :ref:`Writing Your Own File Decoder <file-decoders>`.
 
     Note that this function decodes pixel data only, not entire images.
     If you have an entire image in a string, wrap it in a
-    :py:class:`~io.BytesIO` object, and use :py:func:`~PIL.Image.open` to load
+    :py:class:`~io.BytesIO` object, and use :py:func:`~PIL2.Image.open` to load
     it.
 
     :param mode: The image mode. See: :ref:`concept-modes`.
@@ -2350,7 +2350,7 @@ def frombytes(mode, size, data, decoder_name="raw", *args):
     :param data: A byte buffer containing raw data for the given mode.
     :param decoder_name: What decoder to use.
     :param args: Additional parameters for the given decoder.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     _check_size(size)
@@ -2376,17 +2376,17 @@ def frombuffer(mode, size, data, decoder_name="raw", *args):
     """
     Creates an image memory referencing pixel data in a byte buffer.
 
-    This function is similar to :py:func:`~PIL.Image.frombytes`, but uses data
+    This function is similar to :py:func:`~PIL2.Image.frombytes`, but uses data
     in the byte buffer, where possible.  This means that changes to the
     original buffer object are reflected in this image).  Not all modes can
     share memory; supported modes include "L", "RGBX", "RGBA", and "CMYK".
 
     Note that this function decodes pixel data only, not entire images.
     If you have an entire image file in a string, wrap it in a
-    **BytesIO** object, and use :py:func:`~PIL.Image.open` to load it.
+    **BytesIO** object, and use :py:func:`~PIL2.Image.open` to load it.
 
     In the current version, the default parameters used for the "raw" decoder
-    differs from that used for :py:func:`~PIL.Image.frombytes`.  This is a
+    differs from that used for :py:func:`~PIL2.Image.frombytes`.  This is a
     bug, and will probably be fixed in a future release.  The current release
     issues a warning if you do this; to disable the warning, you should provide
     the full set of parameters.  See below for details.
@@ -2402,7 +2402,7 @@ def frombuffer(mode, size, data, decoder_name="raw", *args):
 
             frombuffer(mode, size, data, "raw", mode, 0, 1)
 
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
 
     .. versionadded:: 1.1.4
     """
@@ -2439,11 +2439,11 @@ def fromarray(obj, mode=None):
     (using the buffer protocol).
 
     If **obj** is not contiguous, then the tobytes method is called
-    and :py:func:`~PIL.Image.frombuffer` is used.
+    and :py:func:`~PIL2.Image.frombuffer` is used.
 
     If you have an image in NumPy::
 
-      from PIL import Image
+      from PIL2 import Image
       import numpy as np
       im = Image.open('hopper.jpg')
       a = np.asarray(im)
@@ -2561,15 +2561,15 @@ def open(fp, mode="r"):
     This is a lazy operation; this function identifies the file, but
     the file remains open and the actual image data is not read from
     the file until you try to process the data (or call the
-    :py:meth:`~PIL.Image.Image.load` method).  See
-    :py:func:`~PIL.Image.new`. See :ref:`file-handling`.
+    :py:meth:`~PIL2.Image.Image.load` method).  See
+    :py:func:`~PIL2.Image.new`. See :ref:`file-handling`.
 
     :param fp: A filename (string), pathlib.Path object or a file object.
        The file object must implement :py:meth:`~file.read`,
        :py:meth:`~file.seek`, and :py:meth:`~file.tell` methods,
        and be opened in binary mode.
     :param mode: The mode.  If given, this argument must be "r".
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     :exception IOError: If the file cannot be found, or the image cannot be
        opened and identified.
     """
@@ -2640,7 +2640,7 @@ def alpha_composite(im1, im2):
     :param im1: The first image. Must have mode RGBA.
     :param im2: The second image.  Must have mode RGBA, and the same size as
        the first image.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     im1.load()
@@ -2663,7 +2663,7 @@ def blend(im1, im2, alpha):
        the second image is returned. There are no restrictions on the
        alpha value. If necessary, the result is clipped to fit into
        the allowed output range.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     im1.load()
@@ -2698,7 +2698,7 @@ def eval(image, *args):
 
     :param image: The input image.
     :param function: A function object, taking one integer argument.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     return image.point(args[0])
@@ -2713,7 +2713,7 @@ def merge(mode, bands):
     :param bands: A sequence containing one single-band image for
         each band in the output image.  All bands must have the
         same size.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
 
     if getmodebands(mode) != len(bands) or "*" in mode:

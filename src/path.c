@@ -4,7 +4,7 @@
  * 2D path utilities
  *
  * history:
- * 1996-11-04 fl   Added to PIL (incomplete)
+ * 1996-11-04 fl   Added to PIL2 (incomplete)
  * 1996-11-05 fl   Added sequence semantics
  * 1997-02-28 fl   Fixed getbbox
  * 1997-06-12 fl   Added id attribute

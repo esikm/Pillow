@@ -1,11 +1,11 @@
 from . import Image
 
 modules = {
-    "pil": "PIL._imaging",
-    "tkinter": "PIL._tkinter_finder",
-    "freetype2": "PIL._imagingft",
-    "littlecms2": "PIL._imagingcms",
-    "webp": "PIL._webp",
+    "pil": "PIL2._imaging",
+    "tkinter": "PIL2._tkinter_finder",
+    "freetype2": "PIL2._imagingft",
+    "littlecms2": "PIL2._imagingcms",
+    "webp": "PIL2._webp",
 }
 
 
@@ -48,10 +48,10 @@ def get_supported_codecs():
 
 
 features = {
-    "webp_anim": ("PIL._webp", 'HAVE_WEBPANIM'),
-    "webp_mux": ("PIL._webp", 'HAVE_WEBPMUX'),
-    "transp_webp": ("PIL._webp", "HAVE_TRANSPARENCY"),
-    "raqm": ("PIL._imagingft", "HAVE_RAQM")
+    "webp_anim": ("PIL2._webp", 'HAVE_WEBPANIM'),
+    "webp_mux": ("PIL2._webp", 'HAVE_WEBPMUX'),
+    "transp_webp": ("PIL2._webp", "HAVE_TRANSPARENCY"),
+    "raqm": ("PIL2._imagingft", "HAVE_RAQM")
 }
 
 
@@ -62,7 +62,7 @@ def check_feature(feature):
     module, flag = features[feature]
 
     try:
-        imported_module = __import__(module, fromlist=['PIL'])
+        imported_module = __import__(module, fromlist=['PIL2'])
         return getattr(imported_module, flag)
     except ImportError:
         return None

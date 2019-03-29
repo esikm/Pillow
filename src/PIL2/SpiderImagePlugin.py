@@ -35,7 +35,7 @@
 
 from __future__ import print_function
 
-from PIL import Image, ImageFile
+from PIL2 import Image, ImageFile
 import os
 import struct
 import sys
@@ -190,7 +190,7 @@ class SpiderImageFile(ImageFile.ImageFile):
 
     # returns a ImageTk.PhotoImage object, after rescaling to 0..255
     def tkPhotoImage(self):
-        from PIL import ImageTk
+        from PIL2 import ImageTk
         return ImageTk.PhotoImage(self.convert2byte(), palette=256)
 
 

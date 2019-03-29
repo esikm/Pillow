@@ -6,7 +6,7 @@
 
 # History:
 
-# 2009-03-08 fl   Added to PIL.
+# 2009-03-08 fl   Added to PIL2.
 
 # Copyright (C) 2002-2003 Kevin Cazabon
 # Copyright (c) 2009 by Fredrik Lundh
@@ -18,20 +18,20 @@
 from __future__ import print_function
 import sys
 
-from PIL import Image
+from PIL2 import Image
 try:
-    from PIL import _imagingcms
+    from PIL2 import _imagingcms
 except ImportError as ex:
     # Allow error import for doc purposes, but error out when accessing
     # anything in core.
     from _util import deferred_error
     _imagingcms = deferred_error(ex)
-from PIL._util import isStringType
+from PIL2._util import isStringType
 
 DESCRIPTION = """
 pyCMS
 
-    a Python / PIL interface to the littleCMS ICC Color Management System
+    a Python / PIL2 interface to the littleCMS ICC Color Management System
     Copyright (C) 2002-2003 Kevin Cazabon
     kevin@cazabon.com
     http://www.cazabon.com
@@ -40,10 +40,10 @@ pyCMS
     littleCMS home page:  http://www.littlecms.com
     (littleCMS is Copyright (C) 1998-2001 Marti Maria)
 
-    Originally released under LGPL.  Graciously donated to PIL in
-    March 2009, for distribution under the standard PIL license
+    Originally released under LGPL.  Graciously donated to PIL2 in
+    March 2009, for distribution under the standard PIL2 license
 
-    The pyCMS.py module provides a "clean" interface between Python/PIL and
+    The pyCMS.py module provides a "clean" interface between Python/PIL2 and
     pyCMSdll, taking care of some of the more complex handling of the direct
     pyCMSdll functions, as well as error-checking and making sure that all
     relevant data is kept together.
@@ -71,7 +71,7 @@ pyCMS
                         buildProofTransform (otherwise the proof profile/intent
                         would be ignored).
 
-        0.1.0 pil       March 2009 - added to PIL, as PIL.ImageCms
+        0.1.0 pil       March 2009 - added to PIL2, as PIL2.ImageCms
 
         0.0.2 alpha     Jan 6, 2002
 
@@ -142,7 +142,7 @@ for flag in FLAGS.values():
 
 
 # --------------------------------------------------------------------.
-# Experimental PIL-level API
+# Experimental PIL2-level API
 # --------------------------------------------------------------------.
 
 ##
@@ -246,7 +246,7 @@ def get_display_profile(handle=None):
     """
 
     if sys.platform == "win32":
-        from PIL import ImageWin
+        from PIL2 import ImageWin
         if isinstance(handle, ImageWin.HDC):
             profile = core.get_display_profile_win32(handle, 1)
         else:
@@ -296,7 +296,7 @@ def profileToProfile(
     profiles, the input profile must handle RGB data, and the output
     profile must handle CMYK data.
 
-    :param im: An open PIL image object (i.e. Image.new(...) or
+    :param im: An open PIL2 image object (i.e. Image.new(...) or
         Image.open(...), etc.)
     :param inputProfile: String, as a valid filename path to the ICC input
         profile you wish to use for this image, or a profile object
@@ -312,7 +312,7 @@ def profileToProfile(
 
         see the pyCMS documentation for details on rendering intents and what
         they do.
-    :param outputMode: A valid PIL mode for the output image (i.e. "RGB",
+    :param outputMode: A valid PIL2 mode for the output image (i.e. "RGB",
         "CMYK", etc.).  Note: if rendering the image "inPlace", outputMode
         MUST be the same mode as the input, or omitted completely.  If
         omitted, the outputMode will be the same as the mode of the input
@@ -321,7 +321,7 @@ def profileToProfile(
         original image is modified in-place, and None is returned.  If False
         (default), a new Image object is returned with the transform applied.
     :param flags: Integer (0-...) specifying additional flags
-    :returns: Either None or a new PIL image object, depending on value of
+    :returns: Either None or a new PIL2 image object, depending on value of
         inPlace
     :exception PyCMSError:
     """
@@ -396,7 +396,7 @@ def buildTransform(
     This function builds and returns an ICC transform from the inputProfile
     to the outputProfile using the renderingIntent to determine what to do
     with out-of-gamut colors.  It will ONLY work for converting images that
-    are in inMode to images that are in outMode color format (PIL mode,
+    are in inMode to images that are in outMode color format (PIL2 mode,
     i.e. "RGB", "RGBA", "CMYK", etc.).
 
     Building the transform is a fair part of the overhead in
@@ -407,7 +407,7 @@ def buildTransform(
     the lookup table for the transform.
 
     The reason pyCMS returns a class object rather than a handle directly
-    to the transform is that it needs to keep track of the PIL input/output
+    to the transform is that it needs to keep track of the PIL2 input/output
     modes that the transform is meant for.  These attributes are stored in
     the "inMode" and "outMode" attributes of the object (which can be
     manually overridden if you really want to, but I don't know of any
@@ -417,9 +417,9 @@ def buildTransform(
         profile you wish to use for this transform, or a profile object
     :param outputProfile: String, as a valid filename path to the ICC output
         profile you wish to use for this transform, or a profile object
-    :param inMode: String, as a valid PIL mode that the appropriate profile
+    :param inMode: String, as a valid PIL2 mode that the appropriate profile
         also supports (i.e. "RGB", "RGBA", "CMYK", etc.)
-    :param outMode: String, as a valid PIL mode that the appropriate profile
+    :param outMode: String, as a valid PIL2 mode that the appropriate profile
         also supports (i.e. "RGB", "RGBA", "CMYK", etc.)
     :param renderingIntent: Integer (0-3) specifying the rendering intent you
         wish to use for the transform
@@ -480,7 +480,7 @@ def buildProofTransform(
     proofRenderingIntent to determine what to do with out-of-gamut
     colors.  This is known as "soft-proofing".  It will ONLY work for
     converting images that are in inMode to images that are in outMode
-    color format (PIL mode, i.e. "RGB", "RGBA", "CMYK", etc.).
+    color format (PIL2 mode, i.e. "RGB", "RGBA", "CMYK", etc.).
 
     Usage of the resulting transform object is exactly the same as with
     ImageCms.buildTransform().
@@ -505,9 +505,9 @@ def buildProofTransform(
         profile object
     :param proofProfile: String, as a valid filename path to the ICC proof
         profile you wish to use for this transform, or a profile object
-    :param inMode: String, as a valid PIL mode that the appropriate profile
+    :param inMode: String, as a valid PIL2 mode that the appropriate profile
         also supports (i.e. "RGB", "RGBA", "CMYK", etc.)
-    :param outMode: String, as a valid PIL mode that the appropriate profile
+    :param outMode: String, as a valid PIL2 mode that the appropriate profile
         also supports (i.e. "RGB", "RGBA", "CMYK", etc.)
     :param renderingIntent: Integer (0-3) specifying the rendering intent you
         wish to use for the input->proof (simulated) transform
@@ -587,14 +587,14 @@ def applyTransform(im, transform, inPlace=0):
     different).  The  default behavior is to return a new Image object of
     the same dimensions in mode transform.outMode.
 
-    :param im: A PIL Image object, and im.mode must be the same as the inMode
+    :param im: A PIL2 Image object, and im.mode must be the same as the inMode
         supported by the transform.
     :param transform: A valid CmsTransform class object
     :param inPlace: Bool (1 == True, 0 or None == False).  If True, im is
         modified in place and None is returned, if False, a new Image object
         with the transform applied is returned (and im is not changed). The
         default is False.
-    :returns: Either None, or a new PIL Image object, depending on the value of
+    :returns: Either None, or a new PIL2 Image object, depending on the value of
         inPlace. The profile will be returned in the image's
         info['icc_profile'].
     :exception PyCMSError:

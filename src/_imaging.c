@@ -3604,7 +3604,7 @@ _clear_cache(PyObject* self, PyObject* args)
 /* -------------------------------------------------------------------- */
 
 /* FIXME: this is something of a mess.  Should replace this with
-   pluggable codecs, but not before PIL 1.2 */
+   pluggable codecs, but not before PIL2 1.2 */
 
 /* Decoders (in decode.c) */
 extern PyObject* PyImaging_BcnDecoderNew(PyObject* self, PyObject* args);

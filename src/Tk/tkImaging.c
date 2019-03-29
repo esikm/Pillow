@@ -22,7 +22,7 @@
  *      }
  *
  * This registers a Tcl command called "PyImagingPhoto", which is used
- * to communicate between PIL and Tk's PhotoImage handler.
+ * to communicate between PIL2 and Tk's PhotoImage handler.
  *
 
  * History:
@@ -98,7 +98,7 @@ PyImagingPhotoPut(ClientData clientdata, Tcl_Interp* interp,
         return TCL_ERROR;
     }
 
-    /* get PIL Image handle */
+    /* get PIL2 Image handle */
     im = ImagingFind(argv[2]);
     if (!im) {
         TCL_APPEND_RESULT(interp, "bad name", (char*) NULL);
@@ -203,7 +203,7 @@ TkImaging_Init(Tcl_Interp* interp)
  * Functions to fill global Tcl / Tk function pointers by dynamic loading
  */
 
-#define TKINTER_FINDER "PIL._tkinter_finder"
+#define TKINTER_FINDER "PIL2._tkinter_finder"
 
 #if defined(_WIN32) || defined(__WIN32__) || defined(WIN32)
 

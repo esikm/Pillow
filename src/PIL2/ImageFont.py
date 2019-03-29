@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# PIL raster font management
+# PIL2 raster font management
 #
 # History:
 # 1996-08-07 fl   created (experimental)
@@ -63,7 +63,7 @@ except ImportError:
 
 
 class ImageFont(object):
-    "PIL font wrapper"
+    "PIL2 font wrapper"
 
     def _load_pilfont(self, filename):
 
@@ -330,7 +330,7 @@ def truetype(font=None, size=10, index=0, encoding="",
 
 def load_path(filename):
     """
-    Load font file. Same as :py:func:`~PIL.ImageFont.load`, but searches for a
+    Load font file. Same as :py:func:`~PIL2.ImageFont.load`, but searches for a
     bitmap font along the Python path.
 
     :param filename: Name of font file.

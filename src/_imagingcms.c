@@ -1,10 +1,10 @@
 /*
  * pyCMS
- * a Python / PIL interface to the littleCMS ICC Color Management System
+ * a Python / PIL2 interface to the littleCMS ICC Color Management System
  * Copyright (C) 2002-2003 Kevin Cazabon
  * kevin@cazabon.com
  * http://www.cazabon.com
- * Adapted/reworked for PIL by Fredrik Lundh
+ * Adapted/reworked for PIL2 by Fredrik Lundh
  * Copyright (c) 2009 Fredrik Lundh
  * Updated to LCMS2
  * Copyright (c) 2013 Eric Soroos
@@ -13,13 +13,13 @@
  * littleCMS home page:  http://www.littlecms.com
  * (littleCMS is Copyright (C) 1998-2001 Marti Maria)
  *
- * Originally released under LGPL.  Graciously donated to PIL in
- * March 2009, for distribution under the standard PIL license
+ * Originally released under LGPL.  Graciously donated to PIL2 in
+ * March 2009, for distribution under the standard PIL2 license
  */
 
 #define COPYRIGHTINFO "\
 pyCMS\n\
-a Python / PIL interface to the littleCMS ICC Color Management System\n\
+a Python / PIL2 interface to the littleCMS ICC Color Management System\n\
 Copyright (C) 2002-2003 Kevin Cazabon\n\
 kevin@cazabon.com\n\
 http://www.cazabon.com\n\
@@ -53,7 +53,7 @@ http://www.cazabon.com\n\
 /* known to-do list with current version:
 
    Verify that PILmode->littleCMStype conversion in findLCMStype is correct for all
-   PIL modes (it probably isn't for the more obscure ones)
+   PIL2 modes (it probably isn't for the more obscure ones)
 
    Add support for creating custom RGB profiles on the fly
    Add support for checking presence of a specific tag in a profile
@@ -1486,7 +1486,7 @@ static struct PyGetSetDef cms_profile_getsetters[] = {
 
 static PyTypeObject CmsProfile_Type = {
     PyVarObject_HEAD_INIT(NULL, 0)
-    "PIL._imagingcms.CmsProfile",   /*tp_name */
+    "PIL2._imagingcms.CmsProfile",   /*tp_name */
     sizeof(CmsProfileObject), 0,/*tp_basicsize, tp_itemsize */
     /* methods */
     (destructor) cms_profile_dealloc, /*tp_dealloc*/

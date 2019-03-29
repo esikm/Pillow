@@ -104,7 +104,7 @@ class PSDraw(object):
     def text(self, xy, text):
         """
         Draws text at the given position. You must use
-        :py:meth:`~PIL.PSDraw.PSDraw.setfont` before calling this method.
+        :py:meth:`~PIL2.PSDraw.PSDraw.setfont` before calling this method.
         """
         text = "\\(".join(text.split("("))
         text = "\\)".join(text.split(")"))
@@ -112,7 +112,7 @@ class PSDraw(object):
         self._fp_write("%d %d M (%s) S\n" % xy)
 
     def image(self, box, im, dpi=None):
-        """Draw a PIL image, centered in the given box."""
+        """Draw a PIL2 image, centered in the given box."""
         # default resolution depends on mode
         if not dpi:
             if im.mode == "1":

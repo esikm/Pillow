@@ -5,7 +5,7 @@
 # macOS icns file decoder, based on icns.py by Bob Ippolito.
 #
 # history:
-# 2004-10-09 fl   Turned into a PIL plugin; removed 2.3 dependencies.
+# 2004-10-09 fl   Turned into a PIL2 plugin; removed 2.3 dependencies.
 #
 # Copyright (c) 2004 by Bob Ippolito.
 # Copyright (c) 2004 by Secret Labs.
@@ -15,8 +15,8 @@
 # See the README file for information on usage and redistribution.
 #
 
-from PIL import Image, ImageFile, PngImagePlugin
-from PIL._binary import i8
+from PIL2 import Image, ImageFile, PngImagePlugin
+from PIL2._binary import i8
 import io
 import os
 import shutil
@@ -26,7 +26,7 @@ import tempfile
 
 enable_jpeg2k = hasattr(Image.core, 'jp2klib_version')
 if enable_jpeg2k:
-    from PIL import Jpeg2KImagePlugin
+    from PIL2 import Jpeg2KImagePlugin
 
 HEADERSIZE = 8
 
@@ -115,7 +115,7 @@ def read_png_or_jpeg2000(fobj, start_length, size):
             or sig[:4] == b'\x0d\x0a\x87\x0a' \
             or sig == b'\x00\x00\x00\x0cjP  \x0d\x0a\x87\x0a':
         if not enable_jpeg2k:
-            raise ValueError('Unsupported icon subimage format (rebuild PIL '
+            raise ValueError('Unsupported icon subimage format (rebuild PIL2 '
                              'with JPEG 2000 support to fix this)')
         # j2k, jpc or j2c
         fobj.seek(start)
@@ -250,7 +250,7 @@ class IcnsFile(object):
 
 class IcnsImageFile(ImageFile.ImageFile):
     """
-    PIL image support for Mac OS .icns files.
+    PIL2 image support for Mac OS .icns files.
     Chooses the best resolution, but will possibly load
     a different size image if you mutate the size attribute
     before calling 'load'.

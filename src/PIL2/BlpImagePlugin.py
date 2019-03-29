@@ -353,7 +353,7 @@ class BLP1Decoder(_BLPBaseDecoder):
             )
 
     def _decode_jpeg_stream(self):
-        from PIL.JpegImagePlugin import JpegImageFile
+        from PIL2.JpegImagePlugin import JpegImageFile
 
         jpeg_header_size, = struct.unpack("<I", self.fd.read(4))
         jpeg_header = self.fd.read(jpeg_header_size)

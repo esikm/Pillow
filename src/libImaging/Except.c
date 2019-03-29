@@ -5,7 +5,7 @@
  * default exception handling
  *
  * This module is usually overridden by application code (e.g.
- * _imaging.c for PIL's standard Python bindings).  If you get
+ * _imaging.c for PIL2's standard Python bindings).  If you get
  * linking errors, remove this file from your project/library.
  *
  * history:

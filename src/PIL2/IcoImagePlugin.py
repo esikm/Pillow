@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# Windows Icon support for PIL
+# Windows Icon support for PIL2
 #
 # History:
 #       96-05-27 fl     Created
@@ -183,7 +183,7 @@ class IcoFile(object):
 
             if 32 == bpp:
                 # 32-bit color depth icon image allows semitransparent areas
-                # PIL's DIB format ignores transparency bits, recover them.
+                # PIL2's DIB format ignores transparency bits, recover them.
                 # The DIB is packed in BGRX byte order where X is the alpha
                 # channel.
 
@@ -240,7 +240,7 @@ class IcoFile(object):
 
 class IcoImageFile(ImageFile.ImageFile):
     """
-    PIL read-only image support for Microsoft Windows .ico files.
+    PIL2 read-only image support for Microsoft Windows .ico files.
 
     By default the largest resolution image in the file will be loaded. This
     can be changed by altering the 'size' attribute before calling 'load'.

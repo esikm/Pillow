@@ -5,11 +5,11 @@
  *
  * "arrow" outline stuff.  the contents of this module
  * will be merged with the path module and the rest of
- * the arrow graphics  package, but not before PIL 1.1.
+ * the arrow graphics  package, but not before PIL2 1.1.
  * use at your own risk.
  *
  * history:
- * 99-01-10 fl  Added to PIL (experimental)
+ * 99-01-10 fl  Added to PIL2 (experimental)
  *
  * Copyright (c) Secret Labs AB 1999.
  * Copyright (c) Fredrik Lundh 1999.

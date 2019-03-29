@@ -5,7 +5,7 @@
  *
  * history:
  * 1999-02-15 fl   Created
- * 2005-05-05 fl   Simplified and cleaned up for PIL 1.1.6
+ * 2005-05-05 fl   Simplified and cleaned up for PIL2 1.1.6
  *
  * Copyright (c) 1999-2005 by Secret Labs AB
  * Copyright (c) 2005 by Fredrik Lundh

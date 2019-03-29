@@ -226,7 +226,7 @@ def crop(image, border=0):
     Remove border from image.  The same amount of pixels are removed
     from all four sides.  This function works on all image modes.
 
-    .. seealso:: :py:meth:`~PIL.Image.Image.crop`
+    .. seealso:: :py:meth:`~PIL2.Image.Image.crop`
 
     :param image: The image to crop.
     :param border: The number of pixels to remove.
@@ -247,8 +247,8 @@ def scale(image, factor, resample=Image.NEAREST):
     :param image: The image to rescale.
     :param factor: The expansion factor, as a float.
     :param resample: An optional resampling filter. Same values possible as
-       in the PIL.Image.resize function.
-    :returns: An :py:class:`~PIL.Image.Image` object.
+       in the PIL2.Image.resize function.
+    :returns: An :py:class:`~PIL2.Image.Image` object.
     """
     if factor == 1:
         return image.copy()
@@ -268,7 +268,7 @@ def deform(image, deformer, resample=Image.BILINEAR):
     :param deformer: A deformer object.  Any object that implements a
                     **getmesh** method can be used.
     :param resample: An optional resampling filter. Same values possible as
-       in the PIL.Image.transform function.
+       in the PIL2.Image.transform function.
     :return: An image.
     """
     return image.transform(
@@ -335,7 +335,7 @@ def fit(image, size, method=Image.NEAREST, bleed=0.0, centering=(0.5, 0.5)):
     :param size: The requested output size in pixels, given as a
                  (width, height) tuple.
     :param method: What resampling method to use. Default is
-                   :py:attr:`PIL.Image.NEAREST`.
+                   :py:attr:`PIL2.Image.NEAREST`.
     :param bleed: Remove a border around the outside of the image (from all
                   four edges. The value is a decimal percentage (use 0.01 for
                   one percent). The default value is 0 (no border).
@@ -494,14 +494,14 @@ def solarize(image, threshold=128):
 
 
 # --------------------------------------------------------------------
-# PIL USM components, from Kevin Cazabon.
+# PIL2 USM components, from Kevin Cazabon.
 
 def gaussian_blur(im, radius=None):
     """ PIL_usm.gblur(im, [radius])"""
 
     warnings.warn(
-        'PIL.ImageOps.gaussian_blur is deprecated. '
-        'Use PIL.ImageFilter.GaussianBlur instead. '
+        'PIL2.ImageOps.gaussian_blur is deprecated. '
+        'Use PIL2.ImageFilter.GaussianBlur instead. '
         'This function will be removed in a future version.',
         DeprecationWarning
     )
@@ -518,8 +518,8 @@ def gblur(im, radius=None):
     """ PIL_usm.gblur(im, [radius])"""
 
     warnings.warn(
-        'PIL.ImageOps.gblur is deprecated. '
-        'Use PIL.ImageFilter.GaussianBlur instead. '
+        'PIL2.ImageOps.gblur is deprecated. '
+        'Use PIL2.ImageFilter.GaussianBlur instead. '
         'This function will be removed in a future version.',
         DeprecationWarning
     )
@@ -531,8 +531,8 @@ def unsharp_mask(im, radius=None, percent=None, threshold=None):
     """ PIL_usm.usm(im, [radius, percent, threshold])"""
 
     warnings.warn(
-        'PIL.ImageOps.unsharp_mask is deprecated. '
-        'Use PIL.ImageFilter.UnsharpMask instead. '
+        'PIL2.ImageOps.unsharp_mask is deprecated. '
+        'Use PIL2.ImageFilter.UnsharpMask instead. '
         'This function will be removed in a future version.',
         DeprecationWarning
     )
@@ -553,8 +553,8 @@ def usm(im, radius=None, percent=None, threshold=None):
     """ PIL_usm.usm(im, [radius, percent, threshold])"""
 
     warnings.warn(
-        'PIL.ImageOps.usm is deprecated. '
-        'Use PIL.ImageFilter.UnsharpMask instead. '
+        'PIL2.ImageOps.usm is deprecated. '
+        'Use PIL2.ImageFilter.UnsharpMask instead. '
         'This function will be removed in a future version.',
         DeprecationWarning
     )
@@ -577,8 +577,8 @@ def box_blur(image, radius):
     :return: An image.
     """
     warnings.warn(
-        'PIL.ImageOps.box_blur is deprecated. '
-        'Use PIL.ImageFilter.BoxBlur instead. '
+        'PIL2.ImageOps.box_blur is deprecated. '
+        'Use PIL2.ImageFilter.BoxBlur instead. '
         'This function will be removed in a future version.',
         DeprecationWarning
     )

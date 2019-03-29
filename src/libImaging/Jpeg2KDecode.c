@@ -628,7 +628,7 @@ j2k_decode_entry(Imaging im, ImagingCodecState state)
     }
 
     /*
-         Colorspace    Number of components    PIL mode
+         Colorspace    Number of components    PIL2 mode
        ------------------------------------------------------
          sRGB          3                       RGB
          sRGB          4                       RGBA

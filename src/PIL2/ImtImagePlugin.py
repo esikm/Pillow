@@ -2,7 +2,7 @@
 # The Python Imaging Library.
 # $Id$
 #
-# IM Tools support for PIL
+# IM Tools support for PIL2
 #
 # history:
 # 1996-05-27 fl   Created (read 8-bit images only)

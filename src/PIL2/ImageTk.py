@@ -47,7 +47,7 @@ def _pilbitmap_check():
     if _pilbitmap_ok is None:
         try:
             im = Image.new("1", (1, 1))
-            tkinter.BitmapImage(data="PIL:%d" % im.im.id)
+            tkinter.BitmapImage(data="PIL2:%d" % im.im.id)
             _pilbitmap_ok = 1
         except tkinter.TclError:
             _pilbitmap_ok = 0
@@ -73,11 +73,11 @@ class PhotoImage(object):
     everywhere Tkinter expects an image object.  If the image is an RGBA
     image, pixels having alpha 0 are treated as transparent.
 
-    The constructor takes either a PIL image, or a mode and a size.
+    The constructor takes either a PIL2 image, or a mode and a size.
     Alternatively, you can use the **file** or **data** options to initialize
     the photo image object.
 
-    :param image: Either a PIL image, or a mode string.  If a mode string is
+    :param image: Either a PIL2 image, or a mode string.  If a mode string is
                   used, a size must also be given.
     :param size: If the first argument is a mode string, this defines the size
                  of the image.
@@ -155,10 +155,10 @@ class PhotoImage(object):
 
     def paste(self, im, box=None):
         """
-        Paste a PIL image into the photo image.  Note that this can
+        Paste a PIL2 image into the photo image.  Note that this can
         be very slow if the photo image is displayed.
 
-        :param im: A PIL image. The size must match the target region.  If the
+        :param im: A PIL2 image. The size must match the target region.  If the
                    mode does not match, the image is converted to the mode of
                    the bitmap image.
         :param box: A 4-tuple defining the left, upper, right, and lower pixel
@@ -217,7 +217,7 @@ class BitmapImage(object):
     non-transparent parts.  See the Tkinter documentation for information on
     how to specify colours.
 
-    :param image: A PIL image.
+    :param image: A PIL2 image.
     """
 
     def __init__(self, image=None, **kw):
@@ -232,7 +232,7 @@ class BitmapImage(object):
         if _pilbitmap_check():
             # fast way (requires the pilbitmap booster patch)
             image.load()
-            kw["data"] = "PIL:%d" % image.im.id
+            kw["data"] = "PIL2:%d" % image.im.id
             self.__im = image  # must keep a reference
         else:
             # slow but safe way
@@ -277,7 +277,7 @@ class BitmapImage(object):
 def getimage(photo):
     """ This function is unimplemented """
 
-    """Copies the contents of a PhotoImage to a PIL image memory."""
+    """Copies the contents of a PhotoImage to a PIL2 image memory."""
     photo.tk.call("PyImagingPhotoGet", photo)
 
 

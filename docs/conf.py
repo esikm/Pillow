@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Pillow (PIL2 Fork) documentation build configuration file, created by
+# Pillow2 (PIL2 Fork) documentation build configuration file, created by
 # sphinx-quickstart on Sat Apr  4 07:54:11 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Pillow (PIL2 Fork)'
+project = u'Pillow2 (PIL2 Fork)'
 copyright = u'1995-2011 Fredrik Lundh, 2010-2018 Alex Clark and Contributors'
 author = u'Fredrik Lundh, Alex Clark and Contributors'
 
@@ -223,7 +223,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'PillowPILFork.tex', u'Pillow (PIL2 Fork) Documentation',
+  (master_doc, 'PillowPILFork.tex', u'Pillow2 (PIL2 Fork) Documentation',
    u'Alex Clark', 'manual'),
 ]
 
@@ -253,7 +253,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pillowpilfork', u'Pillow (PIL2 Fork) Documentation',
+    (master_doc, 'pillowpilfork', u'Pillow2 (PIL2 Fork) Documentation',
      [author], 1)
 ]
 
@@ -267,8 +267,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'PillowPILFork', u'Pillow (PIL2 Fork) Documentation',
-   author, 'PillowPILFork', 'Pillow is the friendly PIL2 fork by Alex Clark and Contributors.',
+  (master_doc, 'PillowPILFork', u'Pillow2 (PIL2 Fork) Documentation',
+   author, 'PillowPILFork', 'Pillow2 is the friendly PIL2 fork by Alex Clark and Contributors.',
    'Miscellaneous'),
 ]
 

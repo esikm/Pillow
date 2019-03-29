@@ -10,13 +10,13 @@ the listed operating systems/distros. The ``ubuntu_14.04.sh`` and
 ``debian_8.2.sh`` scripts have been tested on bare AWS images and will
 install all required dependencies for the system Python 2.7 and 3.4
 for all of the optional dependencies.  Git may also be required prior
-to running the script to actually download Pillow.
+to running the script to actually download Pillow2.
 
 e.g.::
 
   $ sudo apt-get install git
-  $ git clone https://github.com/python-pillow/Pillow.git
-  $ cd Pillow/depends
+  $ git clone https://github.com/python-pillow/Pillow2.git
+  $ cd Pillow2/depends
   $ ./debian_8.2.sh
   $ cd ..
   $ git checkout [branch or tag]

@@ -128,7 +128,7 @@ class TestFilePng(PillowTestCase):
         self.assertEqual(im.info,  {'spam': 'egg\x00'})
 
     def test_bad_ztxt(self):
-        # Test reading malformed zTXt chunks (python-pillow/Pillow#318)
+        # Test reading malformed zTXt chunks (python-pillow/Pillow2#318)
 
         im = load(HEAD + chunk(b'zTXt') + TAIL)
         self.assertEqual(im.info, {})

@@ -525,7 +525,7 @@ class TestImage(PillowTestCase):
         _make_new(im, blank_pa, ImagePalette.ImagePalette())
 
     def test_no_resource_warning_on_save(self):
-        # https://github.com/python-pillow/Pillow/issues/835
+        # https://github.com/python-pillow/Pillow2/issues/835
         # Arrange
         test_file = 'Tests/images/hopper.png'
         temp_file = self.tempfile("temp.jpg")

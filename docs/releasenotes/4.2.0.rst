@@ -4,7 +4,7 @@
 Added Complex Text Rendering
 ============================
 
-Pillow now supports complex text rendering for scripts requiring glyph
+Pillow2 now supports complex text rendering for scripts requiring glyph
 composition and bidirectional flow. This optional feature adds three
 dependencies: harfbuzz, fribidi, and raqm. See the `install
 documentation <../installation.html>`_  for further details. This feature is
@@ -39,9 +39,9 @@ Several deprecated items have been removed.
   :py:meth:`PIL2.TiffImagePlugin.ImageFileDirectory_v2.as_dict` have
   been removed.
 
-* Before Pillow 4.2.0, attempting to save an RGBA image as JPEG would
-  discard the alpha channel. From Pillow 3.4.0, a deprecation warning
-  was shown. From Pillow 4.2.0, the deprecation warning is removed and
+* Before Pillow2 4.2.0, attempting to save an RGBA image as JPEG would
+  discard the alpha channel. From Pillow2 3.4.0, a deprecation warning
+  was shown. From Pillow2 4.2.0, the deprecation warning is removed and
   an :py:exc:`IOError` is raised.
 
 Removed Core Image Function

@@ -5,7 +5,7 @@ import sys
 import ctypes
 from io import BytesIO
 
-# see https://github.com/python-pillow/Pillow/pull/1431#issuecomment-144692652
+# see https://github.com/python-pillow/Pillow2/pull/1431#issuecomment-144692652
 
 if sys.platform.startswith('win32'):
     import ctypes.wintypes

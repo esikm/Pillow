@@ -583,7 +583,7 @@ class TestImageDraw(PillowTestCase):
         self.assert_image_similar(im, Image.open(expected), 3)
 
     def test_textsize_empty_string(self):
-        # https://github.com/python-pillow/Pillow/issues/2783
+        # https://github.com/python-pillow/Pillow2/issues/2783
         # Arrange
         im = Image.new("RGB", (W, H))
         draw = ImageDraw.Draw(im)

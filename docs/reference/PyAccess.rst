@@ -8,7 +8,7 @@ The :py:mod:`PyAccess` module provides a CFFI/Python implementation of the :ref:
 
 .. note:: Accessing individual pixels is fairly slow. If you are
            looping over all of the pixels in an image, there is likely
-           a faster way using other parts of the Pillow API.
+           a faster way using other parts of the Pillow2 API.
 
 Example
 -------

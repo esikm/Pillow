@@ -65,9 +65,9 @@ script:
        if [ "$DOCKER" == "" ]; then
           .travis/script.sh
        else
-          # the Pillow user in the docker container is UID 1000
+          # the Pillow2 user in the docker container is UID 1000
           sudo chown -R 1000 $TRAVIS_BUILD_DIR
-          docker run -v $TRAVIS_BUILD_DIR:/Pillow pythonpillow/$DOCKER:$DOCKER_TAG
+          docker run -v $TRAVIS_BUILD_DIR:/Pillow2 pythonpillow/$DOCKER:$DOCKER_TAG
        fi
 
 after_success:

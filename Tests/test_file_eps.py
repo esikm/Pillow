@@ -72,7 +72,7 @@ class TestFileEps(PillowTestCase):
             self.assert_image_similar(cmyk_image, target, 10)
 
     def test_showpage(self):
-        # See https://github.com/python-pillow/Pillow/issues/2615
+        # See https://github.com/python-pillow/Pillow2/issues/2615
         plot_image = Image.open("Tests/images/reqd_showpage.eps")
         target = Image.open("Tests/images/reqd_showpage.png")
 
@@ -221,7 +221,7 @@ class TestFileEps(PillowTestCase):
             self._test_readline_file_psfile(s, ending)
 
     def test_open_eps(self):
-        # https://github.com/python-pillow/Pillow/issues/1104
+        # https://github.com/python-pillow/Pillow2/issues/1104
         # Arrange
         FILES = ["Tests/images/illu10_no_preview.eps",
                  "Tests/images/illu10_preview.eps",

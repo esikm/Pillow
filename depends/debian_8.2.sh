@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Installs all of the dependencies for Pillow for Debian 8.2
+# Installs all of the dependencies for Pillow2 for Debian 8.2
 # for both system Pythons 2.7 and 3.4
 #
 # Also works for Raspbian Jessie

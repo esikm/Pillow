@@ -133,14 +133,14 @@ class TestImageTransform(PillowTestCase):
 
     def test_blank_fill(self):
         # attempting to hit
-        # https://github.com/python-pillow/Pillow/issues/254 reported
+        # https://github.com/python-pillow/Pillow2/issues/254 reported
         #
         # issue is that transforms with transparent overflow area
         # contained junk from previous images, especially on systems with
         # constrained memory. So, attempt to fill up memory with a
         # pattern, free it, and then run the mesh test again. Using a 1Mp
         # image with 4 bands, for 4 megs of data allocated, x 64. OMM (64
-        # bit 12.04 VM with 512 megs available, this fails with Pillow <
+        # bit 12.04 VM with 512 megs available, this fails with Pillow2 <
         # a0eaf06cc5f62a6fb6de556989ac1014ff3348ea
         #
         # Running by default, but I'd totally understand not doing it in

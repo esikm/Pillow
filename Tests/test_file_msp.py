@@ -30,7 +30,7 @@ class TestFileMsp(PillowTestCase):
 
     def test_bad_checksum(self):
         # Arrange
-        # This was created by forcing Pillow to save with checksum=0
+        # This was created by forcing Pillow2 to save with checksum=0
         bad_checksum = "Tests/images/hopper_bad_checksum.msp"
 
         # Act / Assert

@@ -4,7 +4,7 @@ Block Allocator
 Previous Design
 ---------------
 
-Historically there have been two image allocators in Pillow:
+Historically there have been two image allocators in Pillow2:
 ``ImagingAllocateBlock`` and ``ImagingAllocateArray``. The first works
 for images smaller than 16MB of data and allocates one large chunk of
 memory of ``im->linesize * im->ysize`` bytes. The second works for

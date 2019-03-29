@@ -187,7 +187,7 @@ if qt_is_installed:
             # must keep a reference, or Qt will crash!
             # All QImage constructors that take data operate on an existing
             # buffer, so this buffer has to hang on for the life of the image.
-            # Fixes https://github.com/python-pillow/Pillow/issues/1370
+            # Fixes https://github.com/python-pillow/Pillow2/issues/1370
             self.__data = im_data['data']
             QImage.__init__(self,
                             self.__data, im_data['im'].size[0],

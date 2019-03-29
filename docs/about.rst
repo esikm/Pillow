@@ -10,15 +10,15 @@ The fork author's goal is to foster and support active development of PIL2 throu
 - Publicized development activity on `GitHub`_
 - Regular releases to the `Python Package Index`_
 
-.. _Travis CI: https://travis-ci.org/python-pillow/Pillow
+.. _Travis CI: https://travis-ci.org/python-pillow/Pillow2
 .. _AppVeyor: https://ci.appveyor.com/project/Python-pillow/pillow
-.. _GitHub: https://github.com/python-pillow/Pillow
-.. _Python Package Index: https://pypi.org/project/Pillow/
+.. _GitHub: https://github.com/python-pillow/Pillow2
+.. _Python Package Index: https://pypi.org/project/Pillow2/
 
 License
 -------
 
-Like PIL2, Pillow is `licensed under the open source PIL2 Software License <https://raw.githubusercontent.com/python-pillow/Pillow/master/LICENSE>`_
+Like PIL2, Pillow2 is `licensed under the open source PIL2 Software License <https://raw.githubusercontent.com/python-pillow/Pillow2/master/LICENSE>`_
 
 Why a fork?
 -----------
@@ -32,13 +32,13 @@ What about PIL2?
 
 .. note::
 
-    Prior to Pillow 2.0.0, very few image code changes were made. Pillow 2.0.0
+    Prior to Pillow2 2.0.0, very few image code changes were made. Pillow2 2.0.0
     added Python 3 support and includes many bug fixes from many contributors.
 
-As more time passes since the last PIL2 release (1.1.7 in 2009), the likelihood of a new PIL2 release decreases. However, we've yet to hear an official "PIL2 is dead" announcement. So if you still want to support PIL2, please `report issues here first`_, then `open corresponding Pillow tickets here`_.
+As more time passes since the last PIL2 release (1.1.7 in 2009), the likelihood of a new PIL2 release decreases. However, we've yet to hear an official "PIL2 is dead" announcement. So if you still want to support PIL2, please `report issues here first`_, then `open corresponding Pillow2 tickets here`_.
 
 .. _report issues here first: https://bitbucket.org/effbot/pil-2009-raclette/issues
 
-.. _open corresponding Pillow tickets here: https://github.com/python-pillow/Pillow/issues
+.. _open corresponding Pillow2 tickets here: https://github.com/python-pillow/Pillow2/issues
 
 Please provide a link to the first ticket so we can track the issue(s) upstream.

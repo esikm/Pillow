@@ -1,10 +1,10 @@
 .. _file-handling:
 
-File Handling in Pillow
+File Handling in Pillow2
 =======================
 
-When opening a file as an image, Pillow requires a filename,
-pathlib.Path object, or a file-like object.  Pillow uses the filename
+When opening a file as an image, Pillow2 requires a filename,
+pathlib.Path object, or a file-like object.  Pillow2 uses the filename
 or Path to open a file, so for the rest of this article, they will all
 be treated as a file-like object.
 
@@ -35,7 +35,7 @@ The documentation specifies that the file will be closed after the
 specification rather than an accurate reflection of the state of the
 code.
 
-Pillow cannot in general close and reopen a file, so any access to
+Pillow2 cannot in general close and reopen a file, so any access to
 that file needs to be prior to the close.
 
 Issues
@@ -48,7 +48,7 @@ The current open file handling is inconsistent at best:
   it's legal to seek backward in the file until the last image is
   read, and then it's not.
 * Using the file context manager to provide a file-like object to
-  Pillow is dangerous unless the context of the image is limited to
+  Pillow2 is dangerous unless the context of the image is limited to
   the context of the file.
 
 Image Lifecycle
@@ -70,7 +70,7 @@ Image Lifecycle
   no more seeks can occur.
 
 * ``Image.Image.close()`` Closes the file pointer and destroys the
-  core image object. This is used in the Pillow context manager
+  core image object. This is used in the Pillow2 context manager
   support. e.g.::
 
       with Image.open('test.jpg') as img:
@@ -85,7 +85,7 @@ Multi-frame images are more complicated. The ``load()`` method is not
 a terminal method, so it should not close the underlying file. The
 current behavior of ``seek()`` closing the underlying file on
 accessing the last frame is presumably a heuristic for closing the
-file after iterating through the entire sequence. In general, Pillow
+file after iterating through the entire sequence. In general, Pillow2
 does not know if there are going to be any requests for additional
 data until the caller has explicitly closed the image.
 

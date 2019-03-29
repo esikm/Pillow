@@ -44,7 +44,7 @@ pixel (2x2 pixels for :py:attr:`~PIL2.Image.BILINEAR` and 4x4 for
 downscaling. At the same time, a high quality convolutions-based algorithm with
 flexible kernel was used for :py:attr:`~PIL2.Image.ANTIALIAS` filter.
 
-Starting from Pillow 2.7.0, a high quality convolutions-based algorithm is used
+Starting from Pillow2 2.7.0, a high quality convolutions-based algorithm is used
 for all of these three filters.
 
 If you have previously used any tricks to maintain quality when downscaling with
@@ -59,7 +59,7 @@ A new :py:attr:`PIL2.Image.LANCZOS` constant was added instead of
 
 When :py:attr:`~PIL2.Image.ANTIALIAS` was initially added, it was the only
 high-quality filter based on convolutions. It's name was supposed to reflect
-this. Starting from Pillow 2.7.0 all resize method are based on convolutions.
+this. Starting from Pillow2 2.7.0 all resize method are based on convolutions.
 All of them are antialias from now on. And the real name of the
 :py:attr:`~PIL2.Image.ANTIALIAS` filter is Lanczos filter.
 
@@ -100,10 +100,10 @@ remained the same. For :py:attr:`~PIL2.Image.BILINEAR` filter it has improved by
 Default filter for thumbnails
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In Pillow 2.5 the default filter for :py:meth:`~PIL2.Image.Image.thumbnail` was
+In Pillow2 2.5 the default filter for :py:meth:`~PIL2.Image.Image.thumbnail` was
 changed from :py:attr:`~PIL2.Image.NEAREST` to :py:attr:`~PIL2.Image.ANTIALIAS`.
 Antialias was chosen because all the other filters gave poor quality for
-reduction. Starting from Pillow 2.7.0, :py:attr:`~PIL2.Image.ANTIALIAS` has been
+reduction. Starting from Pillow2 2.7.0, :py:attr:`~PIL2.Image.ANTIALIAS` has been
 replaced with :py:attr:`~PIL2.Image.BICUBIC`, because it's faster and
 :py:attr:`~PIL2.Image.ANTIALIAS` doesn't give any advantages after
 downscaling with libjpeg, which uses supersampling internally, not convolutions.
@@ -135,7 +135,7 @@ are also applicable to it.
 Blur radius
 ^^^^^^^^^^^
 
-There was an error in the previous version of Pillow, where blur radius (the
+There was an error in the previous version of Pillow2, where blur radius (the
 standard deviation of Gaussian) actually meant blur diameter. For example, to
 blur an image with actual radius 5 you were forced to use value 10. This has
 been fixed. Now the meaning of the radius is the same as in other software.

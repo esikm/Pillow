@@ -14,7 +14,7 @@ class TestFileTiffMetadata(PillowTestCase):
     def test_rt_metadata(self):
         """ Test writing arbitrary metadata into the tiff image directory
             Use case is ImageJ private tags, one numeric, one arbitrary
-            data.  https://github.com/python-pillow/Pillow/issues/291
+            data.  https://github.com/python-pillow/Pillow2/issues/291
             """
 
         img = hopper()
@@ -175,7 +175,7 @@ class TestFileTiffMetadata(PillowTestCase):
             self.fail("Should not be struct errors there.")
 
     def test_iccprofile(self):
-        # https://github.com/python-pillow/Pillow/issues/1462
+        # https://github.com/python-pillow/Pillow2/issues/1462
         im = Image.open('Tests/images/hopper.iccprofile.tif')
         out = self.tempfile('temp.tiff')
 
@@ -185,7 +185,7 @@ class TestFileTiffMetadata(PillowTestCase):
         self.assertEqual(im.info['icc_profile'], reloaded.info['icc_profile'])
 
     def test_iccprofile_binary(self):
-        # https://github.com/python-pillow/Pillow/issues/1526
+        # https://github.com/python-pillow/Pillow2/issues/1526
         # We should be able to load this, but probably won't be able to save it.
 
         im = Image.open('Tests/images/hopper.iccprofile_binary.tif')

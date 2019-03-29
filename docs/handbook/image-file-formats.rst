@@ -541,7 +541,7 @@ data.
 SGI
 ^^^
 
-Pillow reads and writes uncompressed ``L``, ``RGB``, and ``RGBA`` files.
+Pillow2 reads and writes uncompressed ``L``, ``RGB``, and ``RGBA`` files.
 
 
 SPIDER
@@ -594,7 +594,7 @@ run-length encoded TGAs.
 TIFF
 ^^^^
 
-Pillow reads and writes TIFF files. It can read both striped and tiled
+Pillow2 reads and writes TIFF files. It can read both striped and tiled
 images, pixel and plane interleaved multi-band images. If you have
 libtiff and its headers installed, PIL2 can read and write many kinds
 of compressed TIFF files. If not, PIL2 will only read and write
@@ -602,8 +602,8 @@ uncompressed files.
 
 .. note::
 
-    Beginning in version 5.0.0, Pillow requires libtiff to read or
-    write compressed files. Prior to that release, Pillow had buggy
+    Beginning in version 5.0.0, Pillow2 requires libtiff to read or
+    write compressed files. Prior to that release, Pillow2 had buggy
     support for reading Packbits, LZW and JPEG compressed TIFFs
     without using libtiff.
 
@@ -653,7 +653,7 @@ Saving Tiff Images
 The :py:meth:`~PIL2.Image.Image.save` method can take the following keyword arguments:
 
 **save_all**
-    If true, Pillow will save all frames of the image to a multiframe tiff document.
+    If true, Pillow2 will save all frames of the image to a multiframe tiff document.
 
     .. versionadded:: 3.4.0
 
@@ -816,7 +816,7 @@ BLP
 ^^^
 
 BLP is the Blizzard Mipmap Format, a texture format used in World of
-Warcraft. Pillow supports reading ``JPEG`` Compressed or raw ``BLP1``
+Warcraft. Pillow2 supports reading ``JPEG`` Compressed or raw ``BLP1``
 images, and all types of ``BLP2`` images.
 
 CUR
@@ -933,7 +933,7 @@ Note that there may be an embedded gamma of 2.2 in MIC files.
 MPO
 ^^^
 
-Pillow identifies and reads Multi Picture Object (MPO) files, loading the primary
+Pillow2 identifies and reads Multi Picture Object (MPO) files, loading the primary
 image when first opened. The :py:meth:`~file.seek` and :py:meth:`~file.tell`
 methods may be used to read other pictures from the file. The pictures are
 zero-indexed and random access is supported.

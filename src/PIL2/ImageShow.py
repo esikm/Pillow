@@ -108,7 +108,7 @@ if sys.platform == "win32":
         format = "BMP"
 
         def get_command(self, file, **options):
-            return ('start "Pillow" /WAIT "%s" '
+            return ('start "Pillow2" /WAIT "%s" '
                     '&& ping -n 2 127.0.0.1 >NUL '
                     '&& del /f "%s"' % (file, file))
 

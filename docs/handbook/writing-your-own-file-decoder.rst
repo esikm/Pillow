@@ -3,18 +3,18 @@
 Writing Your Own Image Plugin
 =============================
 
-The Pillow uses a plug-in model which allows you to add your own
+The Pillow2 uses a plug-in model which allows you to add your own
 decoders to the library, without any changes to the library
 itself. Such plug-ins usually have names like
 :file:`XxxImagePlugin.py`, where ``Xxx`` is a unique format name
 (usually an abbreviation).
 
-.. warning:: Pillow >= 2.1.0 no longer automatically imports any file
+.. warning:: Pillow2 >= 2.1.0 no longer automatically imports any file
              in the Python path with a name ending in
              :file:`ImagePlugin.py`.  You will need to import your
              image plugin manually.
 
-Pillow decodes files in 2 stages:
+Pillow2 decodes files in 2 stages:
 
 1. It loops over the available image plugins in the loaded order, and
    calls the plugin's ``accept`` function with the first 16 bytes of
@@ -312,7 +312,7 @@ Writing Your Own File Decoder in C
 
 There are 3 stages in a file decoder's lifetime:
 
-1. Setup: Pillow looks for a function in the decoder registry, falling
+1. Setup: Pillow2 looks for a function in the decoder registry, falling
    back to a function named ``[decodername]_decoder`` on the internal
    core image object.  That function is called with the ``args`` tuple
    from the ``tile`` setup in the ``_open`` method.
@@ -346,10 +346,10 @@ interest in this object are:
   Function pointer to the cleanup function, has access to ``state``.
 
 **im**
-  The target image, will be set by Pillow.
+  The target image, will be set by Pillow2.
 
 **state**
-  An ImagingCodecStateInstance, will be set by Pillow. The **context**
+  An ImagingCodecStateInstance, will be set by Pillow2. The **context**
   member is an opaque struct that can be used by the decoder to store
   any format specific state or options.
 
@@ -405,7 +405,7 @@ decode method. File decoders should be registered using
 the file decoders, there are three stages in the lifetime of a
 Python-based file decoder:
 
-1. Setup: Pillow looks for the decoder in the registry, then
+1. Setup: Pillow2 looks for the decoder in the registry, then
    instantiates the class.
 
 2. Decoding: The decoder instance's ``decode`` method is repeatedly

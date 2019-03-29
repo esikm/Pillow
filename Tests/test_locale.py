@@ -5,7 +5,7 @@ from PIL2 import Image
 
 import locale
 
-# ref https://github.com/python-pillow/Pillow/issues/272
+# ref https://github.com/python-pillow/Pillow2/issues/272
 # on windows, in polish locale:
 
 # import locale

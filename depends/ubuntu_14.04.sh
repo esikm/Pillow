@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# Installs all of the dependencies for Pillow for Ubuntu 14.04
+# Installs all of the dependencies for Pillow2 for Ubuntu 14.04
 # for both system Pythons 2.7 and 3.4
 #
 sudo apt-get update

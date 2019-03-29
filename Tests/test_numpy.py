@@ -108,7 +108,7 @@ class TestNumpy(PillowTestCase):
 
     def test_1bit(self):
         # Test that 1-bit arrays convert to numpy and back
-        # See: https://github.com/python-pillow/Pillow/issues/350
+        # See: https://github.com/python-pillow/Pillow2/issues/350
         arr = numpy.array([[1, 0, 0, 1, 0], [0, 1, 0, 0, 0]], 'u1')
         img = Image.fromarray(arr * 255).convert('1')
         self.assertEqual(img.mode, '1')
@@ -164,7 +164,7 @@ class TestNumpy(PillowTestCase):
             _to_array(*mode)
 
     def test_point_lut(self):
-        # see https://github.com/python-pillow/Pillow/issues/439
+        # see https://github.com/python-pillow/Pillow2/issues/439
 
         data = list(range(256))*3
         lut = numpy.array(data, dtype='uint8')
@@ -175,7 +175,7 @@ class TestNumpy(PillowTestCase):
 
     def test_putdata(self):
         # shouldn't segfault
-        # see https://github.com/python-pillow/Pillow/issues/1008
+        # see https://github.com/python-pillow/Pillow2/issues/1008
 
         im = Image.new('F', (150, 100))
         arr = numpy.zeros((15000,), numpy.float32)
@@ -185,14 +185,14 @@ class TestNumpy(PillowTestCase):
 
     def test_zero_size(self):
         # Shouldn't cause floating point exception
-        # See https://github.com/python-pillow/Pillow/issues/2259
+        # See https://github.com/python-pillow/Pillow2/issues/2259
 
         im = Image.fromarray(numpy.empty((0, 0), dtype=numpy.uint8))
 
         self.assertEqual(im.size, (0, 0))
 
     def test_bool(self):
-        # https://github.com/python-pillow/Pillow/issues/2044
+        # https://github.com/python-pillow/Pillow2/issues/2044
         a = numpy.zeros((10, 2), dtype=numpy.bool)
         a[0][0] = True
 
@@ -200,7 +200,7 @@ class TestNumpy(PillowTestCase):
         self.assertEqual(im2.getdata()[0], 255)
 
     def test_no_resource_warning_for_numpy_array(self):
-        # https://github.com/python-pillow/Pillow/issues/835
+        # https://github.com/python-pillow/Pillow2/issues/835
         # Arrange
         from numpy import array
         test_file = 'Tests/images/hopper.png'

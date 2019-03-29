@@ -57,7 +57,7 @@ class TestImageCrop(PillowTestCase):
 
     def test_crop_float(self):
         # Check cropping floats are rounded to nearest integer
-        # https://github.com/python-pillow/Pillow/issues/1744
+        # https://github.com/python-pillow/Pillow2/issues/1744
 
         # Arrange
         im = Image.new("RGB", (10, 10))
@@ -72,7 +72,7 @@ class TestImageCrop(PillowTestCase):
     def test_crop_crash(self):
         # Image.crop crashes prepatch with an access violation
         # apparently a use after free on windows, see
-        # https://github.com/python-pillow/Pillow/issues/1077
+        # https://github.com/python-pillow/Pillow2/issues/1077
 
         test_img = 'Tests/images/bmp/g/pal8-0.bmp'
         extents = (1, 1, 10, 10)

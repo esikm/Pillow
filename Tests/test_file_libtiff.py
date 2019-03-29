@@ -88,7 +88,7 @@ class TestFileLibTiff(LibTiffTestCase):
 
         self.assert_image_equal(g4, png)
 
-    # see https://github.com/python-pillow/Pillow/issues/279
+    # see https://github.com/python-pillow/Pillow2/issues/279
     def test_g4_fillorder_eq_png(self):
         """ Checking that we're actually getting the data that we expect"""
         png = Image.open('Tests/images/g4-fillorder-test.png')
@@ -171,7 +171,7 @@ class TestFileLibTiff(LibTiffTestCase):
                         self.assertEqual(
                             val, value, msg="%s didn't roundtrip" % tag)
 
-            # https://github.com/python-pillow/Pillow/issues/1561
+            # https://github.com/python-pillow/Pillow2/issues/1561
             requested_fields = ['StripByteCounts',
                                 'RowsPerStrip',
                                 'StripOffsets']
@@ -529,7 +529,7 @@ class TestFileLibTiff(LibTiffTestCase):
         im.save(outfile)
 
     def test_fd_duplication(self):
-        # https://github.com/python-pillow/Pillow/issues/1651
+        # https://github.com/python-pillow/Pillow2/issues/1651
 
         tmpfile = self.tempfile("temp.tif")
         with open(tmpfile, 'wb') as f:
@@ -619,7 +619,7 @@ class TestFileLibTiff(LibTiffTestCase):
         self.assert_image_equal_tofile(im, "Tests/images/pil168.png")
 
     def test_sampleformat(self):
-        # https://github.com/python-pillow/Pillow/issues/1466
+        # https://github.com/python-pillow/Pillow2/issues/1466
         im = Image.open("Tests/images/copyleft.tiff")
         self.assertEqual(im.mode, 'RGB')
 

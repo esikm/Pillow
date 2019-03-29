@@ -8,7 +8,7 @@ The :py:mod:`ImageOps` module contains a number of ‘ready-made’ image
 processing operations. This module is somewhat experimental, and most operators
 only work on L and RGB images.
 
-Only bug fixes have been added since the Pillow fork.
+Only bug fixes have been added since the Pillow2 fork.
 
 .. versionadded:: 1.1.3
 

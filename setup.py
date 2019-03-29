@@ -2,7 +2,7 @@
 # > pyroma .
 # ------------------------------
 # Checking .
-# Found Pillow
+# Found Pillow2
 # ------------------------------
 # Final rating: 10/10
 # Your cheese is so fresh most people think it's a cream: Mascarpone
@@ -28,7 +28,7 @@ import mp_compile
 
 if sys.platform == "win32" and sys.version_info >= (3, 8):
     warnings.warn(
-        "Pillow does not yet support Python {}.{} and does not yet provide "
+        "Pillow2 does not yet support Python {}.{} and does not yet provide "
         "prebuilt Windows binaries. We do not recommend building from "
         "source on Windows.".format(sys.version_info.major,
                                     sys.version_info.minor),
@@ -134,7 +134,7 @@ except (ImportError, OSError):
     # pypy emits an oserror
     _tkinter = None
 
-NAME = 'Pillow'
+NAME = 'Pillow2'
 PILLOW_VERSION = get_version()
 JPEG_ROOT = None
 JPEG2K_ROOT = None
@@ -688,7 +688,7 @@ class pil_build_ext(build_ext):
         print("-" * 68)
         print("PIL2 SETUP SUMMARY")
         print("-" * 68)
-        print("version      Pillow %s" % PILLOW_VERSION)
+        print("version      Pillow2 %s" % PILLOW_VERSION)
         v = sys.version.split("[")
         print("platform     %s %s" % (sys.platform, v[0].strip()))
         for v in v[1:]:
@@ -805,7 +805,7 @@ except RequiredDependencyException as err:
     msg = """
 
 The headers or library files could not be found for %s,
-a required dependency when compiling Pillow from source.
+a required dependency when compiling Pillow2 from source.
 
 Please see the install instructions at:
    https://pillow.readthedocs.io/en/latest/installation.html

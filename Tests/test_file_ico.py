@@ -48,7 +48,7 @@ class TestFileIco(PillowTestCase):
                                 hopper().resize((32, 32), Image.LANCZOS))
 
     def test_save_256x256(self):
-        """Issue #2264 https://github.com/python-pillow/Pillow/issues/2264"""
+        """Issue #2264 https://github.com/python-pillow/Pillow2/issues/2264"""
         # Arrange
         im = Image.open("Tests/images/hopper_256x256.ico")
         outfile = self.tempfile("temp_saved_hopper_256x256.ico")
@@ -61,7 +61,7 @@ class TestFileIco(PillowTestCase):
         self.assertEqual(im_saved.size, (256, 256))
 
     def test_only_save_relevant_sizes(self):
-        """Issue #2266 https://github.com/python-pillow/Pillow/issues/2266
+        """Issue #2266 https://github.com/python-pillow/Pillow2/issues/2266
         Should save in 16x16, 24x24, 32x32, 48x48 sizes
         and not in 16x16, 24x24, 32x32, 48x48, 48x48, 48x48, 48x48 sizes
         """

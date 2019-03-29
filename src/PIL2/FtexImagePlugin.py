@@ -1,5 +1,5 @@
 """
-A Pillow loader for .ftc and .ftu files (FTEX)
+A Pillow2 loader for .ftc and .ftu files (FTEX)
 Jerome Leclanche <jerome@leclan.ch>
 
 The contents of this file are hereby released in the public domain (CC0)

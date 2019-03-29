@@ -1,6 +1,6 @@
 #
 # The Python Imaging Library
-# Pillow fork
+# Pillow2 fork
 #
 # Python implementation of the PixelAccess Object
 #

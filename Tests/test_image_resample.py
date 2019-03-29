@@ -7,7 +7,7 @@ from PIL2 import Image, ImageDraw
 
 
 class TestImagingResampleVulnerability(PillowTestCase):
-    # see https://github.com/python-pillow/Pillow/issues/1710
+    # see https://github.com/python-pillow/Pillow2/issues/1710
     def test_overflow(self):
         im = hopper('L')
         xsize = 0x100000008 // 4
@@ -364,7 +364,7 @@ class CoreResampleCoefficientsTest(PillowTestCase):
 
     def test_nonzero_coefficients(self):
         # regression test for the wrong coefficients calculation
-        # due to bug https://github.com/python-pillow/Pillow/issues/2161
+        # due to bug https://github.com/python-pillow/Pillow2/issues/2161
         im = Image.new('RGBA', (1280, 1280), (0x20, 0x40, 0x60, 0xff))
         histogram = im.resize((256, 256), Image.BICUBIC).histogram()
 

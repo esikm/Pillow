@@ -1,14 +1,14 @@
-"""Pillow (Fork of the Python Imaging Library)
+"""Pillow2 (Fork of the Python Imaging Library)
 
-Pillow is the friendly PIL2 fork by Alex Clark and Contributors.
-    https://github.com/python-pillow/Pillow/
+Pillow2 is the friendly PIL2 fork by Alex Clark and Contributors.
+    https://github.com/python-pillow/Pillow2/
 
-Pillow is forked from PIL2 1.1.7.
+Pillow2 is forked from PIL2 1.1.7.
 
 PIL2 is the Python Imaging Library by Fredrik Lundh and Contributors.
 Copyright (c) 1999 by Secret Labs AB.
 
-Use PIL2.__version__ for this Pillow version.
+Use PIL2.__version__ for this Pillow2 version.
 PIL2.VERSION is the old PIL2 version and will be removed in the future.
 
 ;-)
@@ -16,7 +16,7 @@ PIL2.VERSION is the old PIL2 version and will be removed in the future.
 
 from . import _version
 
-# VERSION is deprecated and will be removed in Pillow 6.0.0.
+# VERSION is deprecated and will be removed in Pillow2 6.0.0.
 # PILLOW_VERSION is deprecated and will be removed after that.
 # Use __version__ instead.
 VERSION = '1.1.7'  # PIL2 Version

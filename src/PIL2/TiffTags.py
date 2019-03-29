@@ -52,7 +52,7 @@ def lookup(tag):
 # The length here differs from the length in the tiff spec.  For
 # numbers, the tiff spec is for the number of fields returned. We
 # agree here.  For string-like types, the tiff spec uses the length of
-# field in bytes.  In Pillow, we are using the number of expected
+# field in bytes.  In Pillow2, we are using the number of expected
 # fields, in general 1 for string-like types.
 
 
@@ -445,5 +445,5 @@ LIBTIFF_CORE.remove(333)  # Ink Names either
 # Note to advanced users: There may be combinations of these
 # parameters and values that when added properly, will work and
 # produce valid tiff images that may work in your application.
-# It is safe to add and remove tags from this set from Pillow's point
+# It is safe to add and remove tags from this set from Pillow2's point
 # of view so long as you test against libtiff.

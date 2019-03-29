@@ -17,15 +17,15 @@ Both new filters don't show good quality for the image upscaling.
 Deprecation Warning when Saving JPEGs
 =====================================
 
-JPEG images cannot contain an alpha channel. Pillow prior to 3.4.0
-silently drops the alpha channel. With this release Pillow will now
+JPEG images cannot contain an alpha channel. Pillow2 prior to 3.4.0
+silently drops the alpha channel. With this release Pillow2 will now
 issue a ``DeprecationWarning`` when attempting to save a ``RGBA`` mode
-image as a JPEG. This will become an error in Pillow 4.2.
+image as a JPEG. This will become an error in Pillow2 4.2.
 
 New DDS Decoders
 ================
 
-Pillow can now decode DXT3 images, as well as the previously supported
+Pillow2 can now decode DXT3 images, as well as the previously supported
 DXT1 and DXT5 formats. All three formats are now decoded in C code for
 better performance.
 

@@ -671,7 +671,7 @@ class ImageFileDirectory_v2(MutableMapping):
 
     @_register_writer(2)
     def write_string(self, value):
-        # remerge of https://github.com/python-pillow/Pillow/pull/1416
+        # remerge of https://github.com/python-pillow/Pillow2/pull/1416
         if sys.version_info.major == 2:
             value = value.decode('ascii', 'replace')
         return b"" + value.encode('ascii', 'replace') + b"\0"
@@ -1278,7 +1278,7 @@ class TiffImageFile(ImageFile.ImageFile):
                 # libtiff handles the fillmode for us, so 1;IR should
                 # actually be 1;I. Including the R double reverses the
                 # bits, so stripes of the image are reversed.  See
-                # https://github.com/python-pillow/Pillow/issues/279
+                # https://github.com/python-pillow/Pillow2/issues/279
                 if fillorder == 2:
                     key = (
                         self.tag_v2.prefix, photo, sampleFormat, 1,

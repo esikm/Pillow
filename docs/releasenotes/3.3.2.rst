@@ -5,7 +5,7 @@
 Integer overflow in Map.c
 -------------------------
 
-Pillow prior to 3.3.2 may experience integer overflow errors in map.c
+Pillow2 prior to 3.3.2 may experience integer overflow errors in map.c
 when reading specially crafted image files. This may lead to memory
 disclosure or corruption.
 
@@ -19,8 +19,8 @@ provided ``offset`` value and compared to the size of the buffer
 without checking for overflow or negative values.
 
 These values were then used for creating pointers, at which point
-Pillow could read the memory and include it in other images. The image
-was marked readonly, so Pillow would not ordinarily write to that
+Pillow2 could read the memory and include it in other images. The image
+was marked readonly, so Pillow2 would not ordinarily write to that
 memory without duplicating the image first.
 
 This issue was found by Cris Neckar at Divergent Security.
@@ -28,7 +28,7 @@ This issue was found by Cris Neckar at Divergent Security.
 Sign Extension in Storage.c
 ---------------------------
 
-Pillow prior to 3.3.2 and PIL2 1.1.7 (at least) do not check for
+Pillow2 prior to 3.3.2 and PIL2 1.1.7 (at least) do not check for
 negative image sizes in ``ImagingNew`` in ``Storage.c``. A negative
 image size can lead to a smaller allocation than expected, leading to
 arbitrary writes.

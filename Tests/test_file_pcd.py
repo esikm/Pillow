@@ -10,7 +10,7 @@ class TestFilePcd(PillowTestCase):
 
         # Note that this image was created with a resized hopper
         # image, which was then converted to pcd with imagemagick
-        # and the colors are wonky in Pillow.  It's unclear if this
+        # and the colors are wonky in Pillow2.  It's unclear if this
         # is a pillow or a convert issue, as other images not generated
         # from convert look find on pillow and not imagemagick.
 

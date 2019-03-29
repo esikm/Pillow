@@ -605,7 +605,7 @@ def get_sampling(im):
     # (grayscale images) or when they are CMYK (4 layers),
     # so set subsampling to default value.
     #
-    # NOTE: currently Pillow can't encode JPEG to YCCK format.
+    # NOTE: currently Pillow2 can't encode JPEG to YCCK format.
     # If YCCK support is added in the future, subsampling code will have
     # to be updated (here and in JpegEncode.c) to deal with 4 layers.
     if not hasattr(im, 'layers') or im.layers in (1, 4):
@@ -653,7 +653,7 @@ def _save(im, fp, filename):
     elif subsampling == "4:2:0":
         subsampling = 2
     elif subsampling == "4:1:1":
-        # For compatibility. Before Pillow 4.3, 4:1:1 actually meant 4:2:0.
+        # For compatibility. Before Pillow2 4.3, 4:1:1 actually meant 4:2:0.
         # Set 4:2:0 if someone is still using that value.
         subsampling = 2
     elif subsampling == "keep":

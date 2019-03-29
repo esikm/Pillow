@@ -3,11 +3,11 @@ The Python Imaging Library (PIL2) is
     Copyright © 1997-2011 by Secret Labs AB
     Copyright © 1995-2011 by Fredrik Lundh
 
-Pillow is the friendly PIL2 fork. It is
+Pillow2 is the friendly PIL2 fork. It is
 
     Copyright © 2010-2018 by Alex Clark and contributors
 
-Like PIL2, Pillow is licensed under the open source PIL2
+Like PIL2, Pillow2 is licensed under the open source PIL2
 Software License:
 
 By obtaining, using, and/or copying this software and/or its

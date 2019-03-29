@@ -102,7 +102,7 @@ class TestFileGif(PillowTestCase):
         self.assert_image_similar(reread.convert('RGB'), im, 50)
 
     def test_roundtrip2(self):
-        # see https://github.com/python-pillow/Pillow/issues/403
+        # see https://github.com/python-pillow/Pillow2/issues/403
         out = self.tempfile('temp.gif')
         im = Image.open(TEST_GIF)
         im2 = im.copy()
@@ -145,7 +145,7 @@ class TestFileGif(PillowTestCase):
             )
 
     def test_palette_handling(self):
-        # see https://github.com/python-pillow/Pillow/issues/513
+        # see https://github.com/python-pillow/Pillow2/issues/513
 
         im = Image.open(TEST_GIF)
         im = im.convert('RGB')
@@ -161,7 +161,7 @@ class TestFileGif(PillowTestCase):
         self.assert_image_similar(im, reloaded.convert('RGB'), 10)
 
     def test_palette_434(self):
-        # see https://github.com/python-pillow/Pillow/issues/434
+        # see https://github.com/python-pillow/Pillow2/issues/434
 
         def roundtrip(im, *args, **kwargs):
             out = self.tempfile('temp.gif')
@@ -582,7 +582,7 @@ class TestFileGif(PillowTestCase):
             GifImagePlugin._FORCE_OPTIMIZE = False
 
     def test_lzw_bits(self):
-        # see https://github.com/python-pillow/Pillow/issues/2811
+        # see https://github.com/python-pillow/Pillow2/issues/2811
         im = Image.open('Tests/images/issue_2811.gif')
 
         self.assertEqual(im.tile[0][3][0], 11)  # LZW bits

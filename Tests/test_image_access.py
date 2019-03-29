@@ -109,7 +109,7 @@ class TestImageGetPixel(AccessTest):
             self.check(mode)
 
     def test_signedness(self):
-        # see https://github.com/python-pillow/Pillow/issues/452
+        # see https://github.com/python-pillow/Pillow2/issues/452
         # pixelaccess is using signed int* instead of uint*
         for mode in ("I;16", "I;16B"):
             self.check(mode, 2**15-1)
@@ -225,7 +225,7 @@ class TestCffi(AccessTest):
     def test_not_implemented(self):
         self.assertIsNone(PyAccess.new(hopper("BGR;15")))
 
-    # ref https://github.com/python-pillow/Pillow/pull/2009
+    # ref https://github.com/python-pillow/Pillow2/pull/2009
     def test_reference_counting(self):
         size = 10
 

@@ -33,7 +33,7 @@ class TestImageConvert(PillowTestCase):
         im = im.convert()
         self.assert_image(im, "RGB", im.size)
 
-    # ref https://github.com/python-pillow/Pillow/issues/274
+    # ref https://github.com/python-pillow/Pillow2/issues/274
 
     def _test_float_conversion(self, im):
         orig = im.getpixel((5, 5))
@@ -75,7 +75,7 @@ class TestImageConvert(PillowTestCase):
         self.assertEqual(im_rgb.info['transparency'], (0, 0, 0))  # undone
         im_rgb.save(f)
 
-    # ref https://github.com/python-pillow/Pillow/issues/664
+    # ref https://github.com/python-pillow/Pillow2/issues/664
 
     def test_trns_p_rgba(self):
         # Arrange
@@ -87,7 +87,7 @@ class TestImageConvert(PillowTestCase):
 
         # Assert
         self.assertNotIn('transparency', im_rgba.info)
-        # https://github.com/python-pillow/Pillow/issues/2702
+        # https://github.com/python-pillow/Pillow2/issues/2702
         self.assertEqual(im_rgba.palette, None)
 
     def test_trns_l(self):
@@ -137,7 +137,7 @@ class TestImageConvert(PillowTestCase):
         im_p.save(f)
 
     def test_gif_with_rgba_palette_to_p(self):
-        # See https://github.com/python-pillow/Pillow/issues/2433
+        # See https://github.com/python-pillow/Pillow2/issues/2433
         im = Image.open('Tests/images/hopper.gif')
         im.info['transparency'] = 255
         im.load()

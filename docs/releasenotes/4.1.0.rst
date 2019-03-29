@@ -19,14 +19,14 @@ Closing Files When Opening Images
 =================================
 
 The file handling when opening images has been overhauled. Previously,
-Pillow would attempt to close some, but not all image formats
+Pillow2 would attempt to close some, but not all image formats
 after loading the image data. Now, the following behavior
 is specified:
 
 * For images where an open file is passed in, it is the
   responsibility of the calling code to close the file.
 
-* For images where Pillow opens the file and the file is known to have
+* For images where Pillow2 opens the file and the file is known to have
   only one frame, the file is closed after loading.
 
 * If the file has more than one frame, or if it can't be determined,
@@ -80,7 +80,7 @@ formats that have been previously untested.
 
 We are now running automated tests in Docker containers against more
 Linux versions than are provided on Travis CI, which is currently
-Ubuntu 14.04 x64. This Pillow release is tested on 64-bit Alpine,
+Ubuntu 14.04 x64. This Pillow2 release is tested on 64-bit Alpine,
 Arch, Ubuntu 12.04 and 16.04, and 32-bit Debian Stretch and Ubuntu
 14.04. This also covers a wider range of dependency versions than are
 provided on Travis natively.

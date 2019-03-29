@@ -135,7 +135,7 @@ class TestFileJpeg(PillowTestCase):
         test(ImageFile.MAXBLOCK*4+3)  # large block
 
     def test_large_icc_meta(self):
-        # https://github.com/python-pillow/Pillow/issues/148
+        # https://github.com/python-pillow/Pillow2/issues/148
         # Sometimes the meta data on the icc_profile block is bigger than
         # Image.MAXBLOCK or the image size.
         im = Image.open('Tests/images/icc_profile_big.jpg')
@@ -157,7 +157,7 @@ class TestFileJpeg(PillowTestCase):
         self.assertGreaterEqual(im1.bytes, im3.bytes)
 
     def test_optimize_large_buffer(self):
-        # https://github.com/python-pillow/Pillow/issues/148
+        # https://github.com/python-pillow/Pillow2/issues/148
         f = self.tempfile('temp.jpg')
         # this requires ~ 1.5x Image.MAXBLOCK
         im = Image.new("RGB", (4096, 4096), 0xff3333)
@@ -193,7 +193,7 @@ class TestFileJpeg(PillowTestCase):
         im.save(f, format='JPEG', progressive=True, quality=94)
 
     def test_large_exif(self):
-        # https://github.com/python-pillow/Pillow/issues/148
+        # https://github.com/python-pillow/Pillow2/issues/148
         f = self.tempfile('temp.jpg')
         im = hopper()
         im.save(f, 'JPEG', quality=90, exif=b"1"*65532)
@@ -341,7 +341,7 @@ class TestFileJpeg(PillowTestCase):
         im.save(f, quality='keep')
 
     def test_junk_jpeg_header(self):
-        # https://github.com/python-pillow/Pillow/issues/630
+        # https://github.com/python-pillow/Pillow2/issues/630
         filename = "Tests/images/junk_jpeg_header.jpg"
         Image.open(filename)
 
@@ -507,7 +507,7 @@ class TestFileJpeg(PillowTestCase):
             img.save(out, "JPEG")
 
     def test_save_wrong_modes(self):
-        # ref https://github.com/python-pillow/Pillow/issues/2005
+        # ref https://github.com/python-pillow/Pillow2/issues/2005
         out = BytesIO()
         for mode in ['LA', 'La', 'RGBA', 'RGBa', 'P']:
             img = Image.new(mode, (20, 20))

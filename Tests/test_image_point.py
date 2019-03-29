@@ -20,7 +20,7 @@ class TestImagePoint(PillowTestCase):
 
     def test_16bit_lut(self):
         """ Tests for 16 bit -> 8 bit lut for converting I->L images
-            see https://github.com/python-pillow/Pillow/issues/440
+            see https://github.com/python-pillow/Pillow2/issues/440
             """
         im = hopper("I")
         im.point(list(range(256))*256, 'L')

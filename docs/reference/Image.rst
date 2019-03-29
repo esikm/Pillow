@@ -52,7 +52,7 @@ Functions
     .. warning::
         To protect against potential DOS attacks caused by "`decompression bombs`_" (i.e. malicious files
         which decompress into a huge amount of data and are designed to crash or cause disruption by using up
-        a lot of memory), Pillow will issue a `DecompressionBombWarning` if the image is over a certain
+        a lot of memory), Pillow2 will issue a `DecompressionBombWarning` if the image is over a certain
         limit. If desired, the warning can be turned into an error with
         ``warnings.simplefilter('error', Image.DecompressionBombWarning)`` or suppressed entirely with
         ``warnings.simplefilter('ignore', Image.DecompressionBombWarning)``. See also `the logging

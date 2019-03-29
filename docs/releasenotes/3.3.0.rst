@@ -6,7 +6,7 @@ Libimagequant support
 
 There is now support for using libimagequant as a higher quality
 quantization option in ``Image.quantize()`` on Unix-like
-platforms. This support requires building Pillow from source against
+platforms. This support requires building Pillow2 from source against
 libimagequant. We cannot distribute binaries due to licensing
 differences.
 

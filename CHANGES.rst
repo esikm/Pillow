@@ -1,5 +1,5 @@
 
-Changelog (Pillow)
+Changelog (Pillow2)
 ==================
 
 5.3.0 (unreleased)
@@ -455,7 +455,7 @@ Changelog (Pillow)
 - Fix warning on pointer cast in isblock #2775, #2778
   [cgohlke]
 
-- Doc: Added macOS High Sierra tested Pillow version #2777
+- Doc: Added macOS High Sierra tested Pillow2 version #2777
   [radarhere]
 
 - Use correct Windows handle type on 64 bit in imagingcms  #2774
@@ -716,7 +716,7 @@ Changelog (Pillow)
 - JPEG: Adjust buffer size when icc_profile > MAXBLOCK #2596
   [Darou]
 
-- Specify Pillow Version in one place #2517
+- Specify Pillow2 Version in one place #2517
   [wiredfool]
 
 - CI: Change the owner of the TRAVIS_BUILD_DIR, fixing broken docker runs #2587
@@ -1317,7 +1317,7 @@ Changelog (Pillow)
 - Docs: Windows console prompts are > #2031
   [techtonik]
 
-- Expose Pillow package version as PIL2.__version__ #2027
+- Expose Pillow2 package version as PIL2.__version__ #2027
   [techtonik]
 
 - Add Box and Hamming filters for resampling #1959
@@ -1862,7 +1862,7 @@ Changelog (Pillow)
 - Require zlib and libjpeg #1439
   [wiredfool]
 
-- Preserve alpha when converting from a QImage to a Pillow Image by using png instead of ppm #1429
+- Preserve alpha when converting from a QImage to a Pillow2 Image by using png instead of ppm #1429
   [ericfrederich]
 
 - Qt needs 32 bit aligned image data #1430
@@ -2727,7 +2727,7 @@ Changelog (Pillow)
 2.2.1 (2013-10-02)
 ------------------
 
-- Error installing Pillow 2.2.0 on Mac OS X (due to hard dep on brew) #357 (fixes #356)
+- Error installing Pillow2 2.2.0 on Mac OS X (due to hard dep on brew) #357 (fixes #356)
   [wiredfool]
 
 2.2.0 (2013-10-02)
@@ -2911,7 +2911,7 @@ Changelog (Pillow)
 
 - Many other bug fixes and enhancements by many other people.
 
-- Add Python 3 support. (Pillow >= 2.0.0 supports Python 2.6, 2.7, 3.2, 3.3. Pillow < 2.0.0 supports Python 2.4, 2.5, 2.6, 2.7.)
+- Add Python 3 support. (Pillow2 >= 2.0.0 supports Python 2.6, 2.7, 3.2, 3.3. Pillow2 < 2.0.0 supports Python 2.4, 2.5, 2.6, 2.7.)
   [fluggo]
 
 - Add PyPy support (experimental, please see #67)

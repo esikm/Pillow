@@ -2,7 +2,7 @@ Limits
 ------
 
 This page is documentation to the various fundamental size limits in
-the Pillow implementation.
+the Pillow2 implementation.
 
 Internal Limits
 ===============

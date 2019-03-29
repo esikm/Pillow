@@ -836,7 +836,7 @@ PyImaging_JpegDecoderNew(PyObject* self, PyObject* args)
         return NULL;
 
     // libjpeg-turbo supports different output formats.
-    // We are choosing Pillow's native format (3 color bytes + 1 padding)
+    // We are choosing Pillow2's native format (3 color bytes + 1 padding)
     // to avoid extra conversion in Unpack.c.
     if (ImagingJpegUseJCSExtensions() && strcmp(rawmode, "RGB") == 0) {
         rawmode = "RGBX";

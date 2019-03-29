@@ -54,7 +54,7 @@ A new method :py:meth:`PIL2.Image.Image.getchannel` has been added to
 return a single channel by index or name. For example,
 ``image.getchannel("A")`` will return alpha channel as separate image.
 ``getchannel`` should work up to 6 times faster than
-``image.split()[0]`` in previous Pillow versions.
+``image.split()[0]`` in previous Pillow2 versions.
 
 Box Blur
 ^^^^^^^^
@@ -93,22 +93,22 @@ Other Changes
 Loading 16-bit TIFF Images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pillow now can read 16-bit multichannel TIFF files including files
+Pillow2 now can read 16-bit multichannel TIFF files including files
 with alpha transparency. The image data is truncated to 8-bit
 precision.
 
-Pillow now can read 16-bit signed integer single channel TIFF
+Pillow2 now can read 16-bit signed integer single channel TIFF
 files. The image data is promoted to 32-bit for storage and
 processing.
 
 SGI Images
 ^^^^^^^^^^
 
-Pillow can now read and write uncompressed 16-bit multichannel SGI
+Pillow2 can now read and write uncompressed 16-bit multichannel SGI
 images to and from RGB and RGBA formats. The image data is truncated
 to 8-bit precision.
 
-Pillow can now read RLE encoded SGI images in both 8 and 16-bit
+Pillow2 can now read RLE encoded SGI images in both 8 and 16-bit
 precision.
 
 Performance

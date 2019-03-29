@@ -24,7 +24,7 @@
 # See the README file for information on usage and redistribution.
 #
 
-# VERSION is deprecated and will be removed in Pillow 6.0.0.
+# VERSION is deprecated and will be removed in Pillow2 6.0.0.
 # PILLOW_VERSION is deprecated and will be removed after that.
 # Use __version__ instead.
 from . import VERSION, PILLOW_VERSION, __version__, _plugins
@@ -56,7 +56,7 @@ MAX_IMAGE_PIXELS = int(1024 * 1024 * 1024 // 4 // 3)
 
 
 try:
-    # If the _imaging C module is not present, Pillow will not load.
+    # If the _imaging C module is not present, Pillow2 will not load.
     # Note that other modules should not refer to _imaging directly;
     # import Image and use the Image.core variable instead.
     # Also note that Image.core is not a publicly documented interface,
@@ -64,9 +64,9 @@ try:
     from . import _imaging as core
     if __version__ != getattr(core, 'PILLOW_VERSION', None):
         raise ImportError("The _imaging extension was built for another "
-                          "version of Pillow or PIL2:\n"
+                          "version of Pillow2 or PIL2:\n"
                           "Core version: %s\n"
-                          "Pillow version: %s" %
+                          "Pillow2 version: %s" %
                           (getattr(core, 'PILLOW_VERSION', None),
                            __version__))
 
@@ -89,7 +89,7 @@ except ImportError as v:
         # _PyUnicodeUCS2_AsLatin1String
         warnings.warn(
             "The _imaging extension was built for Python with UCS2 support; "
-            "recompile Pillow or build Python --without-wide-unicode. ",
+            "recompile Pillow2 or build Python --without-wide-unicode. ",
             RuntimeWarning
             )
     elif "Symbol not found: _PyUnicodeUCS4_" in str(v):
@@ -97,10 +97,10 @@ except ImportError as v:
         # _PyUnicodeUCS4_AsLatin1String
         warnings.warn(
             "The _imaging extension was built for Python with UCS4 support; "
-            "recompile Pillow or build Python --with-wide-unicode. ",
+            "recompile Pillow2 or build Python --with-wide-unicode. ",
             RuntimeWarning
             )
-    # Fail here anyway. Don't let people run with a mostly broken Pillow.
+    # Fail here anyway. Don't let people run with a mostly broken Pillow2.
     # see docs/porting.rst
     raise
 
@@ -678,7 +678,7 @@ class Image(object):
         new['version'] = 3
         if self.mode == '1':
             # Binary images need to be extended from bits to bytes
-            # See: https://github.com/python-pillow/Pillow/issues/350
+            # See: https://github.com/python-pillow/Pillow2/issues/350
             new['data'] = self.tobytes('raw', 'L')
         else:
             new['data'] = self.tobytes()
@@ -1075,7 +1075,7 @@ class Image(object):
         4-tuple defining the left, upper, right, and lower pixel
         coordinate. See :ref:`coordinate-system`.
 
-        Note: Prior to Pillow 3.4.0, this was a lazy operation.
+        Note: Prior to Pillow2 3.4.0, this was a lazy operation.
 
         :param box: The crop rectangle, as a (left, upper, right, lower)-tuple.
         :rtype: :py:class:`~PIL2.Image.Image`
@@ -2448,7 +2448,7 @@ def fromarray(obj, mode=None):
       im = Image.open('hopper.jpg')
       a = np.asarray(im)
 
-    Then this can be used to convert it to a Pillow image::
+    Then this can be used to convert it to a Pillow2 image::
 
       im = Image.fromarray(a)
 

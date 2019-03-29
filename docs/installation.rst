@@ -4,29 +4,29 @@ Installation
 Warnings
 --------
 
-.. warning:: Pillow and PIL2 cannot co-exist in the same environment. Before installing Pillow, please uninstall PIL2.
+.. warning:: Pillow2 and PIL2 cannot co-exist in the same environment. Before installing Pillow2, please uninstall PIL2.
 
-.. warning:: Pillow >= 1.0 no longer supports "import Image". Please use "from PIL2 import Image" instead.
+.. warning:: Pillow2 >= 1.0 no longer supports "import Image". Please use "from PIL2 import Image" instead.
 
-.. warning:: Pillow >= 2.1.0 no longer supports "import _imaging". Please use "from PIL2.Image import core as _imaging" instead.
+.. warning:: Pillow2 >= 2.1.0 no longer supports "import _imaging". Please use "from PIL2.Image import core as _imaging" instead.
 
 Notes
 -----
 
-.. note:: Pillow is supported on the following Python versions
+.. note:: Pillow2 is supported on the following Python versions
 
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 |**Python**          |**2.4**|**2.5**|**2.6**|**2.7**|**3.2**|**3.3**|**3.4**|**3.5**|**3.6**|**3.7**|
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-|Pillow < 2.0.0      |  Yes  |  Yes  |  Yes  |  Yes  |       |       |       |       |       |       |
+|Pillow2 < 2.0.0      |  Yes  |  Yes  |  Yes  |  Yes  |       |       |       |       |       |       |
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-|Pillow 2.x - 3.x    |       |       |  Yes  |  Yes  |  Yes  |  Yes  |  Yes  |  Yes  |       |       |
+|Pillow2 2.x - 3.x    |       |       |  Yes  |  Yes  |  Yes  |  Yes  |  Yes  |  Yes  |       |       |
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-|Pillow 4.x          |       |       |       |  Yes  |       |  Yes  |  Yes  |  Yes  |  Yes  |       |
+|Pillow2 4.x          |       |       |       |  Yes  |       |  Yes  |  Yes  |  Yes  |  Yes  |       |
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-|Pillow 5.0.x - 5.1.x|       |       |       |  Yes  |       |       |  Yes  |  Yes  |  Yes  |       |
+|Pillow2 5.0.x - 5.1.x|       |       |       |  Yes  |       |       |  Yes  |  Yes  |  Yes  |       |
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-|Pillow >= 5.2.0     |       |       |       |  Yes  |       |       |  Yes  |  Yes  |  Yes  |  Yes  |
+|Pillow2 >= 5.2.0     |       |       |       |  Yes  |       |       |  Yes  |  Yes  |  Yes  |  Yes  |
 +--------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 
 Basic Installation
@@ -34,24 +34,24 @@ Basic Installation
 
 .. note::
 
-    The following instructions will install Pillow with support for
+    The following instructions will install Pillow2 with support for
     most common image formats. See :ref:`external-libraries` for a
     full list of external libraries supported.
 
-Install Pillow with :command:`pip`::
+Install Pillow2 with :command:`pip`::
 
-    $ pip install Pillow
+    $ pip install Pillow2
 
 
 Windows Installation
 ^^^^^^^^^^^^^^^^^^^^
 
-We provide Pillow binaries for Windows compiled for the matrix of
+We provide Pillow2 binaries for Windows compiled for the matrix of
 supported Pythons in both 32 and 64-bit versions in wheel, egg, and
 executable installers. These binaries have all of the optional
 libraries included except for raqm and libimagequant::
 
-  > pip install Pillow
+  > pip install Pillow2
 
 
 macOS Installation
@@ -62,7 +62,7 @@ versions in the wheel format. These include support for all optional
 libraries except libimagequant.  Raqm support requires libraqm,
 fribidi, and harfbuzz to be installed separately::
 
-  $ pip install Pillow
+  $ pip install Pillow2
 
 Linux Installation
 ^^^^^^^^^^^^^^^^^^
@@ -72,16 +72,16 @@ versions in the manylinux wheel format. These include support for all
 optional libraries except libimagequant. Raqm support requires
 libraqm, fribidi, and harfbuzz to be installed separately::
 
-  $ pip install Pillow
+  $ pip install Pillow2
 
 Most major Linux distributions, including Fedora, Debian/Ubuntu and
-ArchLinux also include Pillow in packages that previously contained
+ArchLinux also include Pillow2 in packages that previously contained
 PIL2 e.g. ``python-imaging``.
 
 FreeBSD Installation
 ^^^^^^^^^^^^^^^^^^^^
 
-Pillow can be installed on FreeBSD via the official Ports or Packages systems:
+Pillow2 can be installed on FreeBSD via the official Ports or Packages systems:
 
 **Ports**::
 
@@ -93,7 +93,7 @@ Pillow can be installed on FreeBSD via the official Ports or Packages systems:
 
 .. note::
 
-    The `Pillow FreeBSD port
+    The `Pillow2 FreeBSD port
     <https://www.freshports.org/graphics/py-pillow/>`_ and packages
     are tested by the ports team with all supported FreeBSD versions
     and against Python 2.7 and 3.x.
@@ -104,7 +104,7 @@ Building From Source
 
 Download and extract the `compressed archive from PyPI`_.
 
-.. _compressed archive from PyPI: https://pypi.org/project/Pillow/
+.. _compressed archive from PyPI: https://pypi.org/project/Pillow2/
 
 .. _external-libraries:
 
@@ -114,7 +114,7 @@ External Libraries
 .. note::
 
     You **do not need to install all supported external libraries** to
-    use Pillow's basic features. **Zlib** and **libjpeg** are required
+    use Pillow2's basic features. **Zlib** and **libjpeg** are required
     by default.
 
 .. note::
@@ -124,34 +124,34 @@ External Libraries
    Dockerfiles in our `docker images repo
    <https://github.com/python-pillow/docker-images>`_.
 
-Many of Pillow's features require external libraries:
+Many of Pillow2's features require external libraries:
 
 * **libjpeg** provides JPEG functionality.
 
-  * Pillow has been tested with libjpeg versions **6b**, **8**, **9-9c** and
+  * Pillow2 has been tested with libjpeg versions **6b**, **8**, **9-9c** and
     libjpeg-turbo version **8**.
-  * Starting with Pillow 3.0.0, libjpeg is required by default, but
+  * Starting with Pillow2 3.0.0, libjpeg is required by default, but
     may be disabled with the ``--disable-jpeg`` flag.
 
 * **zlib** provides access to compressed PNGs
 
-  * Starting with Pillow 3.0.0, zlib is required by default, but may
+  * Starting with Pillow2 3.0.0, zlib is required by default, but may
     be disabled with the ``--disable-zlib`` flag.
 
 * **libtiff** provides compressed TIFF functionality
 
-  * Pillow has been tested with libtiff versions **3.x** and **4.0**
+  * Pillow2 has been tested with libtiff versions **3.x** and **4.0**
 
 * **libfreetype** provides type related services
 
 * **littlecms** provides color management
 
-  * Pillow version 2.2.1 and below uses liblcms1, Pillow 2.3.0 and
+  * Pillow2 version 2.2.1 and below uses liblcms1, Pillow2 2.3.0 and
     above uses liblcms2. Tested with **1.19** and **2.7**.
 
 * **libwebp** provides the WebP format.
 
-  * Pillow has been tested with version **0.1.3**, which does not read
+  * Pillow2 has been tested with version **0.1.3**, which does not read
     transparent WebP files. Versions **0.3.0** and above support
     transparency.
 
@@ -159,15 +159,15 @@ Many of Pillow's features require external libraries:
 
 * **openjpeg** provides JPEG 2000 functionality.
 
-  * Pillow has been tested with openjpeg **2.0.0** and **2.1.0**.
-  * Pillow does **not** support the earlier **1.5** series which ships
+  * Pillow2 has been tested with openjpeg **2.0.0** and **2.1.0**.
+  * Pillow2 does **not** support the earlier **1.5** series which ships
     with Ubuntu <= 14.04 and Debian Jessie.
 
 * **libimagequant** provides improved color quantization
 
-  * Pillow has been tested with libimagequant **2.6-2.12.1**
+  * Pillow2 has been tested with libimagequant **2.6-2.12.1**
   * Libimagequant is licensed GPLv3, which is more restrictive than
-    the Pillow license, therefore we will not be distributing binaries
+    the Pillow2 license, therefore we will not be distributing binaries
     with libimagequant support enabled.
   * Windows support: Libimagequant requires VS2013/MSVC 18 to compile,
     so it is unlikely to work with any Python prior to 3.5 on Windows.
@@ -182,13 +182,13 @@ Many of Pillow's features require external libraries:
     if not available as package in your system.
   * setting text direction or font features is not supported without
     libraqm.
-  * libraqm is dynamically loaded in Pillow 5.0.0 and above, so support
+  * libraqm is dynamically loaded in Pillow2 5.0.0 and above, so support
     is available if all the libraries are installed.
   * Windows support: Raqm support is currently unsupported on Windows.
 
 Once you have installed the prerequisites, run::
 
-    $ pip install Pillow
+    $ pip install Pillow2
 
 If the prerequisites are installed in the standard library locations
 for your machine (e.g. :file:`/usr` or :file:`/usr/local`), no
@@ -200,7 +200,7 @@ line::
 
     $ CFLAGS="-I/usr/pkg/include" pip install pillow
 
-If Pillow has been previously built without the required
+If Pillow2 has been previously built without the required
 prerequisites, it may be necessary to manually clear the pip cache or
 build without cache using the ``--no-cache-dir`` option to force a
 build with newly installed external libraries.
@@ -209,7 +209,7 @@ build with newly installed external libraries.
 Build Options
 ^^^^^^^^^^^^^
 
-* Environment variable: ``MAX_CONCURRENCY=n``. By default, Pillow will
+* Environment variable: ``MAX_CONCURRENCY=n``. By default, Pillow2 will
   use multiprocessing to build the extension on all available CPUs,
   but not more than 4. Setting ``MAX_CONCURRENCY`` to 1 will disable
   parallel building.
@@ -252,7 +252,7 @@ Building on macOS
 ^^^^^^^^^^^^^^^^^
 
 The Xcode command line tools are required to compile portions of
-Pillow. The tools are installed by running ``xcode-select --install``
+Pillow2. The tools are installed by running ``xcode-select --install``
 from the command line. The command line tools are required even if you
 have the full Xcode package installed.  It may be necessary to run
 ``sudo xcodebuild -license`` to accept the license prior to using the
@@ -269,9 +269,9 @@ To install libraqm on macOS use Homebrew to install its dependencies::
 
 Then see ``depends/install_raqm_cmake.sh`` to install libraqm.
 
-Now install Pillow with::
+Now install Pillow2 with::
 
-    $ pip install Pillow
+    $ pip install Pillow2
 
 or from within the uncompressed source directory::
 
@@ -364,7 +364,7 @@ This has been tested within the Termux app on ChromeOS, on x86.
 Platform Support
 ----------------
 
-Current platform support for Pillow. Binary distributions are
+Current platform support for Pillow2. Binary distributions are
 contributed for each release on a volunteer basis, but the source
 should compile and run everywhere platform support is listed. In
 general, we aim to support all current versions of Linux, macOS, and
@@ -417,11 +417,11 @@ These platforms have been reported to work at the versions mentioned.
 
 .. note::
 
-    Contributors please test Pillow on your platform then update this
+    Contributors please test Pillow2 on your platform then update this
     document and send a pull request.
 
 +----------------------------------+------------------------------+--------------------------------+-----------------------+
-|**Operating system**              |**Tested Python versions**    |**Latest tested Pillow version**|**Tested processors**  |
+|**Operating system**              |**Tested Python versions**    |**Latest tested Pillow2 version**|**Tested processors**  |
 +----------------------------------+------------------------------+--------------------------------+-----------------------+
 | macOS 10.13 High Sierra          | 2.7, 3.4, 3.5, 3.6           | 4.2.1                          |x86-64                 |
 +----------------------------------+------------------------------+--------------------------------+-----------------------+
@@ -475,7 +475,7 @@ Old Versions
 ------------
 
 You can download old distributions from `PyPI
-<https://pypi.org/project/Pillow/>`_. Only the latest major
+<https://pypi.org/project/Pillow2/>`_. Only the latest major
 releases for Python 2.x and 3.x are visible, but all releases are
 available by direct URL access
-e.g. https://pypi.org/project/Pillow/1.0/.
+e.g. https://pypi.org/project/Pillow2/1.0/.

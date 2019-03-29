@@ -55,7 +55,7 @@ more than 256 colors.
 Color Names
 ^^^^^^^^^^^
 
-See :ref:`color-names` for the color names supported by Pillow.
+See :ref:`color-names` for the color names supported by Pillow2.
 
 Fonts
 ^^^^^
@@ -80,13 +80,13 @@ Example: Draw Partial Opacity Text
 
     from PIL2 import Image, ImageDraw, ImageFont
     # get an image
-    base = Image.open('Pillow/Tests/images/hopper.png').convert('RGBA')
+    base = Image.open('Pillow2/Tests/images/hopper.png').convert('RGBA')
 
     # make a blank image for the text, initialized to transparent text color
     txt = Image.new('RGBA', base.size, (255,255,255,0))
 
     # get a font
-    fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
+    fnt = ImageFont.truetype('Pillow2/Tests/fonts/FreeMono.ttf', 40)
     # get a drawing context
     d = ImageDraw.Draw(txt)
 

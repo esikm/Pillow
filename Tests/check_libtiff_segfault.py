@@ -6,7 +6,7 @@ TEST_FILE = "Tests/images/libtiff_segfault.tif"
 
 class TestLibtiffSegfault(PillowTestCase):
     def test_segfault(self):
-        """ This test should not segfault. It will on Pillow <= 3.1.0 and
+        """ This test should not segfault. It will on Pillow2 <= 3.1.0 and
             libtiff >= 4.0.0
             """
 

@@ -345,7 +345,7 @@ pyCMScopyAux (cmsHTRANSFORM hTransform, Imaging imDst, const Imaging imSrc)
     dstLCMSFormat = cmsGetTransformOutputFormat(hTransform);
     srcLCMSFormat = cmsGetTransformInputFormat(hTransform);
 
-    // currently, all Pillow formats are chunky formats, but check it anyway
+    // currently, all Pillow2 formats are chunky formats, but check it anyway
     if (T_PLANAR(dstLCMSFormat) || T_PLANAR(srcLCMSFormat))
         return;
 

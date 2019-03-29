@@ -4,15 +4,15 @@
 
 ### What actually happened?
 
-### What are your OS, Python and Pillow versions?
+### What are your OS, Python and Pillow2 versions?
 
 * OS: 
 * Python: 
-* Pillow: 
+* Pillow2: 
 
 Please include **code** that reproduces the issue and whenever possible, an **image** that demonstrates the issue. Please upload images to GitHub, not to third-party file hosting sites. If necessary, add the image to a zip or tar archive.
 
-The best reproductions are self-contained scripts with minimal dependencies. If you are using a framework such as plone, Django, or buildout, try to replicate the issue just using Pillow. 
+The best reproductions are self-contained scripts with minimal dependencies. If you are using a framework such as plone, Django, or buildout, try to replicate the issue just using Pillow2. 
 
 ```python
 code goes here

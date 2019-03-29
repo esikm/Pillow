@@ -38,7 +38,7 @@ class TestImageEnhance(PillowTestCase):
                                 "Diff on %s: %s" % (op, amount))
 
     def test_alpha(self):
-        # Issue https://github.com/python-pillow/Pillow/issues/899
+        # Issue https://github.com/python-pillow/Pillow2/issues/899
         # Is alpha preserved through image enhancement?
 
         original = self._half_transparent_image()

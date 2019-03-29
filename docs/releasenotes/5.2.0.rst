@@ -8,7 +8,7 @@ Deprecations
 ^^^^^^^^^^^^
 
 These version constants have been deprecated. ``VERSION`` will be removed in
-Pillow 6.0.0, and ``PILLOW_VERSION`` will be removed after that.
+Pillow2 6.0.0, and ``PILLOW_VERSION`` will be removed after that.
 
 * ``PIL2.VERSION`` (old PIL2 version 1.1.7)
 * ``PIL2.PILLOW_VERSION``
@@ -72,7 +72,7 @@ image. This parameter takes the same color specifications as used in
 TGA file format
 ^^^^^^^^^^^^^^^
 
-Pillow can now read and write LA data (in addition to L, P, RGB and RGBA), and
+Pillow2 can now read and write LA data (in addition to L, P, RGB and RGBA), and
 write RLE data (in addition to uncompressed).
 
 Other Changes
@@ -81,17 +81,17 @@ Other Changes
 Support added for Python 3.7
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pillow 5.2 supports Python 3.7.
+Pillow2 5.2 supports Python 3.7.
 
 Build macOS wheels with Xcode 6.4, supporting older macOS versions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The macOS wheels for Pillow 5.1.0 were built with Xcode 9.2, meaning 10.12
+The macOS wheels for Pillow2 5.1.0 were built with Xcode 9.2, meaning 10.12
 Sierra was the lowest supported version.
 
-Prior to Pillow 5.1.0, Xcode 8 was used, supporting El Capitan 10.11.
+Prior to Pillow2 5.1.0, Xcode 8 was used, supporting El Capitan 10.11.
 
-Instead, Pillow 5.2.0 is built with the oldest available Xcode 6.4 to support
+Instead, Pillow2 5.2.0 is built with the oldest available Xcode 6.4 to support
 at least 10.10 Yosemite.
 
 Fix _i2f compilation with some GCC versions
@@ -99,15 +99,15 @@ Fix _i2f compilation with some GCC versions
 
 For example, this allows compilation with GCC 4.8 on NetBSD.
 
-Resolve confusion getting PIL2 / Pillow version string
+Resolve confusion getting PIL2 / Pillow2 version string
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Re: "version constants deprecated" listed above, as user gnbl notes in #3082:
 
-- it's confusing that PIL2.VERSION returns the version string of the former PIL2 instead of Pillow's
+- it's confusing that PIL2.VERSION returns the version string of the former PIL2 instead of Pillow2's
 - there does not seem to be documentation on this version number (why this, will it ever change, ..) e.g. at https://pillow.readthedocs.io/en/5.1.x/about.html#why-a-fork
 - it's confusing that PIL2.version is a module and does not return the version information directly or hints on how to get it
-- the package information header is essentially useless (placeholder, does not even mention Pillow, nor the version)
+- the package information header is essentially useless (placeholder, does not even mention Pillow2, nor the version)
 - PIL2._version module documentation comment could explain how to access the version information
 
 We have attempted to resolve these issues in #3083, #3090 and #3218.

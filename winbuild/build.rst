@@ -1,11 +1,11 @@
-Building Pillow on Windows
+Building Pillow2 on Windows
 ==========================
 
 .. note:: For most people, the `installation instructions
           <../docs/installation.rst#windows-installation>`_ should
           be sufficient.
 
-This page will describe a build setup to build Pillow against the
+This page will describe a build setup to build Pillow2 against the
 supported Python versions in 32 and 64-bit modes, using freely
 available Microsoft compilers.  This has been developed and tested
 against 64-bit Windows 7 Professional and Windows Server 2012
@@ -75,19 +75,19 @@ the compilers.
 UNDONE -- lcms fails.
 UNDONE -- webp, jpeg2k not recognized
 
-Building Pillow
+Building Pillow2
 ---------------
 
 Once the dependencies are built, run `python build.py --clean` to
-build and install Pillow in virtualenvs for each python
+build and install Pillow2 in virtualenvs for each python
 build. `build.py --dist` will build Windows installers instead of
 installing into virtualenvs.
 
 UNDONE -- suppressed output, what about failures.
 
-Testing Pillow
+Testing Pillow2
 --------------
 
-Build and install Pillow, then run `python test.py` from the
+Build and install Pillow2, then run `python test.py` from the
 `winbuild` directory.
 

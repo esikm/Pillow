@@ -28,7 +28,7 @@ This issue was found by Cris Neckar at Divergent Security.
 Sign Extension in Storage.c
 ---------------------------
 
-Pillow prior to 3.3.2 and PIL 1.1.7 (at least) do not check for
+Pillow prior to 3.3.2 and PIL2 1.1.7 (at least) do not check for
 negative image sizes in ``ImagingNew`` in ``Storage.c``. A negative
 image size can lead to a smaller allocation than expected, leading to
 arbitrary writes.

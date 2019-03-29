@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase
 
-from PIL import ImagePath, Image
-from PIL._util import py3
+from PIL2 import ImagePath, Image
+from PIL2._util import py3
 
 import array
 import struct

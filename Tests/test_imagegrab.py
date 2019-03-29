@@ -3,7 +3,7 @@ from helper import unittest, PillowTestCase, on_appveyor
 import sys
 
 try:
-    from PIL import ImageGrab
+    from PIL2 import ImageGrab
 
     class TestImageGrab(PillowTestCase):
 
@@ -26,7 +26,7 @@ class TestImageGrabImport(PillowTestCase):
 
         # Act
         try:
-            from PIL import ImageGrab
+            from PIL2 import ImageGrab
             ImageGrab.__name__  # dummy to prevent Pyflakes warning
         except Exception as e:
             exception = e

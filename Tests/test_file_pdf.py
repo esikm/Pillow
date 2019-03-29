@@ -1,5 +1,5 @@
 from helper import unittest, PillowTestCase, hopper
-from PIL import Image, PdfParser
+from PIL2 import Image, PdfParser
 import io
 import os
 import os.path

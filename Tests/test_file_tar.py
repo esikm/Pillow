@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, TarIO
+from PIL2 import Image, TarIO
 
 codecs = dir(Image.core)
 

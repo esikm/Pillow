@@ -1,9 +1,9 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, ImagePalette, features
+from PIL2 import Image, ImagePalette, features
 
 try:
-    from PIL import MicImagePlugin
+    from PIL2 import MicImagePlugin
 except ImportError:
     olefile_installed = False
 else:

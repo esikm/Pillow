@@ -3,7 +3,7 @@ from array import array
 
 import sys
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestImagePutData(PillowTestCase):

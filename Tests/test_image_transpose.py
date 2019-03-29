@@ -1,7 +1,7 @@
 import helper
 from helper import unittest, PillowTestCase
 
-from PIL.Image import (FLIP_LEFT_RIGHT, FLIP_TOP_BOTTOM, ROTATE_90, ROTATE_180,
+from PIL2.Image import (FLIP_LEFT_RIGHT, FLIP_TOP_BOTTOM, ROTATE_90, ROTATE_180,
                        ROTATE_270, TRANSPOSE, TRANSVERSE)
 
 

@@ -1,8 +1,8 @@
 # Tests potential DOS of IcnsImagePlugin with 0 length block.
-# Run from anywhere that PIL is importable.
+# Run from anywhere that PIL2 is importable.
 
-from PIL import Image
-from PIL._util import py3
+from PIL2 import Image
+from PIL2._util import py3
 from io import BytesIO
 
 if py3:

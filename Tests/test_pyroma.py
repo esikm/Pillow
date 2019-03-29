@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import __version__
+from PIL2 import __version__
 
 try:
     import pyroma

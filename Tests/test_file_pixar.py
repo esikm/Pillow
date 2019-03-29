@@ -1,6 +1,6 @@
 from helper import hopper, unittest, PillowTestCase
 
-from PIL import Image, PixarImagePlugin
+from PIL2 import Image, PixarImagePlugin
 
 TEST_FILE = "Tests/images/hopper.pxr"
 

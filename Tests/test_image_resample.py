@@ -3,7 +3,7 @@ from __future__ import division, print_function
 from contextlib import contextmanager
 
 from helper import unittest, PillowTestCase, hopper
-from PIL import Image, ImageDraw
+from PIL2 import Image, ImageDraw
 
 
 class TestImagingResampleVulnerability(PillowTestCase):

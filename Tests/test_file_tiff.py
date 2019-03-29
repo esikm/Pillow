@@ -5,9 +5,9 @@ import sys
 
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, TiffImagePlugin
-from PIL._util import py3
-from PIL.TiffImagePlugin import X_RESOLUTION, Y_RESOLUTION, RESOLUTION_UNIT
+from PIL2 import Image, TiffImagePlugin
+from PIL2._util import py3
+from PIL2.TiffImagePlugin import X_RESOLUTION, Y_RESOLUTION, RESOLUTION_UNIT
 
 logger = logging.getLogger(__name__)
 
@@ -334,13 +334,13 @@ class TestFileTiff(PillowTestCase):
         self.assertRaises(EOFError, im.seek, 1)
 
     def test__limit_rational_int(self):
-        from PIL.TiffImagePlugin import _limit_rational
+        from PIL2.TiffImagePlugin import _limit_rational
         value = 34
         ret = _limit_rational(value, 65536)
         self.assertEqual(ret, (34, 1))
 
     def test__limit_rational_float(self):
-        from PIL.TiffImagePlugin import _limit_rational
+        from PIL2.TiffImagePlugin import _limit_rational
         value = 22.3
         ret = _limit_rational(value, 65536)
         self.assertEqual(ret, (223, 10))

@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import _binary
+from PIL2 import _binary
 
 
 class TestBinary(PillowTestCase):

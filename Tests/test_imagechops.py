@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL import ImageChops
+from PIL2 import Image
+from PIL2 import ImageChops
 
 BLACK = (0, 0, 0)
 BROWN = (127, 64, 0)

@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper, on_appveyor
 
-from PIL import Image
+from PIL2 import Image
 import sys
 import os
 
@@ -10,7 +10,7 @@ if os.environ.get("PYTHONOPTIMIZE") == "2":
     cffi = None
 else:
     try:
-        from PIL import PyAccess
+        from PIL2 import PyAccess
         import cffi
     except ImportError:
         cffi = None
@@ -263,11 +263,11 @@ int main(int argc, char* argv[])
 #endif
 
     Py_InitializeEx(0);
-    Py_DECREF(PyImport_ImportModule("PIL.Image"));
+    Py_DECREF(PyImport_ImportModule("PIL2.Image"));
     Py_Finalize();
 
     Py_InitializeEx(0);
-    Py_DECREF(PyImport_ImportModule("PIL.Image"));
+    Py_DECREF(PyImport_ImportModule("PIL2.Image"));
     Py_Finalize();
 
 #if PY_MAJOR_VERSION >= 3

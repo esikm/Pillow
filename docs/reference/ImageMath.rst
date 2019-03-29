@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageMath
-.. py:currentmodule:: PIL.ImageMath
+.. py:module:: PIL2.ImageMath
+.. py:currentmodule:: PIL2.ImageMath
 
 :py:mod:`ImageMath` Module
 ==========================
@@ -8,12 +8,12 @@ The :py:mod:`ImageMath` module can be used to evaluate “image expressions”. 
 module provides a single eval function, which takes an expression string and
 one or more images.
 
-Example: Using the :py:mod:`~PIL.ImageMath` module
+Example: Using the :py:mod:`~PIL2.ImageMath` module
 --------------------------------------------------
 
 .. code-block:: python
 
-    from PIL import Image, ImageMath
+    from PIL2 import Image, ImageMath
 
     im1 = Image.open("image1.jpg")
     im2 = Image.open("image2.jpg")
@@ -25,9 +25,9 @@ Example: Using the :py:mod:`~PIL.ImageMath` module
 
     Evaluate expression in the given environment.
 
-    In the current version, :py:mod:`~PIL.ImageMath` only supports
+    In the current version, :py:mod:`~PIL2.ImageMath` only supports
     single-layer images. To process multi-band images, use the
-    :py:meth:`~PIL.Image.Image.split` method or :py:func:`~PIL.Image.merge`
+    :py:meth:`~PIL2.Image.Image.split` method or :py:func:`~PIL2.Image.merge`
     function.
 
     :param expression: A string which uses the standard Python expression
@@ -44,7 +44,7 @@ Expression syntax
 -----------------
 
 Expressions are standard Python expressions, but they’re evaluated in a
-non-standard environment. You can use PIL methods as usual, plus the following
+non-standard environment. You can use PIL2 methods as usual, plus the following
 set of operators and functions:
 
 Standard Operators
@@ -60,8 +60,8 @@ point values, as necessary. For example, if you add two 8-bit images, the
 result will be a 32-bit integer image. If you add a floating point constant to
 an 8-bit image, the result will be a 32-bit floating point image.
 
-You can force conversion using the :py:func:`~PIL.ImageMath.convert`,
-:py:func:`~PIL.ImageMath.float`, and :py:func:`~PIL.ImageMath.int` functions
+You can force conversion using the :py:func:`~PIL2.ImageMath.convert`,
+:py:func:`~PIL2.ImageMath.float`, and :py:func:`~PIL2.ImageMath.int` functions
 described below.
 
 Bitwise Operators

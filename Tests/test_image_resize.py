@@ -5,7 +5,7 @@ from itertools import permutations
 
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestImagingCoreResize(PillowTestCase):

@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import GribStubImagePlugin, Image
+from PIL2 import GribStubImagePlugin, Image
 
 TEST_FILE = "Tests/images/WAlaska.wind.7days.grb"
 

@@ -1,17 +1,17 @@
-.. py:module:: PIL.ImageGrab
-.. py:currentmodule:: PIL.ImageGrab
+.. py:module:: PIL2.ImageGrab
+.. py:currentmodule:: PIL2.ImageGrab
 
 :py:mod:`ImageGrab` Module (macOS and Windows only)
 ===================================================
 
 The :py:mod:`ImageGrab` module can be used to copy the contents of the screen
-or the clipboard to a PIL image memory.
+or the clipboard to a PIL2 image memory.
 
 .. note:: The current version works on macOS and Windows only.
 
 .. versionadded:: 1.1.3
 
-.. py:function:: PIL.ImageGrab.grab(bbox=None)
+.. py:function:: PIL2.ImageGrab.grab(bbox=None)
 
     Take a snapshot of the screen. The pixels inside the bounding box are
     returned as an "RGB" image on Windows or "RGBA" on macOS.
@@ -22,7 +22,7 @@ or the clipboard to a PIL image memory.
     :param bbox: What region to copy. Default is the entire screen.
     :return: An image
 
-.. py:function:: PIL.ImageGrab.grabclipboard()
+.. py:function:: PIL2.ImageGrab.grabclipboard()
 
     Take a snapshot of the clipboard image, if any.
 

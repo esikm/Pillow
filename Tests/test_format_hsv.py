@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL._util import py3
+from PIL2 import Image
+from PIL2._util import py3
 
 import colorsys
 import itertools

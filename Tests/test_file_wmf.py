@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL import WmfImagePlugin
+from PIL2 import Image
+from PIL2 import WmfImagePlugin
 
 
 class TestFileWmf(PillowTestCase):

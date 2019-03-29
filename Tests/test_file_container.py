@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL import ContainerIO
+from PIL2 import Image
+from PIL2 import ContainerIO
 
 TEST_FILE = "Tests/images/dummy.container"
 

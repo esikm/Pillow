@@ -1,11 +1,11 @@
-.. py:module:: PIL.Image
-.. py:currentmodule:: PIL.Image
+.. py:module:: PIL2.Image
+.. py:currentmodule:: PIL2.Image
 
 :py:mod:`Image` Module
 ======================
 
-The :py:mod:`~PIL.Image` module provides a class with the same name which is
-used to represent a PIL image. The module also provides a number of factory
+The :py:mod:`~PIL2.Image` module provides a class with the same name which is
+used to represent a PIL2 image. The module also provides a number of factory
 functions, including functions to load images from files, and to create new
 images.
 
@@ -21,7 +21,7 @@ Windows).
 
 .. code-block:: python
 
-    from PIL import Image
+    from PIL2 import Image
     im = Image.open("bride.jpg")
     im.rotate(45).show()
 
@@ -33,7 +33,7 @@ current directory preserving aspect ratios with 128x128 max resolution.
 
 .. code-block:: python
 
-    from PIL import Image
+    from PIL2 import Image
     import glob, os
 
     size = 128, 128
@@ -98,15 +98,15 @@ Registering plugins
 The Image Class
 ---------------
 
-.. autoclass:: PIL.Image.Image
+.. autoclass:: PIL2.Image.Image
 
-An instance of the :py:class:`~PIL.Image.Image` class has the following
+An instance of the :py:class:`~PIL2.Image.Image` class has the following
 methods. Unless otherwise stated, all methods return a new instance of the
-:py:class:`~PIL.Image.Image` class, holding the resulting image.
+:py:class:`~PIL2.Image.Image` class, holding the resulting image.
 
 
-.. automethod:: PIL.Image.Image.alpha_composite
-.. automethod:: PIL.Image.Image.convert
+.. automethod:: PIL2.Image.Image.alpha_composite
+.. automethod:: PIL2.Image.Image.convert
 
 The following example converts an RGB image (linearly calibrated according to
 ITU-R 709, using the D65 luminant) to the CIE XYZ color space:
@@ -119,47 +119,47 @@ ITU-R 709, using the D65 luminant) to the CIE XYZ color space:
         0.019334, 0.119193, 0.950227, 0 )
     out = im.convert("RGB", rgb2xyz)
 
-.. automethod:: PIL.Image.Image.copy
-.. automethod:: PIL.Image.Image.crop
-.. automethod:: PIL.Image.Image.draft
-.. automethod:: PIL.Image.Image.filter
-.. automethod:: PIL.Image.Image.getbands
-.. automethod:: PIL.Image.Image.getbbox
-.. automethod:: PIL.Image.Image.getcolors
-.. automethod:: PIL.Image.Image.getdata
-.. automethod:: PIL.Image.Image.getextrema
-.. automethod:: PIL.Image.Image.getpalette
-.. automethod:: PIL.Image.Image.getpixel
-.. automethod:: PIL.Image.Image.histogram
-.. automethod:: PIL.Image.Image.offset
-.. automethod:: PIL.Image.Image.paste
-.. automethod:: PIL.Image.Image.point
-.. automethod:: PIL.Image.Image.putalpha
-.. automethod:: PIL.Image.Image.putdata
-.. automethod:: PIL.Image.Image.putpalette
-.. automethod:: PIL.Image.Image.putpixel
-.. automethod:: PIL.Image.Image.quantize
-.. automethod:: PIL.Image.Image.resize
-.. automethod:: PIL.Image.Image.remap_palette
-.. automethod:: PIL.Image.Image.rotate
-.. automethod:: PIL.Image.Image.save
-.. automethod:: PIL.Image.Image.seek
-.. automethod:: PIL.Image.Image.show
-.. automethod:: PIL.Image.Image.split
-.. automethod:: PIL.Image.Image.getchannel
-.. automethod:: PIL.Image.Image.tell
-.. automethod:: PIL.Image.Image.thumbnail
-.. automethod:: PIL.Image.Image.tobitmap
-.. automethod:: PIL.Image.Image.tobytes
-.. automethod:: PIL.Image.Image.tostring
-.. automethod:: PIL.Image.Image.transform
-.. automethod:: PIL.Image.Image.transpose
-.. automethod:: PIL.Image.Image.verify
+.. automethod:: PIL2.Image.Image.copy
+.. automethod:: PIL2.Image.Image.crop
+.. automethod:: PIL2.Image.Image.draft
+.. automethod:: PIL2.Image.Image.filter
+.. automethod:: PIL2.Image.Image.getbands
+.. automethod:: PIL2.Image.Image.getbbox
+.. automethod:: PIL2.Image.Image.getcolors
+.. automethod:: PIL2.Image.Image.getdata
+.. automethod:: PIL2.Image.Image.getextrema
+.. automethod:: PIL2.Image.Image.getpalette
+.. automethod:: PIL2.Image.Image.getpixel
+.. automethod:: PIL2.Image.Image.histogram
+.. automethod:: PIL2.Image.Image.offset
+.. automethod:: PIL2.Image.Image.paste
+.. automethod:: PIL2.Image.Image.point
+.. automethod:: PIL2.Image.Image.putalpha
+.. automethod:: PIL2.Image.Image.putdata
+.. automethod:: PIL2.Image.Image.putpalette
+.. automethod:: PIL2.Image.Image.putpixel
+.. automethod:: PIL2.Image.Image.quantize
+.. automethod:: PIL2.Image.Image.resize
+.. automethod:: PIL2.Image.Image.remap_palette
+.. automethod:: PIL2.Image.Image.rotate
+.. automethod:: PIL2.Image.Image.save
+.. automethod:: PIL2.Image.Image.seek
+.. automethod:: PIL2.Image.Image.show
+.. automethod:: PIL2.Image.Image.split
+.. automethod:: PIL2.Image.Image.getchannel
+.. automethod:: PIL2.Image.Image.tell
+.. automethod:: PIL2.Image.Image.thumbnail
+.. automethod:: PIL2.Image.Image.tobitmap
+.. automethod:: PIL2.Image.Image.tobytes
+.. automethod:: PIL2.Image.Image.tostring
+.. automethod:: PIL2.Image.Image.transform
+.. automethod:: PIL2.Image.Image.transpose
+.. automethod:: PIL2.Image.Image.verify
 
-.. automethod:: PIL.Image.Image.fromstring
+.. automethod:: PIL2.Image.Image.fromstring
 
-.. automethod:: PIL.Image.Image.load
-.. automethod:: PIL.Image.Image.close
+.. automethod:: PIL2.Image.Image.load
+.. automethod:: PIL2.Image.Image.close
 
 Attributes
 ----------
@@ -211,10 +211,10 @@ Instances of the :py:class:`Image` class have the following attributes:
 .. py:attribute:: palette
 
     Colour palette table, if any. If mode is “P”, this should be an instance of
-    the :py:class:`~PIL.ImagePalette.ImagePalette` class. Otherwise, it should
+    the :py:class:`~PIL2.ImagePalette.ImagePalette` class. Otherwise, it should
     be set to ``None``.
 
-    :type: :py:class:`~PIL.ImagePalette.ImagePalette` or ``None``
+    :type: :py:class:`~PIL2.ImagePalette.ImagePalette` or ``None``
 
 .. py:attribute:: info
 

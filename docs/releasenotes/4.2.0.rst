@@ -14,7 +14,7 @@ platforms.
 New Optional Parameters
 =======================
 
-* :py:meth:`PIL.ImageDraw.floodfill` has a new optional parameter:
+* :py:meth:`PIL2.ImageDraw.floodfill` has a new optional parameter:
   threshold. This specifies a tolerance for the color to replace with
   the flood fill.
 
@@ -25,18 +25,18 @@ New Optional Parameters
 New DecompressionBomb Warning
 =============================
 
-:py:meth:`PIL.Image.Image.crop` now may raise a DecompressionBomb
+:py:meth:`PIL2.Image.Image.crop` now may raise a DecompressionBomb
 warning if the crop region enlarges the image over the threshold
-specified by :py:attr:`PIL.Image.MAX_PIXELS`.
+specified by :py:attr:`PIL2.Image.MAX_PIXELS`.
 
 Removed Deprecated Items
 ========================
 
 Several deprecated items have been removed.
 
-* The methods :py:meth:`PIL.ImageWin.Dib.fromstring`,
-  :py:meth:`PIL.ImageWin.Dib.tostring` and
-  :py:meth:`PIL.TiffImagePlugin.ImageFileDirectory_v2.as_dict` have
+* The methods :py:meth:`PIL2.ImageWin.Dib.fromstring`,
+  :py:meth:`PIL2.ImageWin.Dib.tostring` and
+  :py:meth:`PIL2.TiffImagePlugin.ImageFileDirectory_v2.as_dict` have
   been removed.
 
 * Before Pillow 4.2.0, attempting to save an RGBA image as JPEG would

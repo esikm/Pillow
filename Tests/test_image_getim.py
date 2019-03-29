@@ -1,5 +1,5 @@
 from helper import unittest, PillowTestCase, hopper
-from PIL._util import py3
+from PIL2._util import py3
 
 
 class TestImageGetIm(PillowTestCase):

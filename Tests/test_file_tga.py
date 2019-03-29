@@ -4,7 +4,7 @@ from itertools import product
 
 from helper import unittest, PillowTestCase
 
-from PIL import Image
+from PIL2 import Image
 
 
 _TGA_DIR = os.path.join("Tests", "images", "tga")

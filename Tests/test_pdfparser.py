@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL.PdfParser import IndirectObjectDef, IndirectReference, PdfBinary, \
+from PIL2.PdfParser import IndirectObjectDef, IndirectReference, PdfBinary, \
                           PdfDict, PdfFormatError, PdfName, PdfParser, \
                           PdfStream, decode_text, encode_text, pdf_repr
 

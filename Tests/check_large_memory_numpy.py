@@ -10,7 +10,7 @@ from helper import unittest, PillowTestCase
 # on any 32-bit machine, as well as any smallish things (like
 # Raspberry Pis).
 
-from PIL import Image
+from PIL2 import Image
 try:
     import numpy as np
 except ImportError:

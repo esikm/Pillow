@@ -11,7 +11,7 @@ be treated as a file-like object.
 The first four of these items are equivalent, the last is dangerous
 and may fail::
 
-    from PIL import Image
+    from PIL2 import Image
     import io
     import pathlib
 

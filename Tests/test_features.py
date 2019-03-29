@@ -1,9 +1,9 @@
 from helper import unittest, PillowTestCase
 
-from PIL import features
+from PIL2 import features
 
 try:
-    from PIL import _webp
+    from PIL2 import _webp
     HAVE_WEBP = True
 except:
     HAVE_WEBP = False

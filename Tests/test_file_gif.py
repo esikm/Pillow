@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper, netpbm_available
 
-from PIL import Image, ImagePalette, GifImagePlugin
+from PIL2 import Image, ImagePalette, GifImagePlugin
 
 from io import BytesIO
 

@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, SgiImagePlugin
+from PIL2 import Image, SgiImagePlugin
 
 
 class TestFileSgi(PillowTestCase):

@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, Jpeg2KImagePlugin
+from PIL2 import Image, Jpeg2KImagePlugin
 from io import BytesIO
 
 codecs = dir(Image.core)
@@ -54,7 +54,7 @@ class TestFileJpeg2k(PillowTestCase):
         self.assert_image_similar(im, test_card, 1.0e-3)
 
     # These two test pre-written JPEG 2000 files that were not written with
-    # PIL (they were made using Adobe Photoshop)
+    # PIL2 (they were made using Adobe Photoshop)
 
     def test_lossless(self):
         im = Image.open('Tests/images/test-card-lossless.jp2')
@@ -178,7 +178,7 @@ class TestFileJpeg2k(PillowTestCase):
 
     def test_parser_feed(self):
         # Arrange
-        from PIL import ImageFile
+        from PIL2 import ImageFile
         with open('Tests/images/test-card-lossless.jp2', 'rb') as f:
             data = f.read()
 

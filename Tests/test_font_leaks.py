@@ -1,7 +1,7 @@
 from __future__ import division
 from helper import unittest, PillowLeakTestCase
 import sys
-from PIL import Image, features, ImageDraw, ImageFont
+from PIL2 import Image, features, ImageDraw, ImageFont
 
 
 @unittest.skipIf(sys.platform.startswith('win32'), "requires Unix or macOS")

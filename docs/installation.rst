@@ -4,11 +4,11 @@ Installation
 Warnings
 --------
 
-.. warning:: Pillow and PIL cannot co-exist in the same environment. Before installing Pillow, please uninstall PIL.
+.. warning:: Pillow and PIL2 cannot co-exist in the same environment. Before installing Pillow, please uninstall PIL2.
 
-.. warning:: Pillow >= 1.0 no longer supports "import Image". Please use "from PIL import Image" instead.
+.. warning:: Pillow >= 1.0 no longer supports "import Image". Please use "from PIL2 import Image" instead.
 
-.. warning:: Pillow >= 2.1.0 no longer supports "import _imaging". Please use "from PIL.Image import core as _imaging" instead.
+.. warning:: Pillow >= 2.1.0 no longer supports "import _imaging". Please use "from PIL2.Image import core as _imaging" instead.
 
 Notes
 -----
@@ -76,7 +76,7 @@ libraqm, fribidi, and harfbuzz to be installed separately::
 
 Most major Linux distributions, including Fedora, Debian/Ubuntu and
 ArchLinux also include Pillow in packages that previously contained
-PIL e.g. ``python-imaging``.
+PIL2 e.g. ``python-imaging``.
 
 FreeBSD Installation
 ^^^^^^^^^^^^^^^^^^^^

@@ -1,6 +1,6 @@
 from helper import hopper, unittest, PillowTestCase
 
-from PIL import Image, XVThumbImagePlugin
+from PIL2 import Image, XVThumbImagePlugin
 
 TEST_FILE = "Tests/images/hopper.p7"
 

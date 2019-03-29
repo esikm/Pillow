@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestModeI16(PillowTestCase):
@@ -23,7 +23,7 @@ class TestModeI16(PillowTestCase):
                         (p1, im1.mode, xy, p2)))
 
     def test_basic(self):
-        # PIL 1.1 has limited support for 16-bit image data.  Check that
+        # PIL2 1.1 has limited support for 16-bit image data.  Check that
         # create/copy/transform and save works as expected.
 
         def basic(mode):

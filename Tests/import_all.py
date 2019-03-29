@@ -7,10 +7,10 @@ import traceback
 import sys
 sys.path.insert(0, ".")
 
-for file in glob.glob("src/PIL/*.py"):
+for file in glob.glob("src/PIL2/*.py"):
     module = os.path.basename(file)[:-3]
     try:
-        exec("from PIL import " + module)
+        exec("from PIL2 import " + module)
     except (ImportError, SyntaxError):
         print("===", "failed to import", module)
         traceback.print_exc()

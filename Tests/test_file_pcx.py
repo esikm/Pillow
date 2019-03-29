@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, ImageFile, PcxImagePlugin
+from PIL2 import Image, ImageFile, PcxImagePlugin
 
 
 class TestFilePcx(PillowTestCase):

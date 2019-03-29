@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import ImageWin
+from PIL2 import ImageWin
 import sys
 
 

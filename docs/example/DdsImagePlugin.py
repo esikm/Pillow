@@ -12,7 +12,7 @@ Full text of the CC0 license:
 
 import struct
 from io import BytesIO
-from PIL import Image, ImageFile
+from PIL2 import Image, ImageFile
 
 
 # Magic ("DDS ")

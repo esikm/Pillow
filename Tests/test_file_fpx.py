@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase
 
 try:
-    from PIL import FpxImagePlugin
+    from PIL2 import FpxImagePlugin
 except ImportError:
     olefile_installed = False
 else:

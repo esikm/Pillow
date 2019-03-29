@@ -1,5 +1,5 @@
 from __future__ import print_function
-from PIL import Image
+from PIL2 import Image
 
 import io
 import queue

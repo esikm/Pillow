@@ -1,5 +1,5 @@
 from helper import unittest, PillowLeakTestCase
-from PIL import Image, features
+from PIL2 import Image, features
 from io import BytesIO
 
 test_file = "Tests/images/hopper.webp"

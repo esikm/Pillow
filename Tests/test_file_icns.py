@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, IcnsImagePlugin
+from PIL2 import Image, IcnsImagePlugin
 
 import io
 import sys

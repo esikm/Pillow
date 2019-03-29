@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageEnhance
-.. py:currentmodule:: PIL.ImageEnhance
+.. py:module:: PIL2.ImageEnhance
+.. py:currentmodule:: PIL2.ImageEnhance
 
 :py:mod:`ImageEnhance` Module
 =============================
@@ -12,7 +12,7 @@ Example: Vary the sharpness of an image
 
 .. code-block:: python
 
-    from PIL import ImageEnhance
+    from PIL2 import ImageEnhance
 
     enhancer = ImageEnhance.Sharpness(image)
 
@@ -29,7 +29,7 @@ Classes
 All enhancement classes implement a common interface, containing a single
 method:
 
-.. py:class:: PIL.ImageEnhance._Enhance
+.. py:class:: PIL2.ImageEnhance._Enhance
     .. py:method:: enhance(factor)
 
         Returns an enhanced image.
@@ -40,7 +40,7 @@ method:
                        etc), and higher values more. There are no restrictions
                        on this value.
 
-.. py:class:: PIL.ImageEnhance.Color(image)
+.. py:class:: PIL2.ImageEnhance.Color(image)
 
     Adjust image color balance.
 
@@ -49,7 +49,7 @@ method:
     factor of 0.0 gives a black and white image. A factor of 1.0 gives
     the original image.
 
-.. py:class:: PIL.ImageEnhance.Contrast(image)
+.. py:class:: PIL2.ImageEnhance.Contrast(image)
 
     Adjust image contrast.
 
@@ -57,7 +57,7 @@ method:
     to the contrast control on a TV set. An enhancement factor of 0.0
     gives a solid grey image. A factor of 1.0 gives the original image.
 
-.. py:class:: PIL.ImageEnhance.Brightness(image)
+.. py:class:: PIL2.ImageEnhance.Brightness(image)
 
     Adjust image brightness.
 
@@ -65,7 +65,7 @@ method:
     enhancement factor of 0.0 gives a black image. A factor of 1.0 gives the
     original image.
 
-.. py:class:: PIL.ImageEnhance.Sharpness(image)
+.. py:class:: PIL2.ImageEnhance.Sharpness(image)
 
     Adjust image sharpness.
 

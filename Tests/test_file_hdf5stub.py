@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Hdf5StubImagePlugin, Image
+from PIL2 import Hdf5StubImagePlugin, Image
 
 TEST_FILE = "Tests/images/hdf5.h5"
 

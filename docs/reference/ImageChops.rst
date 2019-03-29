@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageChops
-.. py:currentmodule:: PIL.ImageChops
+.. py:module:: PIL2.ImageChops
+.. py:currentmodule:: PIL2.ImageChops
 
 :py:mod:`ImageChops` ("Channel Operations") Module
 ==================================================
@@ -22,25 +22,25 @@ image. Unless otherwise noted, the result of a channel operation is always
 clipped to the range 0 to MAX (which is 255 for all modes supported by the
 operations in this module).
 
-.. autofunction:: PIL.ImageChops.add
-.. autofunction:: PIL.ImageChops.add_modulo
-.. autofunction:: PIL.ImageChops.blend
-.. autofunction:: PIL.ImageChops.composite
-.. autofunction:: PIL.ImageChops.constant
-.. autofunction:: PIL.ImageChops.darker
-.. autofunction:: PIL.ImageChops.difference
-.. autofunction:: PIL.ImageChops.duplicate
-.. autofunction:: PIL.ImageChops.invert
-.. autofunction:: PIL.ImageChops.lighter
-.. autofunction:: PIL.ImageChops.logical_and
-.. autofunction:: PIL.ImageChops.logical_or
-.. autofunction:: PIL.ImageChops.multiply
-.. py:method:: PIL.ImageChops.offset(image, xoffset, yoffset=None)
+.. autofunction:: PIL2.ImageChops.add
+.. autofunction:: PIL2.ImageChops.add_modulo
+.. autofunction:: PIL2.ImageChops.blend
+.. autofunction:: PIL2.ImageChops.composite
+.. autofunction:: PIL2.ImageChops.constant
+.. autofunction:: PIL2.ImageChops.darker
+.. autofunction:: PIL2.ImageChops.difference
+.. autofunction:: PIL2.ImageChops.duplicate
+.. autofunction:: PIL2.ImageChops.invert
+.. autofunction:: PIL2.ImageChops.lighter
+.. autofunction:: PIL2.ImageChops.logical_and
+.. autofunction:: PIL2.ImageChops.logical_or
+.. autofunction:: PIL2.ImageChops.multiply
+.. py:method:: PIL2.ImageChops.offset(image, xoffset, yoffset=None)
 
     Returns a copy of the image where data has been offset by the given
     distances. Data wraps around the edges. If **yoffset** is omitted, it
     is assumed to be equal to **xoffset**.
 
-.. autofunction:: PIL.ImageChops.screen
-.. autofunction:: PIL.ImageChops.subtract
-.. autofunction:: PIL.ImageChops.subtract_modulo
+.. autofunction:: PIL2.ImageChops.screen
+.. autofunction:: PIL2.ImageChops.subtract
+.. autofunction:: PIL2.ImageChops.subtract_modulo

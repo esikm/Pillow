@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, FliImagePlugin
+from PIL2 import Image, FliImagePlugin
 
 # created as an export of a palette image from Gimp2.6
 # save as...-> hopper.fli, default options.

@@ -2,7 +2,7 @@ from helper import unittest, PillowTestCase, hopper
 
 # Not running this test by default. No DOS against Travis CI.
 
-from PIL import PyAccess
+from PIL2 import PyAccess
 
 import time
 

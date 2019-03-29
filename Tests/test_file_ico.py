@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
 import io
-from PIL import Image, IcoImagePlugin
+from PIL2 import Image, IcoImagePlugin
 
 TEST_ICO_FILE = "Tests/images/hopper.ico"
 

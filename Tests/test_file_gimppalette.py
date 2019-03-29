@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL.GimpPaletteFile import GimpPaletteFile
+from PIL2.GimpPaletteFile import GimpPaletteFile
 
 
 class TestImage(PillowTestCase):

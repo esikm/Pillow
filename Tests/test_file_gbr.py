@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, GbrImagePlugin
+from PIL2 import Image, GbrImagePlugin
 
 
 class TestFileGbr(PillowTestCase):

@@ -1,7 +1,7 @@
 import os.path
 
 from helper import PillowTestCase, hopper, unittest
-from PIL import Image, ImageDraw2, features
+from PIL2 import Image, ImageDraw2, features
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -41,7 +41,7 @@ class TestImageDraw(PillowTestCase):
         pen = ImageDraw2.Pen("blue", width=7)
         draw.line(list(range(10)), pen)
 
-        from PIL import ImageDraw
+        from PIL2 import ImageDraw
 
         draw, handler = ImageDraw.getdraw(im)
         pen = ImageDraw2.Pen("blue", width=7)

@@ -4,7 +4,7 @@ Plugin reference
 :mod:`BmpImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.BmpImagePlugin
+.. automodule:: PIL2.BmpImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -12,7 +12,7 @@ Plugin reference
 :mod:`BufrStubImagePlugin` Module
 ---------------------------------
 
-.. automodule:: PIL.BufrStubImagePlugin
+.. automodule:: PIL2.BufrStubImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -20,7 +20,7 @@ Plugin reference
 :mod:`CurImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.CurImagePlugin
+.. automodule:: PIL2.CurImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -28,7 +28,7 @@ Plugin reference
 :mod:`DcxImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.DcxImagePlugin
+.. automodule:: PIL2.DcxImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -36,7 +36,7 @@ Plugin reference
 :mod:`EpsImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.EpsImagePlugin
+.. automodule:: PIL2.EpsImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -44,7 +44,7 @@ Plugin reference
 :mod:`FitsStubImagePlugin` Module
 ---------------------------------
 
-.. automodule:: PIL.FitsStubImagePlugin
+.. automodule:: PIL2.FitsStubImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -52,7 +52,7 @@ Plugin reference
 :mod:`FliImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.FliImagePlugin
+.. automodule:: PIL2.FliImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -60,7 +60,7 @@ Plugin reference
 :mod:`FpxImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.FpxImagePlugin
+.. automodule:: PIL2.FpxImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -68,7 +68,7 @@ Plugin reference
 :mod:`GbrImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.GbrImagePlugin
+.. automodule:: PIL2.GbrImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -76,7 +76,7 @@ Plugin reference
 :mod:`GifImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.GifImagePlugin
+.. automodule:: PIL2.GifImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -84,7 +84,7 @@ Plugin reference
 :mod:`GribStubImagePlugin` Module
 ---------------------------------
 
-.. automodule:: PIL.GribStubImagePlugin
+.. automodule:: PIL2.GribStubImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -92,7 +92,7 @@ Plugin reference
 :mod:`Hdf5StubImagePlugin` Module
 ---------------------------------
 
-.. automodule:: PIL.Hdf5StubImagePlugin
+.. automodule:: PIL2.Hdf5StubImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -100,7 +100,7 @@ Plugin reference
 :mod:`IcnsImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.IcnsImagePlugin
+.. automodule:: PIL2.IcnsImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -108,7 +108,7 @@ Plugin reference
 :mod:`IcoImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.IcoImagePlugin
+.. automodule:: PIL2.IcoImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -116,7 +116,7 @@ Plugin reference
 :mod:`ImImagePlugin` Module
 ---------------------------
 
-.. automodule:: PIL.ImImagePlugin
+.. automodule:: PIL2.ImImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -124,7 +124,7 @@ Plugin reference
 :mod:`ImtImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.ImtImagePlugin
+.. automodule:: PIL2.ImtImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -132,7 +132,7 @@ Plugin reference
 :mod:`IptcImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.IptcImagePlugin
+.. automodule:: PIL2.IptcImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -140,7 +140,7 @@ Plugin reference
 :mod:`JpegImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.JpegImagePlugin
+.. automodule:: PIL2.JpegImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -148,7 +148,7 @@ Plugin reference
 :mod:`Jpeg2KImagePlugin` Module
 -------------------------------
 
-.. automodule:: PIL.Jpeg2KImagePlugin
+.. automodule:: PIL2.Jpeg2KImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -156,7 +156,7 @@ Plugin reference
 :mod:`McIdasImagePlugin` Module
 -------------------------------
 
-.. automodule:: PIL.McIdasImagePlugin
+.. automodule:: PIL2.McIdasImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -164,7 +164,7 @@ Plugin reference
 :mod:`MicImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.MicImagePlugin
+.. automodule:: PIL2.MicImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -172,7 +172,7 @@ Plugin reference
 :mod:`MpegImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.MpegImagePlugin
+.. automodule:: PIL2.MpegImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -180,7 +180,7 @@ Plugin reference
 :mod:`MspImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.MspImagePlugin
+.. automodule:: PIL2.MspImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -188,7 +188,7 @@ Plugin reference
 :mod:`PalmImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.PalmImagePlugin
+.. automodule:: PIL2.PalmImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -196,7 +196,7 @@ Plugin reference
 :mod:`PcdImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PcdImagePlugin
+.. automodule:: PIL2.PcdImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -204,7 +204,7 @@ Plugin reference
 :mod:`PcxImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PcxImagePlugin
+.. automodule:: PIL2.PcxImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -212,7 +212,7 @@ Plugin reference
 :mod:`PdfImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PdfImagePlugin
+.. automodule:: PIL2.PdfImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -220,7 +220,7 @@ Plugin reference
 :mod:`PixarImagePlugin` Module
 ------------------------------
 
-.. automodule:: PIL.PixarImagePlugin
+.. automodule:: PIL2.PixarImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -228,18 +228,18 @@ Plugin reference
 :mod:`PngImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PngImagePlugin
+.. automodule:: PIL2.PngImagePlugin
     :members: ChunkStream, PngImageFile, PngStream, getchunks, is_cid, putchunk
     :show-inheritance:
-.. autoclass:: PIL.PngImagePlugin.ChunkStream
+.. autoclass:: PIL2.PngImagePlugin.ChunkStream
     :members:
     :undoc-members:
     :show-inheritance:
-.. autoclass:: PIL.PngImagePlugin.PngImageFile
+.. autoclass:: PIL2.PngImagePlugin.PngImageFile
     :members:
     :undoc-members:
     :show-inheritance:
-.. autoclass:: PIL.PngImagePlugin.PngStream
+.. autoclass:: PIL2.PngImagePlugin.PngStream
     :members:
     :undoc-members:
     :show-inheritance:
@@ -248,7 +248,7 @@ Plugin reference
 :mod:`PpmImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PpmImagePlugin
+.. automodule:: PIL2.PpmImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -256,7 +256,7 @@ Plugin reference
 :mod:`PsdImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.PsdImagePlugin
+.. automodule:: PIL2.PsdImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -264,7 +264,7 @@ Plugin reference
 :mod:`SgiImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.SgiImagePlugin
+.. automodule:: PIL2.SgiImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -272,7 +272,7 @@ Plugin reference
 :mod:`SpiderImagePlugin` Module
 -------------------------------
 
-.. automodule:: PIL.SpiderImagePlugin
+.. automodule:: PIL2.SpiderImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -280,7 +280,7 @@ Plugin reference
 :mod:`SunImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.SunImagePlugin
+.. automodule:: PIL2.SunImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -288,7 +288,7 @@ Plugin reference
 :mod:`TgaImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.TgaImagePlugin
+.. automodule:: PIL2.TgaImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -296,7 +296,7 @@ Plugin reference
 :mod:`TiffImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.TiffImagePlugin
+.. automodule:: PIL2.TiffImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -304,7 +304,7 @@ Plugin reference
 :mod:`WebPImagePlugin` Module
 -----------------------------
 
-.. automodule:: PIL.WebPImagePlugin
+.. automodule:: PIL2.WebPImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -312,7 +312,7 @@ Plugin reference
 :mod:`WmfImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.WmfImagePlugin
+.. automodule:: PIL2.WmfImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -320,7 +320,7 @@ Plugin reference
 :mod:`XVThumbImagePlugin` Module
 --------------------------------
 
-.. automodule:: PIL.XVThumbImagePlugin
+.. automodule:: PIL2.XVThumbImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -328,7 +328,7 @@ Plugin reference
 :mod:`XbmImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.XbmImagePlugin
+.. automodule:: PIL2.XbmImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:
@@ -336,7 +336,7 @@ Plugin reference
 :mod:`XpmImagePlugin` Module
 ----------------------------
 
-.. automodule:: PIL.XpmImagePlugin
+.. automodule:: PIL2.XpmImagePlugin
     :members:
     :undoc-members:
     :show-inheritance:

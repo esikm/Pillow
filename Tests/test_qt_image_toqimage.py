@@ -1,11 +1,11 @@
 from helper import unittest, PillowTestCase, hopper
 from test_imageqt import PillowQtTestCase
 
-from PIL import ImageQt, Image
+from PIL2 import ImageQt, Image
 
 
 if ImageQt.qt_is_installed:
-    from PIL.ImageQt import QImage
+    from PIL2.ImageQt import QImage
 
     try:
         from PyQt5 import QtGui

@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageStat
-.. py:currentmodule:: PIL.ImageStat
+.. py:module:: PIL2.ImageStat
+.. py:currentmodule:: PIL2.ImageStat
 
 :py:mod:`ImageStat` Module
 ==========================
@@ -7,13 +7,13 @@
 The :py:mod:`ImageStat` module calculates global statistics for an image, or
 for a region of an image.
 
-.. py:class:: PIL.ImageStat.Stat(image_or_list, mask=None)
+.. py:class:: PIL2.ImageStat.Stat(image_or_list, mask=None)
 
     Calculate statistics for the given image. If a mask is included,
     only the regions covered by that mask are included in the
     statistics. You can also pass in a previously calculated histogram.
 
-    :param image: A PIL image, or a precalculated histogram.
+    :param image: A PIL2 image, or a precalculated histogram.
     :param mask: An optional mask.
 
     .. py:attribute:: extrema

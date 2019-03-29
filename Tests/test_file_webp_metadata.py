@@ -1,9 +1,9 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image
+from PIL2 import Image
 
 try:
-    from PIL import _webp
+    from PIL2 import _webp
     HAVE_WEBP = True
 except ImportError:
     HAVE_WEBP = False

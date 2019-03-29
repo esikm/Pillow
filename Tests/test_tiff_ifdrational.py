@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import TiffImagePlugin, Image
-from PIL.TiffImagePlugin import IFDRational
+from PIL2 import TiffImagePlugin, Image
+from PIL2.TiffImagePlugin import IFDRational
 
 from fractions import Fraction
 

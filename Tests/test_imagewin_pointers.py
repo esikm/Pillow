@@ -1,5 +1,5 @@
 from helper import unittest, PillowTestCase, hopper
-from PIL import Image, ImageWin
+from PIL2 import Image, ImageWin
 
 import sys
 import ctypes

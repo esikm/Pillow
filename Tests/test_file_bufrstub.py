@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import BufrStubImagePlugin, Image
+from PIL2 import BufrStubImagePlugin, Image
 
 TEST_FILE = "Tests/images/gfs.t06z.rassda.tm00.bufr_d"
 

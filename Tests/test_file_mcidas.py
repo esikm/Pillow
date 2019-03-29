@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, McIdasImagePlugin
+from PIL2 import Image, McIdasImagePlugin
 
 
 class TestFileMcIdas(PillowTestCase):

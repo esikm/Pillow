@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import GdImageFile
+from PIL2 import GdImageFile
 
 import io
 

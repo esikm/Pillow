@@ -1,8 +1,8 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL import ImageSequence
-from PIL import SpiderImagePlugin
+from PIL2 import Image
+from PIL2 import ImageSequence
+from PIL2 import SpiderImagePlugin
 
 import tempfile
 

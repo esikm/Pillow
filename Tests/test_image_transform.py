@@ -2,13 +2,13 @@ import math
 
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestImageTransform(PillowTestCase):
 
     def test_sanity(self):
-        from PIL import ImageTransform
+        from PIL2 import ImageTransform
 
         im = Image.new("L", (100, 100))
 

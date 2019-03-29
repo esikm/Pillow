@@ -1,9 +1,9 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
+from PIL2 import Image
 
 try:
-    from PIL import _webp
+    from PIL2 import _webp
 except ImportError:
     pass
     # Skip in setUp()
@@ -13,7 +13,7 @@ class TestFileWebpAlpha(PillowTestCase):
 
     def setUp(self):
         try:
-            from PIL import _webp
+            from PIL2 import _webp
         except ImportError:
             self.skipTest('WebP support not installed')
 

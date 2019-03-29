@@ -11,7 +11,7 @@ from helper import unittest, PillowTestCase
 # Raspberry Pis). It does succeed on a 3gb Ubuntu 12.04x64 VM on Python
 # 2.7 and 3.2.
 
-from PIL import Image
+from PIL2 import Image
 YDIM = 32769
 XDIM = 48000
 

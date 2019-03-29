@@ -1,5 +1,5 @@
 from helper import unittest, PillowTestCase
-from PIL import Image, PngImagePlugin, ImageFile
+from PIL2 import Image, PngImagePlugin, ImageFile
 from io import BytesIO
 import zlib
 

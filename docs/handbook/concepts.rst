@@ -17,7 +17,7 @@ operations act on each band separately, e.g., histograms.  It is often useful to
 think of each pixel as having one value per band.
 
 To get the number and names of bands in an image, use the
-:py:meth:`~PIL.Image.Image.getbands` method.
+:py:meth:`~PIL2.Image.Image.getbands` method.
 
 .. _concept-modes:
 
@@ -42,19 +42,19 @@ image. The current release supports the following standard modes:
     * ``I`` (32-bit signed integer pixels)
     * ``F`` (32-bit floating point pixels)
 
-PIL also provides limited support for a few special modes, including ``LA`` (L
+PIL2 also provides limited support for a few special modes, including ``LA`` (L
 with alpha), ``RGBX`` (true color with padding) and ``RGBa`` (true color with
-premultiplied alpha). However, PIL doesn’t support user-defined modes; if you
+premultiplied alpha). However, PIL2 doesn’t support user-defined modes; if you
 need to handle band combinations that are not listed above, use a sequence of
 Image objects.
 
-You can read the mode of an image through the :py:attr:`~PIL.Image.Image.mode`
+You can read the mode of an image through the :py:attr:`~PIL2.Image.Image.mode`
 attribute. This is a string containing one of the above values.
 
 Size
 ----
 
-You can read the image size through the :py:attr:`~PIL.Image.Image.size`
+You can read the image size through the :py:attr:`~PIL2.Image.Image.size`
 attribute. This is a 2-tuple, containing the horizontal and vertical size in
 pixels.
 
@@ -82,11 +82,11 @@ Info
 ----
 
 You can attach auxiliary information to an image using the
-:py:attr:`~PIL.Image.Image.info` attribute. This is a dictionary object.
+:py:attr:`~PIL2.Image.Image.info` attribute. This is a dictionary object.
 
 How such information is handled when loading and saving image files is up to
 the file format handler (see the chapter on :ref:`image-file-formats`). Most
-handlers add properties to the :py:attr:`~PIL.Image.Image.info` attribute when
+handlers add properties to the :py:attr:`~PIL2.Image.Image.info` attribute when
 loading an image, but ignore it when saving images.
 
 .. _concept-filters:
@@ -104,8 +104,8 @@ pixel, the Python Imaging Library provides different resampling *filters*.
     Each pixel of source image contributes to one pixel of the
     destination image with identical weights.
     For upscaling is equivalent of ``NEAREST``.
-    This filter can only be used with the :py:meth:`~PIL.Image.Image.resize`
-    and :py:meth:`~PIL.Image.Image.thumbnail` methods.
+    This filter can only be used with the :py:meth:`~PIL2.Image.Image.resize`
+    and :py:meth:`~PIL2.Image.Image.thumbnail` methods.
 
     .. versionadded:: 3.4.0
 
@@ -118,8 +118,8 @@ pixel, the Python Imaging Library provides different resampling *filters*.
 ``HAMMING``
     Produces a sharper image than ``BILINEAR``, doesn't have dislocations
     on local level like with ``BOX``.
-    This filter can only be used with the :py:meth:`~PIL.Image.Image.resize`
-    and :py:meth:`~PIL.Image.Image.thumbnail` methods.
+    This filter can only be used with the :py:meth:`~PIL2.Image.Image.resize`
+    and :py:meth:`~PIL2.Image.Image.thumbnail` methods.
 
     .. versionadded:: 3.4.0
 
@@ -132,8 +132,8 @@ pixel, the Python Imaging Library provides different resampling *filters*.
 ``LANCZOS``
     Calculate the output pixel value using a high-quality Lanczos filter (a
     truncated sinc) on all pixels that may contribute to the output value.
-    This filter can only be used with the :py:meth:`~PIL.Image.Image.resize`
-    and :py:meth:`~PIL.Image.Image.thumbnail` methods.
+    This filter can only be used with the :py:meth:`~PIL2.Image.Image.resize`
+    and :py:meth:`~PIL2.Image.Image.thumbnail` methods.
 
     .. versionadded:: 1.1.3
 

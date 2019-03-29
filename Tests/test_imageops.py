@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import ImageOps
-from PIL import Image
+from PIL2 import ImageOps
+from PIL2 import Image
 
 
 class TestImageOps(PillowTestCase):

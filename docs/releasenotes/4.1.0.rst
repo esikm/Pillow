@@ -10,9 +10,9 @@ Several deprecated items have been removed.
   resolution', 'resolution unit', and 'date time' has been
   removed. Underscores should be used instead.
 
-* The methods :py:meth:`PIL.ImageDraw.ImageDraw.setink`,
-  :py:meth:`PIL.ImageDraw.ImageDraw.setfill`, and
-  :py:meth:`PIL.ImageDraw.ImageDraw.setfont` have been removed.
+* The methods :py:meth:`PIL2.ImageDraw.ImageDraw.setink`,
+  :py:meth:`PIL2.ImageDraw.ImageDraw.setfill`, and
+  :py:meth:`PIL2.ImageDraw.ImageDraw.setfont` have been removed.
 
 
 Closing Files When Opening Images
@@ -42,11 +42,11 @@ is specified:
 Changes to GIF Handling When Saving
 ===================================
 
-The :py:class:`PIL.GifImagePlugin` code has been refactored to fix the flow when
+The :py:class:`PIL2.GifImagePlugin` code has been refactored to fix the flow when
 saving images. There are two external changes that arise from this:
 
-* An :py:class:`PIL.ImagePalette.ImagePalette` object is now accepted
-  as a specified palette argument in :py:meth:`PIL.Image.Image.save()`.
+* An :py:class:`PIL2.ImagePalette.ImagePalette` object is now accepted
+  as a specified palette argument in :py:meth:`PIL2.Image.Image.save()`.
 
 * The image to be saved is no longer modified in place by any of the
   operations of the save function. Previously it was modified when
@@ -58,7 +58,7 @@ multiple frame GIFs.
 New Method: Image.remap_palette
 ===============================
 
-The method :py:meth:`PIL.Image.Image.remap_palette()` has been
+The method :py:meth:`PIL2.Image.Image.remap_palette()` has been
 added. This method was hoisted from the GifImagePlugin code used to
 optimize the palette.
 

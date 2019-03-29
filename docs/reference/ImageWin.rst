@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageWin
-.. py:currentmodule:: PIL.ImageWin
+.. py:module:: PIL2.ImageWin
+.. py:currentmodule:: PIL2.ImageWin
 
 :py:mod:`ImageWin` Module (Windows-only)
 ========================================
@@ -13,7 +13,7 @@ Tkinter makes the window handle available via the winfo_id method:
 
 .. code-block:: python
 
-    from PIL import ImageWin
+    from PIL2 import ImageWin
 
     dib = ImageWin.Dib(...)
 
@@ -21,9 +21,9 @@ Tkinter makes the window handle available via the winfo_id method:
     dib.draw(hwnd, xy)
 
 
-.. autoclass:: PIL.ImageWin.Dib
+.. autoclass:: PIL2.ImageWin.Dib
     :members:
 
 
-.. autoclass:: PIL.ImageWin.HDC
-.. autoclass:: PIL.ImageWin.HWND
+.. autoclass:: PIL2.ImageWin.HDC
+.. autoclass:: PIL2.ImageWin.HWND

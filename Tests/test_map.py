@@ -1,7 +1,7 @@
 from helper import PillowTestCase, unittest
 import sys
 
-from PIL import Image
+from PIL2 import Image
 
 
 @unittest.skipIf(sys.platform.startswith('win32'),

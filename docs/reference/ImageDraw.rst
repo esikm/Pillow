@@ -1,15 +1,15 @@
-.. py:module:: PIL.ImageDraw
-.. py:currentmodule:: PIL.ImageDraw
+.. py:module:: PIL2.ImageDraw
+.. py:currentmodule:: PIL2.ImageDraw
 
 :py:mod:`ImageDraw` Module
 ==========================
 
 The :py:mod:`ImageDraw` module provides simple 2D graphics for
-:py:class:`~PIL.Image.Image` objects.  You can use this module to create new
+:py:class:`~PIL2.Image.Image` objects.  You can use this module to create new
 images, annotate or retouch existing images, and to generate graphics on the
 fly for web use.
 
-For a more advanced drawing library for PIL, see the `aggdraw module`_.
+For a more advanced drawing library for PIL2, see the `aggdraw module`_.
 
 .. _aggdraw module: https://github.com/pytroll/aggdraw
 
@@ -18,7 +18,7 @@ Example: Draw a gray cross over an image
 
 .. code-block:: python
 
-    from PIL import Image, ImageDraw
+    from PIL2 import Image, ImageDraw
 
     im = Image.open("hopper.jpg")
 
@@ -36,14 +36,14 @@ Concepts
 Coordinates
 ^^^^^^^^^^^
 
-The graphics interface uses the same coordinate system as PIL itself, with (0,
+The graphics interface uses the same coordinate system as PIL2 itself, with (0,
 0) in the upper left corner.
 
 Colors
 ^^^^^^
 
 To specify colors, you can use numbers or tuples just as you would use with
-:py:meth:`PIL.Image.new` or :py:meth:`PIL.Image.Image.putpixel`. For “1”,
+:py:meth:`PIL2.Image.new` or :py:meth:`PIL2.Image.Image.putpixel`. For “1”,
 “L”, and “I” images, use integers. For “RGB” images, use a 3-tuple containing
 integer values. For “F” images, use integer or floating point values.
 
@@ -60,25 +60,25 @@ See :ref:`color-names` for the color names supported by Pillow.
 Fonts
 ^^^^^
 
-PIL can use bitmap fonts or OpenType/TrueType fonts.
+PIL2 can use bitmap fonts or OpenType/TrueType fonts.
 
-Bitmap fonts are stored in PIL’s own format, where each font typically consists
+Bitmap fonts are stored in PIL2’s own format, where each font typically consists
 of two files, one named .pil and the other usually named .pbm. The former
 contains font metrics, the latter raster data.
 
-To load a bitmap font, use the load functions in the :py:mod:`~PIL.ImageFont`
+To load a bitmap font, use the load functions in the :py:mod:`~PIL2.ImageFont`
 module.
 
 To load a OpenType/TrueType font, use the truetype function in the
-:py:mod:`~PIL.ImageFont` module. Note that this function depends on third-party
-libraries, and may not available in all PIL builds.
+:py:mod:`~PIL2.ImageFont` module. Note that this function depends on third-party
+libraries, and may not available in all PIL2 builds.
 
 Example: Draw Partial Opacity Text
 ----------------------------------
 
 .. code-block:: python
 
-    from PIL import Image, ImageDraw, ImageFont
+    from PIL2 import Image, ImageDraw, ImageFont
     # get an image
     base = Image.open('Pillow/Tests/images/hopper.png').convert('RGBA')
 
@@ -104,7 +104,7 @@ Example: Draw Partial Opacity Text
 Functions
 ---------
 
-.. py:class:: PIL.ImageDraw.Draw(im, mode=None)
+.. py:class:: PIL2.ImageDraw.Draw(im, mode=None)
 
     Creates an object that can be used to draw in the given image.
 
@@ -120,13 +120,13 @@ Functions
 Methods
 -------
 
-.. py:method:: PIL.ImageDraw.ImageDraw.getfont()
+.. py:method:: PIL2.ImageDraw.ImageDraw.getfont()
 
     Get the current default font.
 
     :returns: An image font.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.arc(xy, start, end, fill=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.arc(xy, start, end, fill=None)
 
     Draws an arc (a portion of a circle outline) between the start and end
     angles, inside the given bounding box.
@@ -139,7 +139,7 @@ Methods
     :param end: Ending angle, in degrees.
     :param fill: Color to use for the arc.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.bitmap(xy, bitmap, fill=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.bitmap(xy, bitmap, fill=None)
 
     Draws a bitmap (mask) at the given position, using the current fill color
     for the non-zero portions. The bitmap should be a valid transparency mask
@@ -148,11 +148,11 @@ Methods
     This is equivalent to doing ``image.paste(xy, color, bitmap)``.
 
     To paste pixel data into an image, use the
-    :py:meth:`~PIL.Image.Image.paste` method on the image itself.
+    :py:meth:`~PIL2.Image.Image.paste` method on the image itself.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.chord(xy, start, end, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.chord(xy, start, end, fill=None, outline=None)
 
-    Same as :py:meth:`~PIL.ImageDraw.ImageDraw.arc`, but connects the end points
+    Same as :py:meth:`~PIL2.ImageDraw.ImageDraw.arc`, but connects the end points
     with a straight line.
 
     :param xy: Two points to define the bounding box. Sequence of
@@ -161,7 +161,7 @@ Methods
     :param outline: Color to use for the outline.
     :param fill: Color to use for the fill.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.ellipse(xy, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.ellipse(xy, fill=None, outline=None)
 
     Draws an ellipse inside the given bounding box.
 
@@ -171,7 +171,7 @@ Methods
     :param outline: Color to use for the outline.
     :param fill: Color to use for the fill.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.line(xy, fill=None, width=0, joint=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.line(xy, fill=None, width=0, joint=None)
 
     Draws a line between the coordinates in the **xy** list.
 
@@ -188,7 +188,7 @@ Methods
 
         .. versionadded:: 5.3.0
 
-.. py:method:: PIL.ImageDraw.ImageDraw.pieslice(xy, start, end, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.pieslice(xy, start, end, fill=None, outline=None)
 
     Same as arc, but also draws straight lines between the end points and the
     center of the bounding box.
@@ -202,7 +202,7 @@ Methods
     :param fill: Color to use for the fill.
     :param outline: Color to use for the outline.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.point(xy, fill=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.point(xy, fill=None)
 
     Draws points (individual pixels) at the given coordinates.
 
@@ -210,7 +210,7 @@ Methods
                numeric values like ``[x, y, x, y, ...]``.
     :param fill: Color to use for the point.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.polygon(xy, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.polygon(xy, fill=None, outline=None)
 
     Draws a polygon.
 
@@ -223,7 +223,7 @@ Methods
     :param outline: Color to use for the outline.
     :param fill: Color to use for the fill.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.rectangle(xy, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.rectangle(xy, fill=None, outline=None)
 
     Draws a rectangle.
 
@@ -233,13 +233,13 @@ Methods
     :param outline: Color to use for the outline.
     :param fill: Color to use for the fill.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.shape(shape, fill=None, outline=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.shape(shape, fill=None, outline=None)
 
     .. warning:: This method is experimental.
 
     Draw a shape.
 
-.. py:method:: PIL.ImageDraw.ImageDraw.text(xy, text, fill=None, font=None, anchor=None, spacing=0, align="left", direction=None, features=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.text(xy, text, fill=None, font=None, anchor=None, spacing=0, align="left", direction=None, features=None)
 
     Draws the string at the given position.
 
@@ -247,7 +247,7 @@ Methods
     :param text: Text to be drawn. If it contains any newline characters,
                  the text is passed on to multiline_text()
     :param fill: Color to use for the text.
-    :param font: An :py:class:`~PIL.ImageFont.ImageFont` instance.
+    :param font: An :py:class:`~PIL2.ImageFont.ImageFont` instance.
     :param spacing: If the text is passed on to multiline_text(),
                     the number of pixels between lines.
     :param align: If the text is passed on to multiline_text(),
@@ -271,14 +271,14 @@ Methods
 
                      .. versionadded:: 4.2.0
 
-.. py:method:: PIL.ImageDraw.ImageDraw.multiline_text(xy, text, fill=None, font=None, anchor=None, spacing=0, align="left", direction=None, features=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.multiline_text(xy, text, fill=None, font=None, anchor=None, spacing=0, align="left", direction=None, features=None)
 
     Draws the string at the given position.
 
     :param xy: Top left corner of the text.
     :param text: Text to be drawn.
     :param fill: Color to use for the text.
-    :param font: An :py:class:`~PIL.ImageFont.ImageFont` instance.
+    :param font: An :py:class:`~PIL2.ImageFont.ImageFont` instance.
     :param spacing: The number of pixels between lines.
     :param align: "left", "center" or "right".
     :param direction: Direction of the text. It can be 'rtl' (right to
@@ -300,13 +300,13 @@ Methods
 
                      .. versionadded:: 4.2.0
 
-.. py:method:: PIL.ImageDraw.ImageDraw.textsize(text, font=None, spacing=4, direction=None, features=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.textsize(text, font=None, spacing=4, direction=None, features=None)
 
     Return the size of the given string, in pixels.
 
     :param text: Text to be measured. If it contains any newline characters,
                  the text is passed on to multiline_textsize()
-    :param font: An :py:class:`~PIL.ImageFont.ImageFont` instance.
+    :param font: An :py:class:`~PIL2.ImageFont.ImageFont` instance.
     :param spacing: If the text is passed on to multiline_textsize(),
                     the number of pixels between lines.
     :param direction: Direction of the text. It can be 'rtl' (right to
@@ -328,12 +328,12 @@ Methods
 
                      .. versionadded:: 4.2.0
 
-.. py:method:: PIL.ImageDraw.ImageDraw.multiline_textsize(text, font=None, spacing=4, direction=None, features=None)
+.. py:method:: PIL2.ImageDraw.ImageDraw.multiline_textsize(text, font=None, spacing=4, direction=None, features=None)
 
     Return the size of the given string, in pixels.
 
     :param text: Text to be measured.
-    :param font: An :py:class:`~PIL.ImageFont.ImageFont` instance.
+    :param font: An :py:class:`~PIL2.ImageFont.ImageFont` instance.
     :param spacing: The number of pixels between lines.
     :param direction: Direction of the text. It can be 'rtl' (right to
                       left), 'ltr' (left to right) or 'ttb' (top to bottom).
@@ -354,18 +354,18 @@ Methods
 
                      .. versionadded:: 4.2.0
 
-.. py:method:: PIL.ImageDraw.getdraw(im=None, hints=None)
+.. py:method:: PIL2.ImageDraw.getdraw(im=None, hints=None)
 
     .. warning:: This method is experimental.
 
-    A more advanced 2D drawing interface for PIL images,
+    A more advanced 2D drawing interface for PIL2 images,
     based on the WCK interface.
 
     :param im: The image to draw in.
     :param hints: An optional list of hints.
     :returns: A (drawing context, drawing resource factory) tuple.
 
-.. py:method:: PIL.ImageDraw.floodfill(image, xy, value, border=None, thresh=0)
+.. py:method:: PIL2.ImageDraw.floodfill(image, xy, value, border=None, thresh=0)
 
     .. warning:: This method is experimental.
 

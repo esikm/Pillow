@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, CurImagePlugin
+from PIL2 import Image, CurImagePlugin
 
 TEST_FILE = "Tests/images/deerstalker.cur"
 

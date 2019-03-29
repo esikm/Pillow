@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, ImageFilter
+from PIL2 import Image, ImageFilter
 
 
 sample = Image.new("L", (7, 5))

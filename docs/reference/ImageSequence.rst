@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageSequence
-.. py:currentmodule:: PIL.ImageSequence
+.. py:module:: PIL2.ImageSequence
+.. py:currentmodule:: PIL2.ImageSequence
 
 :py:mod:`ImageSequence` Module
 ==============================
@@ -12,7 +12,7 @@ Extracting frames from an animation
 
 .. code-block:: python
 
-    from PIL import Image, ImageSequence
+    from PIL2 import Image, ImageSequence
 
     im = Image.open("animation.fli")
 
@@ -21,7 +21,7 @@ Extracting frames from an animation
         frame.save("frame%d.png" % index)
         index += 1
 
-The :py:class:`~PIL.ImageSequence.Iterator` class
+The :py:class:`~PIL2.ImageSequence.Iterator` class
 -------------------------------------------------
 
-.. autoclass:: PIL.ImageSequence.Iterator
+.. autoclass:: PIL2.ImageSequence.Iterator

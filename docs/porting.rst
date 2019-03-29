@@ -1,22 +1,22 @@
 Porting
 =======
 
-**Porting existing PIL-based code to Pillow**
+**Porting existing PIL2-based code to Pillow**
 
 Pillow is a functional drop-in replacement for the Python Imaging Library. To
-run your existing PIL-compatible code with Pillow, it needs to be modified to
-import the ``Image`` module from the ``PIL`` namespace *instead* of the
+run your existing PIL2-compatible code with Pillow, it needs to be modified to
+import the ``Image`` module from the ``PIL2`` namespace *instead* of the
 global namespace. Change this::
 
     import Image
 
 to this::
 
-    from PIL import Image
+    from PIL2 import Image
 
 The :py:mod:`_imaging` module has been moved. You can now import it like this::
 
-    from PIL.Image import core as _imaging
+    from PIL2.Image import core as _imaging
 
 The image plugin loading mechanism has changed. Pillow no longer
 automatically imports any file in the Python path with a name ending
@@ -25,5 +25,5 @@ manually.
 
 Pillow will raise an exception if the core extension can't be loaded
 for any reason, including a version mismatch between the Python and
-extension code. Previously PIL allowed Python only code to run if the
+extension code. Previously PIL2 allowed Python only code to run if the
 core extension was not available.

@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageOps
-.. py:currentmodule:: PIL.ImageOps
+.. py:module:: PIL2.ImageOps
+.. py:currentmodule:: PIL2.ImageOps
 
 :py:mod:`ImageOps` Module
 ==========================

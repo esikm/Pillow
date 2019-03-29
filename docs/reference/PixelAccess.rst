@@ -4,7 +4,7 @@
 =============================
 
 The PixelAccess class provides read and write access to
-:py:class:`PIL.Image` data at a pixel level.
+:py:class:`PIL2.Image` data at a pixel level.
 
 .. note::  Accessing individual pixels is fairly slow. If you are looping over all of the pixels in an image, there is likely a faster way using other parts of the Pillow API.
 
@@ -16,7 +16,7 @@ changes it.
 
 .. code-block:: python
 
-    from PIL import Image
+    from PIL2 import Image
     im = Image.open('hopper.jpg')
     px = im.load()
     print (px[4,4])

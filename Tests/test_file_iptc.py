@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, IptcImagePlugin
+from PIL2 import Image, IptcImagePlugin
 
 TEST_FILE = "Tests/images/iptc.jpg"
 

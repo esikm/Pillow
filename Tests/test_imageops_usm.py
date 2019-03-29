@@ -1,8 +1,8 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image
-from PIL import ImageOps
-from PIL import ImageFilter
+from PIL2 import Image
+from PIL2 import ImageOps
+from PIL2 import ImageFilter
 
 im = Image.open("Tests/images/hopper.ppm")
 snakes = Image.open("Tests/images/color_snakes.png")

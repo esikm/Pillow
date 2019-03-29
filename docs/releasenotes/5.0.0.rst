@@ -44,7 +44,7 @@ if they choose. Some library consumers have little interest in the format
 support and would like to keep dependencies to a minimum.
 
 Further, the vendored version was removed in Pillow 4.0.0 and replaced with a
-deprecation warning that PIL.OleFileIO would be removed in a future version.
+deprecation warning that PIL2.OleFileIO would be removed in a future version.
 This warning has been upgraded to an import error pending future removal.
 
 Check parameter on _save
@@ -94,7 +94,7 @@ Source Layout Changes
 ^^^^^^^^^^^^^^^^^^^^^
 
 The Pillow source is now stored within the ``src`` directory of the
-distribution. This prevents accidental imports of the PIL directory
+distribution. This prevents accidental imports of the PIL2 directory
 when running Python from the project directory.
 
 Setup.py Changes

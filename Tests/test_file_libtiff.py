@@ -1,7 +1,7 @@
 from __future__ import print_function
 from helper import unittest, PillowTestCase, hopper
-from PIL import features
-from PIL._util import py3
+from PIL2 import features
+from PIL2._util import py3
 
 from ctypes import c_float
 import io
@@ -9,7 +9,7 @@ import logging
 import itertools
 import os
 
-from PIL import Image, TiffImagePlugin, TiffTags
+from PIL2 import Image, TiffImagePlugin, TiffTags
 
 logger = logging.getLogger(__name__)
 
@@ -329,7 +329,7 @@ class TestFileLibTiff(LibTiffTestCase):
     def test_blur(self):
         # test case from irc, how to do blur on b/w image
         # and save to compressed tif.
-        from PIL import ImageFilter
+        from PIL2 import ImageFilter
         out = self.tempfile('temp.tif')
         im = Image.open('Tests/images/pport_g4.tif')
         im = im.convert('L')

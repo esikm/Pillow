@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, cached_property
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestImagingPaste(PillowTestCase):

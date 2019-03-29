@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import FitsStubImagePlugin, Image
+from PIL2 import FitsStubImagePlugin, Image
 
 TEST_FILE = "Tests/images/hopper.fits"
 

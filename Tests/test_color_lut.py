@@ -2,7 +2,7 @@ from __future__ import division
 
 from array import array
 
-from PIL import Image, ImageFilter
+from PIL2 import Image, ImageFilter
 from helper import unittest, PillowTestCase
 
 try:

@@ -1,5 +1,5 @@
 from helper import unittest, PillowTestCase
-from PIL import Image, ImageFont, ImageDraw
+from PIL2 import Image, ImageFont, ImageDraw
 
 
 image_font_installed = True

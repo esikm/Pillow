@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image
-from PIL import ImageColor
+from PIL2 import Image
+from PIL2 import ImageColor
 
 
 class TestImageColor(PillowTestCase):

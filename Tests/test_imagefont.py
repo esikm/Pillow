@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from helper import unittest, PillowTestCase
 
-from PIL import Image, ImageDraw, ImageFont, features
+from PIL2 import Image, ImageDraw, ImageFont, features
 from io import BytesIO
 import os
 import sys

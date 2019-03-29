@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import FontFile, BdfFontFile
+from PIL2 import FontFile, BdfFontFile
 
 filename = "Tests/images/courB08.bdf"
 

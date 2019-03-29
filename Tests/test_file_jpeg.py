@@ -5,9 +5,9 @@ from io import BytesIO
 import os
 import sys
 
-from PIL import Image
-from PIL import ImageFile
-from PIL import JpegImagePlugin
+from PIL2 import Image
+from PIL2 import ImageFile
+from PIL2 import JpegImagePlugin
 
 codecs = dir(Image.core)
 
@@ -238,7 +238,7 @@ class TestFileJpeg(PillowTestCase):
                          514: 4294967295,
                          271: 'Make',
                          272: 'XXX-XXX',
-                         305: 'PIL',
+                         305: 'PIL2',
                          42034: ((1, 1), (1, 1), (1, 1), (1, 1)),
                          42035: 'LensMake',
                          34856: b'\xaa\xaa\xaa\xaa\xaa\xaa',
@@ -469,7 +469,7 @@ class TestFileJpeg(PillowTestCase):
 
     def test_no_duplicate_0x1001_tag(self):
         # Arrange
-        from PIL import ExifTags
+        from PIL2 import ExifTags
         tag_ids = {v: k for k, v in ExifTags.TAGS.items()}
 
         # Assert

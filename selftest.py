@@ -5,8 +5,8 @@ from __future__ import print_function
 import sys
 import os
 
-from PIL import Image, ImageDraw, ImageFilter, ImageMath
-from PIL import features
+from PIL2 import Image, ImageDraw, ImageFilter, ImageMath
+from PIL2 import features
 
 try:
     Image.core.ping
@@ -24,7 +24,7 @@ def _info(im):
 
 def testimage():
     """
-    PIL lets you create in-memory images with various pixel types:
+    PIL2 lets you create in-memory images with various pixel types:
 
     >>> im = Image.new("1", (128, 128)) # monochrome
     >>> _info(im)
@@ -53,7 +53,7 @@ def testimage():
     ...  print(v)
     ('JPEG', 'RGB', (128, 128))
 
-    PIL doesn't actually load the image data until it's needed,
+    PIL2 doesn't actually load the image data until it's needed,
     or you call the "load" method:
 
     >>> im = Image.open("Tests/images/hopper.ppm")
@@ -146,7 +146,7 @@ def testimage():
     >>> im.mode, im.size
     ('F', (128, 128))
 
-    PIL can do many other things, but I'll leave that for another
+    PIL2 can do many other things, but I'll leave that for another
     day.  If you're curious, check the handbook, available from:
 
         http://www.pythonware.com
@@ -167,7 +167,7 @@ if __name__ == "__main__":
     print("Binary modules loaded from", os.path.dirname(Image.core.__file__))
     print("-"*68)
     for name, feature in [
-        ("pil", "PIL CORE"),
+        ("pil", "PIL2 CORE"),
         ("tkinter", "TKINTER"),
         ("freetype2", "FREETYPE2"),
         ("littlecms2", "LITTLECMS2"),

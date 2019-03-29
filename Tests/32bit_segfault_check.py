@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from PIL import Image
+from PIL2 import Image
 import sys
 
 

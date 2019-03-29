@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 from test_imageqt import PillowQtTestCase
 
-from PIL import ImageQt, Image
+from PIL2 import ImageQt, Image
 
 
 class TestFromQImage(PillowQtTestCase, PillowTestCase):
@@ -13,9 +13,9 @@ class TestFromQImage(PillowQtTestCase, PillowTestCase):
     ]
 
     def roundtrip(self, expected):
-        # PIL -> Qt
+        # PIL2 -> Qt
         intermediate = expected.toqimage()
-        # Qt -> PIL
+        # Qt -> PIL2
         result = ImageQt.fromqimage(intermediate)
 
         if intermediate.hasAlphaChannel():

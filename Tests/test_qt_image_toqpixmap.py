@@ -1,10 +1,10 @@
 from helper import unittest, PillowTestCase, hopper
 from test_imageqt import PillowQPixmapTestCase
 
-from PIL import ImageQt
+from PIL2 import ImageQt
 
 if ImageQt.qt_is_installed:
-    from PIL.ImageQt import QPixmap
+    from PIL2.ImageQt import QPixmap
 
 
 class TestToQPixmap(PillowQPixmapTestCase, PillowTestCase):

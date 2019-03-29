@@ -122,7 +122,7 @@ def _read(file):
 
 
 def get_version():
-    version_file = 'src/PIL/_version.py'
+    version_file = 'src/PIL2/_version.py'
     with open(version_file, 'r') as f:
         exec(compile(f.read(), version_file, 'exec'))
     return locals()['__version__']
@@ -628,7 +628,7 @@ class pil_build_ext(build_ext):
         else:
             defs.append(("PILLOW_VERSION", '"%s"' % PILLOW_VERSION))
 
-        exts = [(Extension("PIL._imaging",
+        exts = [(Extension("PIL2._imaging",
                            files,
                            libraries=libs,
                            define_macros=defs))]
@@ -640,14 +640,14 @@ class pil_build_ext(build_ext):
             libs = ["freetype"]
             defs = []
             exts.append(Extension(
-                "PIL._imagingft", ["src/_imagingft.c"], libraries=libs,
+                "PIL2._imagingft", ["src/_imagingft.c"], libraries=libs,
                 define_macros=defs))
 
         if feature.lcms:
             extra = []
             if sys.platform == "win32":
                 extra.extend(["user32", "gdi32"])
-            exts.append(Extension("PIL._imagingcms",
+            exts.append(Extension("PIL2._imagingcms",
                                   ["src/_imagingcms.c"],
                                   libraries=[feature.lcms] + extra))
 
@@ -660,19 +660,19 @@ class pil_build_ext(build_ext):
                 libs.append(feature.webpmux)
                 libs.append(feature.webpmux.replace('pmux', 'pdemux'))
 
-            exts.append(Extension("PIL._webp",
+            exts.append(Extension("PIL2._webp",
                                   ["src/_webp.c"],
                                   libraries=libs,
                                   define_macros=defs))
 
         tk_libs = ['psapi'] if sys.platform == 'win32' else []
-        exts.append(Extension("PIL._imagingtk",
+        exts.append(Extension("PIL2._imagingtk",
                               ["src/_imagingtk.c", "src/Tk/tkImaging.c"],
                               include_dirs=['src/Tk'],
                               libraries=tk_libs))
 
-        exts.append(Extension("PIL._imagingmath", ["src/_imagingmath.c"]))
-        exts.append(Extension("PIL._imagingmorph", ["src/_imagingmorph.c"]))
+        exts.append(Extension("PIL2._imagingmath", ["src/_imagingmath.c"]))
+        exts.append(Extension("PIL2._imagingmorph", ["src/_imagingmorph.c"]))
 
         self.extensions[:] = exts
 
@@ -686,7 +686,7 @@ class pil_build_ext(build_ext):
     def summary_report(self, feature):
 
         print("-" * 68)
-        print("PIL SETUP SUMMARY")
+        print("PIL2 SETUP SUMMARY")
         print("-" * 68)
         print("version      Pillow %s" % PILLOW_VERSION)
         v = sys.version.split("[")
@@ -792,14 +792,14 @@ try:
           ],
           python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*",
           cmdclass={"build_ext": pil_build_ext},
-          ext_modules=[Extension("PIL._imaging", ["_imaging.c"])],
+          ext_modules=[Extension("PIL2._imaging", ["_imaging.c"])],
           include_package_data=True,
           setup_requires=pytest_runner,
           tests_require=['pytest'],
-          packages=["PIL"],
+          packages=["PIL2"],
           package_dir={'': 'src'},
           keywords=["Imaging", ],
-          license='Standard PIL License',
+          license='Standard PIL2 License',
           zip_safe=not (debug_build() or PLATFORM_MINGW), )
 except RequiredDependencyException as err:
     msg = """

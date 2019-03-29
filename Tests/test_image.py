@@ -1,7 +1,7 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
-from PIL._util import py3
+from PIL2 import Image
+from PIL2._util import py3
 import os
 
 
@@ -30,13 +30,13 @@ class TestImage(PillowTestCase):
 
         im = Image.new("L", (100, 100))
         self.assertEqual(
-            repr(im)[:45], "<PIL.Image.Image image mode=L size=100x100 at")
+            repr(im)[:45], "<PIL2.Image.Image image mode=L size=100x100 at")
         self.assertEqual(im.mode, "L")
         self.assertEqual(im.size, (100, 100))
 
         im = Image.new("RGB", (100, 100))
         self.assertEqual(
-            repr(im)[:45], "<PIL.Image.Image image mode=RGB size=100x100 ")
+            repr(im)[:45], "<PIL2.Image.Image image mode=RGB size=100x100 ")
         self.assertEqual(im.mode, "RGB")
         self.assertEqual(im.size, (100, 100))
 
@@ -74,7 +74,7 @@ class TestImage(PillowTestCase):
 
     @unittest.skipUnless(Image.HAS_PATHLIB, "requires pathlib/pathlib2")
     def test_pathlib(self):
-        from PIL.Image import Path
+        from PIL2.Image import Path
         im = Image.open(Path("Tests/images/hopper.jpg"))
         self.assertEqual(im.mode, "RGB")
         self.assertEqual(im.size, (128, 128))
@@ -215,7 +215,7 @@ class TestImage(PillowTestCase):
     def test_alpha_composite(self):
         # https://stackoverflow.com/questions/3374878
         # Arrange
-        from PIL import ImageDraw
+        from PIL2 import ImageDraw
 
         expected_colors = sorted([
             (1122, (128, 127, 0, 255)),
@@ -498,7 +498,7 @@ class TestImage(PillowTestCase):
         self.assertRaises(ValueError, im.remap_palette, None)
 
     def test__new(self):
-        from PIL import ImagePalette
+        from PIL2 import ImagePalette
 
         im = hopper('RGB')
         im_p = hopper('P')

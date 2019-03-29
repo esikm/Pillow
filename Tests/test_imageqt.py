@@ -1,10 +1,10 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import ImageQt
+from PIL2 import ImageQt
 
 
 if ImageQt.qt_is_installed:
-    from PIL.ImageQt import qRgba
+    from PIL2.ImageQt import qRgba
 
     def skip_if_qt_is_not_installed(_):
         pass

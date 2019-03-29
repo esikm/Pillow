@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image
+from PIL2 import Image
 
 
 class TestImageMode(PillowTestCase):
@@ -10,7 +10,7 @@ class TestImageMode(PillowTestCase):
         im = hopper()
         im.mode
 
-        from PIL import ImageMode
+        from PIL2 import ImageMode
 
         ImageMode.getmode("1")
         ImageMode.getmode("L")

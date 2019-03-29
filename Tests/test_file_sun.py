@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, SunImagePlugin
+from PIL2 import Image, SunImagePlugin
 
 import os
 

@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImageFile
-.. py:currentmodule:: PIL.ImageFile
+.. py:module:: PIL2.ImageFile
+.. py:currentmodule:: PIL2.ImageFile
 
 :py:mod:`ImageFile` Module
 ==========================
@@ -17,7 +17,7 @@ Example: Parse an image
 
 .. code-block:: python
 
-    from PIL import ImageFile
+    from PIL2 import ImageFile
 
     fp = open("hopper.pgm", "rb")
 
@@ -34,14 +34,14 @@ Example: Parse an image
     im.save("copy.jpg")
 
 
-:py:class:`~PIL.ImageFile.Parser`
+:py:class:`~PIL2.ImageFile.Parser`
 ---------------------------------
 
-.. autoclass:: PIL.ImageFile.Parser()
+.. autoclass:: PIL2.ImageFile.Parser()
     :members:
 
-:py:class:`~PIL.ImageFile.PyDecoder`
+:py:class:`~PIL2.ImageFile.PyDecoder`
 ------------------------------------
 
-.. autoclass:: PIL.ImageFile.PyDecoder()
+.. autoclass:: PIL2.ImageFile.PyDecoder()
     :members:

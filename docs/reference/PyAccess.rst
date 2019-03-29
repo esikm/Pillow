@@ -1,5 +1,5 @@
-.. py:module:: PIL.PyAccess
-.. py:currentmodule:: PIL.PyAccess
+.. py:module:: PIL2.PyAccess
+.. py:currentmodule:: PIL2.PyAccess
 
 :py:mod:`PyAccess` Module
 =========================
@@ -17,7 +17,7 @@ The following script loads an image, accesses one pixel from it, then changes it
 
 .. code-block:: python
 
-    from PIL import Image
+    from PIL2 import Image
     im = Image.open('hopper.jpg')
     px = im.load()
     print (px[4,4])
@@ -34,5 +34,5 @@ Results in the following::
 :py:class:`PyAccess` Class
 --------------------------
 
-.. autoclass:: PIL.PyAccess.PyAccess()
+.. autoclass:: PIL2.PyAccess.PyAccess()
     :members:

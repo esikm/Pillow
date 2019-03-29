@@ -1,7 +1,7 @@
 from __future__ import print_function
 from helper import unittest, PillowTestCase
 
-from PIL import Image
+from PIL2 import Image
 import os
 
 base = os.path.join('Tests', 'images', 'bmp')

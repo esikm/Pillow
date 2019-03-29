@@ -1,4 +1,4 @@
-PIL Package (autodoc of remaining modules)
+PIL2 Package (autodoc of remaining modules)
 ==========================================
 
 Reference for modules whose documentation has not yet been ported or written
@@ -7,7 +7,7 @@ can be found here.
 :mod:`BdfFontFile` Module
 -------------------------
 
-.. automodule:: PIL.BdfFontFile
+.. automodule:: PIL2.BdfFontFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -15,7 +15,7 @@ can be found here.
 :mod:`ContainerIO` Module
 -------------------------
 
-.. automodule:: PIL.ContainerIO
+.. automodule:: PIL2.ContainerIO
     :members:
     :undoc-members:
     :show-inheritance:
@@ -23,7 +23,7 @@ can be found here.
 :mod:`FontFile` Module
 ----------------------
 
-.. automodule:: PIL.FontFile
+.. automodule:: PIL2.FontFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -31,7 +31,7 @@ can be found here.
 :mod:`GdImageFile` Module
 -------------------------
 
-.. automodule:: PIL.GdImageFile
+.. automodule:: PIL2.GdImageFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -39,7 +39,7 @@ can be found here.
 :mod:`GimpGradientFile` Module
 ------------------------------
 
-.. automodule:: PIL.GimpGradientFile
+.. automodule:: PIL2.GimpGradientFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -47,7 +47,7 @@ can be found here.
 :mod:`GimpPaletteFile` Module
 -----------------------------
 
-.. automodule:: PIL.GimpPaletteFile
+.. automodule:: PIL2.GimpPaletteFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -57,7 +57,7 @@ can be found here.
 :mod:`ImageDraw2` Module
 ------------------------
 
-.. automodule:: PIL.ImageDraw2
+.. automodule:: PIL2.ImageDraw2
     :members:
     :undoc-members:
     :show-inheritance:
@@ -65,7 +65,7 @@ can be found here.
 :mod:`ImageShow` Module
 -----------------------
 
-.. automodule:: PIL.ImageShow
+.. automodule:: PIL2.ImageShow
     :members:
     :undoc-members:
     :show-inheritance:
@@ -73,7 +73,7 @@ can be found here.
 :mod:`ImageTransform` Module
 ----------------------------
 
-.. automodule:: PIL.ImageTransform
+.. automodule:: PIL2.ImageTransform
     :members:
     :undoc-members:
     :show-inheritance:
@@ -81,7 +81,7 @@ can be found here.
 :mod:`JpegPresets` Module
 -------------------------
 
-.. automodule:: PIL.JpegPresets
+.. automodule:: PIL2.JpegPresets
     :members:
     :undoc-members:
     :show-inheritance:
@@ -89,7 +89,7 @@ can be found here.
 :mod:`PaletteFile` Module
 -------------------------
 
-.. automodule:: PIL.PaletteFile
+.. automodule:: PIL2.PaletteFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -97,7 +97,7 @@ can be found here.
 :mod:`PcfFontFile` Module
 -------------------------
 
-.. automodule:: PIL.PcfFontFile
+.. automodule:: PIL2.PcfFontFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -105,7 +105,7 @@ can be found here.
 :class:`PngImagePlugin.iTXt` Class
 ----------------------------------
 
-.. autoclass:: PIL.PngImagePlugin.iTXt
+.. autoclass:: PIL2.PngImagePlugin.iTXt
     :members:
     :undoc-members:
     :show-inheritance:
@@ -119,7 +119,7 @@ can be found here.
 :class:`PngImagePlugin.PngInfo` Class
 -------------------------------------
 
-.. autoclass:: PIL.PngImagePlugin.PngInfo
+.. autoclass:: PIL2.PngImagePlugin.PngInfo
     :members:
     :undoc-members:
     :show-inheritance:
@@ -128,7 +128,7 @@ can be found here.
 :mod:`TarIO` Module
 -------------------
 
-.. automodule:: PIL.TarIO
+.. automodule:: PIL2.TarIO
     :members:
     :undoc-members:
     :show-inheritance:
@@ -136,7 +136,7 @@ can be found here.
 :mod:`WalImageFile` Module
 --------------------------
 
-.. automodule:: PIL.WalImageFile
+.. automodule:: PIL2.WalImageFile
     :members:
     :undoc-members:
     :show-inheritance:
@@ -144,7 +144,7 @@ can be found here.
 :mod:`_binary` Module
 ---------------------
 
-.. automodule:: PIL._binary
+.. automodule:: PIL2._binary
     :members:
     :undoc-members:
     :show-inheritance:

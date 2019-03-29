@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 import sys
-from PIL import Image
+from PIL2 import Image
 from io import BytesIO
 
 # Limits for testing the leak

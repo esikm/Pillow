@@ -5,34 +5,34 @@ Using the Image class
 ---------------------
 
 The most important class in the Python Imaging Library is the
-:py:class:`~PIL.Image.Image` class, defined in the module with the same name.
+:py:class:`~PIL2.Image.Image` class, defined in the module with the same name.
 You can create instances of this class in several ways; either by loading
 images from files, processing other images, or creating images from scratch.
 
-To load an image from a file, use the :py:func:`~PIL.Image.open` function
-in the :py:mod:`~PIL.Image` module::
+To load an image from a file, use the :py:func:`~PIL2.Image.open` function
+in the :py:mod:`~PIL2.Image` module::
 
-    >>> from PIL import Image
+    >>> from PIL2 import Image
     >>> im = Image.open("hopper.ppm")
 
-If successful, this function returns an :py:class:`~PIL.Image.Image` object.
+If successful, this function returns an :py:class:`~PIL2.Image.Image` object.
 You can now use instance attributes to examine the file contents::
 
     >>> from __future__ import print_function
     >>> print(im.format, im.size, im.mode)
     PPM (512, 512) RGB
 
-The :py:attr:`~PIL.Image.Image.format` attribute identifies the source of an
+The :py:attr:`~PIL2.Image.Image.format` attribute identifies the source of an
 image. If the image was not read from a file, it is set to None. The size
 attribute is a 2-tuple containing width and height (in pixels). The
-:py:attr:`~PIL.Image.Image.mode` attribute defines the number and names of the
+:py:attr:`~PIL2.Image.Image.mode` attribute defines the number and names of the
 bands in the image, and also the pixel type and depth. Common modes are “L”
 (luminance) for greyscale images, “RGB” for true color images, and “CMYK” for
 pre-press images.
 
 If the file cannot be opened, an :py:exc:`IOError` exception is raised.
 
-Once you have an instance of the :py:class:`~PIL.Image.Image` class, you can use
+Once you have an instance of the :py:class:`~PIL2.Image.Image` class, you can use
 the methods defined by this class to process and manipulate the image. For
 example, let’s display the image we just loaded::
 
@@ -40,7 +40,7 @@ example, let’s display the image we just loaded::
 
 .. note::
 
-    The standard version of :py:meth:`~PIL.Image.Image.show` is not very
+    The standard version of :py:meth:`~PIL2.Image.Image.show` is not very
     efficient, since it saves the image to a temporary file and calls the
     :command:`xv` utility to display the image. If you don’t have :command:`xv`
     installed, it won’t even work. When it does work though, it is very handy
@@ -52,13 +52,13 @@ Reading and writing images
 --------------------------
 
 The Python Imaging Library supports a wide variety of image file formats. To
-read files from disk, use the :py:func:`~PIL.Image.open` function in the
-:py:mod:`~PIL.Image` module. You don’t have to know the file format to open a
+read files from disk, use the :py:func:`~PIL2.Image.open` function in the
+:py:mod:`~PIL2.Image` module. You don’t have to know the file format to open a
 file. The library automatically determines the format based on the contents of
 the file.
 
-To save a file, use the :py:meth:`~PIL.Image.Image.save` method of the
-:py:class:`~PIL.Image.Image` class. When saving files, the name becomes
+To save a file, use the :py:meth:`~PIL2.Image.Image.save` method of the
+:py:class:`~PIL2.Image.Image` class. When saving files, the name becomes
 important. Unless you specify the format, the library uses the filename
 extension to discover which file storage format to use.
 
@@ -69,7 +69,7 @@ Convert files to JPEG
 
     from __future__ import print_function
     import os, sys
-    from PIL import Image
+    from PIL2 import Image
 
     for infile in sys.argv[1:]:
         f, e = os.path.splitext(infile)
@@ -80,7 +80,7 @@ Convert files to JPEG
             except IOError:
                 print("cannot convert", infile)
 
-A second argument can be supplied to the :py:meth:`~PIL.Image.Image.save`
+A second argument can be supplied to the :py:meth:`~PIL2.Image.Image.save`
 method which explicitly specifies a file format. If you use a non-standard
 extension, you must always specify the format this way:
 
@@ -91,7 +91,7 @@ Create JPEG thumbnails
 
     from __future__ import print_function
     import os, sys
-    from PIL import Image
+    from PIL2 import Image
 
     size = (128, 128)
 
@@ -122,7 +122,7 @@ Identify Image Files
 
     from __future__ import print_function
     import sys
-    from PIL import Image
+    from PIL2 import Image
 
     for infile in sys.argv[1:]:
         try:
@@ -134,9 +134,9 @@ Identify Image Files
 Cutting, pasting, and merging images
 ------------------------------------
 
-The :py:class:`~PIL.Image.Image` class contains methods allowing you to
+The :py:class:`~PIL2.Image.Image` class contains methods allowing you to
 manipulate regions within an image. To extract a sub-rectangle from an image,
-use the :py:meth:`~PIL.Image.Image.crop` method.
+use the :py:meth:`~PIL2.Image.Image.crop` method.
 
 Copying a subrectangle from an image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -190,9 +190,9 @@ Rolling an image
 
         return image
 
-Note that when pasting it back from the :py:meth:`~PIL.Image.Image.crop`
-operation, :py:meth:`~PIL.Image.Image.load` is called first. This is because
-cropping is a lazy operation. If :py:meth:`~PIL.Image.Image.load` was not
+Note that when pasting it back from the :py:meth:`~PIL2.Image.Image.crop`
+operation, :py:meth:`~PIL2.Image.Image.load` is called first. This is because
+cropping is a lazy operation. If :py:meth:`~PIL2.Image.Image.load` was not
 called, then the crop operation would not be performed until the images were
 used in the paste commands. This would mean that ``part1`` would be cropped from
 the version of ``image`` already modified by the first paste.
@@ -219,15 +219,15 @@ Splitting and merging bands
     r, g, b = im.split()
     im = Image.merge("RGB", (b, g, r))
 
-Note that for a single-band image, :py:meth:`~PIL.Image.Image.split` returns
+Note that for a single-band image, :py:meth:`~PIL2.Image.Image.split` returns
 the image itself. To work with individual color bands, you may want to convert
 the image to “RGB” first.
 
 Geometrical transforms
 ----------------------
 
-The :py:class:`PIL.Image.Image` class contains methods to
-:py:meth:`~PIL.Image.Image.resize` and :py:meth:`~PIL.Image.Image.rotate` an
+The :py:class:`PIL2.Image.Image` class contains methods to
+:py:meth:`~PIL2.Image.Image.resize` and :py:meth:`~PIL2.Image.Image.rotate` an
 image. The former takes a tuple giving the new size, the latter the angle in
 degrees counter-clockwise.
 
@@ -240,8 +240,8 @@ Simple geometry transforms
     out = im.rotate(45) # degrees counter-clockwise
 
 To rotate the image in 90 degree steps, you can either use the
-:py:meth:`~PIL.Image.Image.rotate` method or the
-:py:meth:`~PIL.Image.Image.transpose` method. The latter can also be used to
+:py:meth:`~PIL2.Image.Image.rotate` method or the
+:py:meth:`~PIL2.Image.Image.transpose` method. The latter can also be used to
 flip an image around its horizontal or vertical axis.
 
 Transposing an image
@@ -256,11 +256,11 @@ Transposing an image
     out = im.transpose(Image.ROTATE_270)
 
 ``transpose(ROTATE)`` operations can also be performed identically with
-:py:meth:`~PIL.Image.Image.rotate` operations, provided the `expand` flag is
+:py:meth:`~PIL2.Image.Image.rotate` operations, provided the `expand` flag is
 true, to provide for the same changes to the image's size.
 
 A more general form of image transformations can be carried out via the
-:py:meth:`~PIL.Image.Image.transform` method.
+:py:meth:`~PIL2.Image.Image.transform` method.
 
 .. _color-transforms:
 
@@ -268,14 +268,14 @@ Color transforms
 ----------------
 
 The Python Imaging Library allows you to convert images between different pixel
-representations using the :py:meth:`~PIL.Image.Image.convert` method.
+representations using the :py:meth:`~PIL2.Image.Image.convert` method.
 
 Converting between modes
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
-    from PIL import Image
+    from PIL2 import Image
     im = Image.open("hopper.ppm").convert("L")
 
 The library supports transformations between each supported mode and the “L”
@@ -291,22 +291,22 @@ used to enhance images.
 Filters
 ^^^^^^^
 
-The :py:mod:`~PIL.ImageFilter` module contains a number of pre-defined
+The :py:mod:`~PIL2.ImageFilter` module contains a number of pre-defined
 enhancement filters that can be used with the
-:py:meth:`~PIL.Image.Image.filter` method.
+:py:meth:`~PIL2.Image.Image.filter` method.
 
 Applying filters
 ~~~~~~~~~~~~~~~~
 
 ::
 
-    from PIL import ImageFilter
+    from PIL2 import ImageFilter
     out = im.filter(ImageFilter.DETAIL)
 
 Point Operations
 ^^^^^^^^^^^^^^^^
 
-The :py:meth:`~PIL.Image.Image.point` method can be used to translate the pixel
+The :py:meth:`~PIL2.Image.Image.point` method can be used to translate the pixel
 values of an image (e.g. image contrast manipulation). In most cases, a
 function object expecting one argument can be passed to this method. Each
 pixel is processed according to that function:
@@ -320,8 +320,8 @@ Applying point transforms
     out = im.point(lambda i: i * 1.2)
 
 Using the above technique, you can quickly apply any simple expression to an
-image. You can also combine the :py:meth:`~PIL.Image.Image.point` and
-:py:meth:`~PIL.Image.Image.paste` methods to selectively modify an image:
+image. You can also combine the :py:meth:`~PIL2.Image.Image.point` and
+:py:meth:`~PIL2.Image.Image.paste` methods to selectively modify an image:
 
 Processing individual bands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -358,7 +358,7 @@ Enhancement
 ^^^^^^^^^^^
 
 For more advanced image enhancement, you can use the classes in the
-:py:mod:`~PIL.ImageEnhance` module. Once created from an image, an enhancement
+:py:mod:`~PIL2.ImageEnhance` module. Once created from an image, an enhancement
 object can be used to quickly try out different settings.
 
 You can adjust contrast, brightness, color balance and sharpness in this way.
@@ -368,7 +368,7 @@ Enhancing images
 
 ::
 
-    from PIL import ImageEnhance
+    from PIL2 import ImageEnhance
 
     enh = ImageEnhance.Contrast(im)
     enh.enhance(1.3).show("30% more contrast")
@@ -381,7 +381,7 @@ The Python Imaging Library contains some basic support for image sequences
 GIF, and a few experimental formats. TIFF files can also contain more than one
 frame.
 
-When you open a sequence file, PIL automatically loads the first frame in the
+When you open a sequence file, PIL2 automatically loads the first frame in the
 sequence. You can use the seek and tell methods to move between different
 frames:
 
@@ -390,7 +390,7 @@ Reading sequences
 
 ::
 
-    from PIL import Image
+    from PIL2 import Image
 
     im = Image.open("animation.gif")
     im.seek(1) # skip to the second frame
@@ -416,7 +416,7 @@ Using the ImageSequence Iterator class
 
 ::
 
-    from PIL import ImageSequence
+    from PIL2 import ImageSequence
     for frame in ImageSequence.Iterator(im):
         # ...do something to frame...
 
@@ -432,8 +432,8 @@ Drawing Postscript
 
 ::
 
-    from PIL import Image
-    from PIL import PSDraw
+    from PIL2 import Image
+    from PIL2 import PSDraw
 
     im = Image.open("hopper.ppm")
     title = "hopper"
@@ -455,14 +455,14 @@ Drawing Postscript
 More on reading images
 ----------------------
 
-As described earlier, the :py:func:`~PIL.Image.open` function of the
-:py:mod:`~PIL.Image` module is used to open an image file. In most cases, you
+As described earlier, the :py:func:`~PIL2.Image.open` function of the
+:py:mod:`~PIL2.Image` module is used to open an image file. In most cases, you
 simply pass it the filename as an argument::
 
-    from PIL import Image
+    from PIL2 import Image
     im = Image.open("hopper.ppm")
 
-If everything goes well, the result is an :py:class:`PIL.Image.Image` object.
+If everything goes well, the result is an :py:class:`PIL2.Image.Image` object.
 Otherwise, an :exc:`IOError` exception is raised.
 
 You can use a file-like object instead of the filename. The object must
@@ -474,7 +474,7 @@ Reading from an open file
 
 ::
 
-    from PIL import Image
+    from PIL2 import Image
     with open("hopper.ppm", "rb") as fp:
         im = Image.open(fp)
 
@@ -493,15 +493,15 @@ Reading from a string
 Note that the library rewinds the file (using ``seek(0)``) before reading the
 image header. In addition, seek will also be used when the image data is read
 (by the load method). If the image file is embedded in a larger file, such as a
-tar file, you can use the :py:class:`~PIL.ContainerIO` or
-:py:class:`~PIL.TarIO` modules to access it.
+tar file, you can use the :py:class:`~PIL2.ContainerIO` or
+:py:class:`~PIL2.TarIO` modules to access it.
 
 Reading from a tar archive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
-    from PIL import Image, TarIO
+    from PIL2 import Image, TarIO
 
     fp = TarIO.TarIO("Tests/images/hopper.tar", "hopper.jpg")
     im = Image.open(fp)
@@ -514,7 +514,7 @@ This can often be used to speed up decoding when creating thumbnails (when
 speed is usually more important than quality) and printing to a monochrome
 laser printer (when only a greyscale version of the image is needed).
 
-The :py:meth:`~PIL.Image.Image.draft` method manipulates an opened but not yet
+The :py:meth:`~PIL2.Image.Image.draft` method manipulates an opened but not yet
 loaded image so it as closely as possible matches the given mode and size. This
 is done by reconfiguring the image decoder.
 
@@ -525,7 +525,7 @@ This is only available for JPEG and MPO files.
 
 ::
 
-    from PIL import Image
+    from PIL2 import Image
     from __future__ import print_function
     im = Image.open(file)
     print("original =", im.mode, im.size)

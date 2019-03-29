@@ -2,7 +2,7 @@ import sys
 
 from helper import unittest, PillowTestCase
 
-from PIL import Image
+from PIL2 import Image
 
 
 X = 255

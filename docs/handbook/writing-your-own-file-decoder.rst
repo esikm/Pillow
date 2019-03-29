@@ -27,14 +27,14 @@ Pillow decodes files in 2 stages:
    it.
 
 An image plug-in should contain a format handler derived from the
-:py:class:`PIL.ImageFile.ImageFile` base class. This class should
+:py:class:`PIL2.ImageFile.ImageFile` base class. This class should
 provide an :py:meth:`_open` method, which reads the file header and
-sets up at least the :py:attr:`~PIL.Image.Image.mode` and
-:py:attr:`~PIL.Image.Image.size` attributes. To be able to load the
+sets up at least the :py:attr:`~PIL2.Image.Image.mode` and
+:py:attr:`~PIL2.Image.Image.size` attributes. To be able to load the
 file, the method must also create a list of :py:attr:`tile`
 descriptors, which contain a decoder name, extents of the tile, and
 any decoder-specific data. The format handler class must be explicitly
-registered, via a call to the :py:mod:`~PIL.Image` module.
+registered, via a call to the :py:mod:`~PIL2.Image` module.
 
 .. note:: For performance reasons, it is important that the
   :py:meth:`_open` method quickly rejects files that do not have the
@@ -51,7 +51,7 @@ true color.
 
 **SpamImagePlugin.py**::
 
-    from PIL import Image, ImageFile
+    from PIL2 import Image, ImageFile
     import string
 
     class SpamImageFile(ImageFile.ImageFile):
@@ -93,7 +93,7 @@ true color.
     Image.register_extension(SpamImageFile.format, ".spa") # dos version
 
 The format handler must always set the
-:py:attr:`~PIL.Image.Image.size` and :py:attr:`~PIL.Image.Image.mode`
+:py:attr:`~PIL2.Image.Image.size` and :py:attr:`~PIL2.Image.Image.mode`
 attributes. If these are not set, the file cannot be opened. To
 simplify the plugin, the calling code considers exceptions like
 :py:exc:`SyntaxError`, :py:exc:`KeyError`, :py:exc:`IndexError`,
@@ -101,7 +101,7 @@ simplify the plugin, the calling code considers exceptions like
 the file.
 
 Note that the image plugin must be explicitly registered using
-:py:func:`PIL.Image.register_open`. Although not required, it is also a good
+:py:func:`PIL2.Image.register_open`. Although not required, it is also a good
 idea to register any extensions used by this format.
 
 The :py:attr:`tile` attribute
@@ -147,7 +147,7 @@ The raw decoder
 The ``raw`` decoder is used to read uncompressed data from an image file. It
 can be used with most uncompressed file formats, such as PPM, BMP, uncompressed
 TIFF, and many others. To use the raw decoder with the
-:py:func:`PIL.Image.frombytes` function, use the following syntax::
+:py:func:`PIL2.Image.frombytes` function, use the following syntax::
 
     image = Image.frombytes(
         mode, size, data, "raw",
@@ -162,7 +162,7 @@ The fields are used as follows:
 
 **raw mode**
     The pixel layout used in the file, and is used to properly convert data to
-    PIL’s internal layout. For a summary of the available formats, see the
+    PIL2’s internal layout. For a summary of the available formats, see the
     table below.
 
 **stride**
@@ -175,7 +175,7 @@ The fields are used as follows:
     the bottom line (-1). If omitted, the orientation defaults to 1.
 
 The **raw mode** field is used to determine how the data should be unpacked to
-match PIL’s internal pixel layout. PIL supports a large set of raw modes; for a
+match PIL2’s internal pixel layout. PIL2 supports a large set of raw modes; for a
 complete list, see the table in the :py:mod:`Unpack.c` module. The following
 table describes some commonly used **raw modes**:
 
@@ -216,7 +216,7 @@ standard plug-in implementations provided with the library.
 Decoding floating point data
 ----------------------------
 
-PIL provides some special mechanisms to allow you to load a wide variety of
+PIL2 provides some special mechanisms to allow you to load a wide variety of
 formats into a mode ``F`` (floating point) image memory.
 
 You can use the ``raw`` decoder to read images where data is packed in any
@@ -251,7 +251,7 @@ mode	     description
 The bit decoder
 ---------------
 
-If the raw decoder cannot handle your format, PIL also provides a special “bit”
+If the raw decoder cannot handle your format, PIL2 also provides a special “bit”
 decoder that can be used to read various packed formats into a floating point
 image memory.
 
@@ -399,9 +399,9 @@ Writing Your Own File Decoder in Python
 =======================================
 
 Python file decoders should derive from
-:py:class:`PIL.ImageFile.PyDecoder` and should at least override the
+:py:class:`PIL2.ImageFile.PyDecoder` and should at least override the
 decode method. File decoders should be registered using
-:py:meth:`PIL.Image.register_decoder`. As in the C implementation of
+:py:meth:`PIL2.Image.register_decoder`. As in the C implementation of
 the file decoders, there are three stages in the lifetime of a
 Python-based file decoder:
 

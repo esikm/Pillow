@@ -1,18 +1,18 @@
-.. py:module:: PIL.ImageFont
-.. py:currentmodule:: PIL.ImageFont
+.. py:module:: PIL2.ImageFont
+.. py:currentmodule:: PIL2.ImageFont
 
 :py:mod:`ImageFont` Module
 ==========================
 
 The :py:mod:`ImageFont` module defines a class with the same name. Instances of
 this class store bitmap fonts, and are used with the
-:py:meth:`PIL.ImageDraw.Draw.text` method.
+:py:meth:`PIL2.ImageDraw.Draw.text` method.
 
-PIL uses its own font file format to store bitmap fonts. You can use the
+PIL2 uses its own font file format to store bitmap fonts. You can use the
 :command:`pilfont` utility to convert BDF and PCF font descriptors (X window
 font formats) to this format.
 
-Starting with version 1.1.4, PIL can be configured to support TrueType and
+Starting with version 1.1.4, PIL2 can be configured to support TrueType and
 OpenType fonts (as well as other font formats supported by the FreeType
 library). For earlier versions, TrueType support is only available as part of
 the imToolkit package
@@ -22,7 +22,7 @@ Example
 
 .. code-block:: python
 
-    from PIL import ImageFont, ImageDraw
+    from PIL2 import ImageFont, ImageDraw
 
     draw = ImageDraw.Draw(image)
 
@@ -39,19 +39,19 @@ Example
 Functions
 ---------
 
-.. autofunction:: PIL.ImageFont.load
-.. autofunction:: PIL.ImageFont.load_path
-.. autofunction:: PIL.ImageFont.truetype
-.. autofunction:: PIL.ImageFont.load_default
+.. autofunction:: PIL2.ImageFont.load
+.. autofunction:: PIL2.ImageFont.load_path
+.. autofunction:: PIL2.ImageFont.truetype
+.. autofunction:: PIL2.ImageFont.load_default
 
 Methods
 -------
 
-.. py:method:: PIL.ImageFont.ImageFont.getsize(text)
+.. py:method:: PIL2.ImageFont.ImageFont.getsize(text)
 
     :return: (width, height)
 
-.. py:method:: PIL.ImageFont.ImageFont.getmask(text, mode='', direction=None, features=[])
+.. py:method:: PIL2.ImageFont.ImageFont.getmask(text, mode='', direction=None, features=[])
 
     Create a bitmap for the text.
 
@@ -85,5 +85,5 @@ Methods
 
                      .. versionadded:: 4.2.0
 
-    :return: An internal PIL storage memory instance as defined by the
-             :py:mod:`PIL.Image.core` interface module.
+    :return: An internal PIL2 storage memory instance as defined by the
+             :py:mod:`PIL2.Image.core` interface module.

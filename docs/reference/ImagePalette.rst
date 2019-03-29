@@ -1,5 +1,5 @@
-.. py:module:: PIL.ImagePalette
-.. py:currentmodule:: PIL.ImagePalette
+.. py:module:: PIL2.ImagePalette
+.. py:currentmodule:: PIL2.ImagePalette
 
 :py:mod:`ImagePalette` Module
 =============================
@@ -13,9 +13,9 @@ represent the color palette of palette mapped images.
     though, so it's probably safe for you to read the source code and puzzle
     out the internals if you need to.
 
-    The :py:class:`~PIL.ImagePalette.ImagePalette` class has several methods,
+    The :py:class:`~PIL2.ImagePalette.ImagePalette` class has several methods,
     but they are all marked as "experimental." Read that as you will. The
     ``[source]`` link is there for a reason.
 
-.. autoclass:: PIL.ImagePalette.ImagePalette
+.. autoclass:: PIL2.ImagePalette.ImagePalette
     :members:

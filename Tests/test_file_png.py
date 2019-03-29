@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, PillowLeakTestCase, hopper
-from PIL import Image, ImageFile, PngImagePlugin
-from PIL._util import py3
+from PIL2 import Image, ImageFile, PngImagePlugin
+from PIL2._util import py3
 
 from io import BytesIO
 import zlib
@@ -110,7 +110,7 @@ class TestFilePng(PillowTestCase):
         self.assertRaises(IOError, Image.open, test_file)
 
     def test_bad_text(self):
-        # Make sure PIL can read malformed tEXt chunks (@PIL152)
+        # Make sure PIL2 can read malformed tEXt chunks (@PIL152)
 
         im = load(HEAD + chunk(b'tEXt') + TAIL)
         self.assertEqual(im.info, {})

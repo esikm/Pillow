@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, ImageSequence, TiffImagePlugin
+from PIL2 import Image, ImageSequence, TiffImagePlugin
 
 
 class TestImageSequence(PillowTestCase):

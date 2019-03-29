@@ -4,7 +4,7 @@ from helper import djpeg_available, cjpeg_available, netpbm_available
 import sys
 import shutil
 
-from PIL import Image, JpegImagePlugin, GifImagePlugin
+from PIL2 import Image, JpegImagePlugin, GifImagePlugin
 
 TEST_JPG = "Tests/images/hopper.jpg"
 TEST_GIF = "Tests/images/hopper.gif"

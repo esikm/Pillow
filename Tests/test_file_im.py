@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, ImImagePlugin
+from PIL2 import Image, ImImagePlugin
 
 # sample im
 TEST_IM = "Tests/images/hopper.im"

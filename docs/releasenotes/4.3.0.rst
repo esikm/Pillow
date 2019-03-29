@@ -34,14 +34,14 @@ These are internal functions that should not have been used by user
 code, but they were accessible from the python layer.
 
 Debugging code within ``Image.core.grabclipboard`` was removed. It had been
-marked as ``will be removed in future versions`` since PIL. When enabled, it
+marked as ``will be removed in future versions`` since PIL2. When enabled, it
 identified the format of the clipboard data.
 
-The ``PIL.Image.core.copy`` and ``PIL.Image.Image.im.copy2`` methods
+The ``PIL2.Image.core.copy`` and ``PIL2.Image.Image.im.copy2`` methods
 have been removed.
 
-The ``PIL.Image.core.getcount`` methods have been removed, use
-``PIL.Image.core.get_stats()['new_count']`` property instead.
+The ``PIL2.Image.core.getcount`` methods have been removed, use
+``PIL2.Image.core.get_stats()['new_count']`` property instead.
 
 
 API Additions
@@ -50,7 +50,7 @@ API Additions
 Get One Channel From Image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A new method :py:meth:`PIL.Image.Image.getchannel` has been added to
+A new method :py:meth:`PIL2.Image.Image.getchannel` has been added to
 return a single channel by index or name. For example,
 ``image.getchannel("A")`` will return alpha channel as separate image.
 ``getchannel`` should work up to 6 times faster than
@@ -59,14 +59,14 @@ return a single channel by index or name. For example,
 Box Blur
 ^^^^^^^^
 
-A new filter, :py:class:`PIL.ImageFilter.BoxBlur`, has been
+A new filter, :py:class:`PIL2.ImageFilter.BoxBlur`, has been
 added. This is a filter with similar results to a Gaussian blur, but
 is much faster.
 
 Partial Resampling
 ^^^^^^^^^^^^^^^^^^
 
-Added new argument ``box`` for :py:meth:`PIL.Image.Image.resize`. This
+Added new argument ``box`` for :py:meth:`PIL2.Image.Image.resize`. This
 argument defines a source rectangle from within the source image to be
 resized.  This is very similar to the ``image.crop(box).resize(size)``
 sequence except that ``box`` can be specified with subpixel accuracy.
@@ -75,15 +75,15 @@ New Transpose Operation
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``Image.TRANSVERSE`` operation has been added to
-:py:meth:`PIL.Image.Image.transpose`. This is equivalent to a transpose
+:py:meth:`PIL2.Image.Image.transpose`. This is equivalent to a transpose
 operation about the opposite diagonal.
 
 Multiband Filters
 ^^^^^^^^^^^^^^^^^
 
-There is a new :py:class:`PIL.ImageFilter.MultibandFilter` base class
+There is a new :py:class:`PIL2.ImageFilter.MultibandFilter` base class
 for image filters that can run on all channels of an image in one
-operation. The original :py:class:`PIL.ImageFilter.Filter` class
+operation. The original :py:class:`PIL2.ImageFilter.Filter` class
 remains for image filters that can process only single band images, or
 require splitting of channels prior to filtering.
 

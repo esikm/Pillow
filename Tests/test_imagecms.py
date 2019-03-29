@@ -1,14 +1,14 @@
 from helper import unittest, PillowTestCase, hopper
 import datetime
 
-from PIL import Image, ImageMode
+from PIL2 import Image, ImageMode
 
 from io import BytesIO
 import os
 
 try:
-    from PIL import ImageCms
-    from PIL.ImageCms import ImageCmsProfile
+    from PIL2 import ImageCms
+    from PIL2.ImageCms import ImageCmsProfile
     ImageCms.core.profile_open
 except ImportError as v:
     # Skipped via setUp()
@@ -23,7 +23,7 @@ class TestImageCms(PillowTestCase):
 
     def setUp(self):
         try:
-            from PIL import ImageCms
+            from PIL2 import ImageCms
             # need to hit getattr to trigger the delayed import error
             ImageCms.core.profile_open
         except ImportError as v:
@@ -209,8 +209,8 @@ class TestImageCms(PillowTestCase):
         pLab = ImageCms.createProfile("LAB")
         t = ImageCms.buildTransform(psRGB, pLab, "RGB", "LAB")
 
-        # Need to add a type mapping for some PIL type to TYPE_Lab_8 in
-        # findLCMSType, and have that mapping work back to a PIL mode
+        # Need to add a type mapping for some PIL2 type to TYPE_Lab_8 in
+        # findLCMSType, and have that mapping work back to a PIL2 mode
         # (likely RGB).
         i = ImageCms.applyTransform(hopper(), t)
         self.assert_image(i, "LAB", (128, 128))

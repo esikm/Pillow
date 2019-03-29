@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 from io import BytesIO
-from PIL import Image
+from PIL2 import Image
 
 
 test_files = ["Tests/images/sugarshack.mpo", "Tests/images/frozenpond.mpo"]

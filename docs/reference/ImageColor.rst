@@ -1,12 +1,12 @@
-.. py:module:: PIL.ImageColor
-.. py:currentmodule:: PIL.ImageColor
+.. py:module:: PIL2.ImageColor
+.. py:currentmodule:: PIL2.ImageColor
 
 :py:mod:`ImageColor` Module
 ===========================
 
 The :py:mod:`ImageColor` module contains color tables and converters from
 CSS3-style color specifiers to RGB tuples. This module is used by
-:py:meth:`PIL.Image.new` and the :py:mod:`~PIL.ImageDraw` module, among
+:py:meth:`PIL2.Image.new` and the :py:mod:`~PIL2.ImageDraw` module, among
 others.
 
 .. _color-names:
@@ -38,7 +38,7 @@ The ImageColor module supports the following string formats:
   can be given as ``hsb(hue, saturation%, brightness%)``, where each of the
   values are used as they are in HSV.
 
-* Common HTML color names. The :py:mod:`~PIL.ImageColor` module provides some
+* Common HTML color names. The :py:mod:`~PIL2.ImageColor` module provides some
   140 standard color names, based on the colors supported by the X Window
   system and most web browsers. color names are case insensitive. For example,
   ``red`` and ``Red`` both specify pure red.
@@ -55,7 +55,7 @@ Functions
 
 .. py:method:: getcolor(color, mode)
 
-    Same as :py:func:`~PIL.ImageColor.getrgb`, but converts the RGB value to a
+    Same as :py:func:`~PIL2.ImageColor.getrgb`, but converts the RGB value to a
     greyscale value if the mode is not color or a palette image. If the string
     cannot be parsed, this function raises a :py:exc:`ValueError` exception.
 

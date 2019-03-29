@@ -104,7 +104,7 @@ Changelog (Pillow)
 - Fixed bug in ImageDraw.multiline_textsize() #3114
   [tianyu139]
 
-- Added getsize_multiline support for PIL.ImageFont #3113
+- Added getsize_multiline support for PIL2.ImageFont #3113
   [tianyu139]
 
 - Added ImageFile get_format_mimetype method #3190
@@ -185,7 +185,7 @@ Changelog (Pillow)
 - Changed encoderinfo to have priority over info when saving GIF images #3086
   [radarhere]
 
-- Rename PIL.version to PIL._version and remove it from module #3083
+- Rename PIL2.version to PIL2._version and remove it from module #3083
   [homm]
 
 - Enable background colour parameter on rotate #3057
@@ -305,7 +305,7 @@ Changelog (Pillow)
 - Test: Switch from nose to pytest #2815
   [hugovk]
 
-- Rework Source directory layout, preventing accidental import of PIL. #2911
+- Rework Source directory layout, preventing accidental import of PIL2. #2911
   [wiredfool]
 
 - Dynamically link libraqm #2753
@@ -401,7 +401,7 @@ Changelog (Pillow)
 - Test: Fix test_image.py to use tempfile #2841
   [radarhere]
 
-- Replace PIL.OleFileIO deprecation warning with descriptive ImportError #2833
+- Replace PIL2.OleFileIO deprecation warning with descriptive ImportError #2833
   [hugovk]
 
 - WebP: Add support for animated WebP files #2761
@@ -779,7 +779,7 @@ Changelog (Pillow)
 - Build: Ignore OpenJpeg 1.5 on FreeBSD #2544
   [melvyn-sopacua]
 
-- Remove 'not yet implemented' methods from PIL 1.1.4 #2538
+- Remove 'not yet implemented' methods from PIL2 1.1.4 #2538
   [hugovk]
 
 - Dependencies: Update FreeType to 2.8, LibTIFF to 4.0.8 and libimagequant to 2.9.1 #2535 #2537 #2540
@@ -962,13 +962,13 @@ Changelog (Pillow)
 - Tests: Added docker images for testing alternate platforms. See also https://github.com/python-pillow/docker-images. #2368
   [wiredfool]
 
-- Removed PIL 1.0 era TK readme that concerns Windows 95/NT #2360
+- Removed PIL2 1.0 era TK readme that concerns Windows 95/NT #2360
   [wiredfool]
 
 - Prevent `nose -v` printing docstrings #2369
   [hugovk]
 
-- Replaced absolute PIL imports with relative imports #2349
+- Replaced absolute PIL2 imports with relative imports #2349
   [radarhere]
 
 - Added context managers for file handling #2307
@@ -1302,7 +1302,7 @@ Changelog (Pillow)
 - Fix conversion of bit images to numpy arrays Fixes #350, #2058
   [matthew-brett]
 
-- Add ImageOps.scale to expand or contract a PIL image by a factor #2011
+- Add ImageOps.scale to expand or contract a PIL2 image by a factor #2011
   [vlmath]
 
 - Flake8 fixes #2050
@@ -1317,7 +1317,7 @@ Changelog (Pillow)
 - Docs: Windows console prompts are > #2031
   [techtonik]
 
-- Expose Pillow package version as PIL.__version__ #2027
+- Expose Pillow package version as PIL2.__version__ #2027
   [techtonik]
 
 - Add Box and Hamming filters for resampling #1959
@@ -1593,7 +1593,7 @@ Changelog (Pillow)
 - Added __copy__ method to Image #1772
   [radarhere]
 
-- Updated dates in PIL license in OleFileIO README #1787
+- Updated dates in PIL2 license in OleFileIO README #1787
   [radarhere]
 
 - Corrected Tiff tag names #1786
@@ -2108,7 +2108,7 @@ Changelog (Pillow)
 - Add support for HTTP response objects to Image.open() #1151
   [mfitzp]
 
-- Improve reference docs for PIL.ImageDraw.Draw.pieslice() #1145
+- Improve reference docs for PIL2.ImageDraw.Draw.pieslice() #1145
   [audreyr]
 
 - Added copy method font_variant() and accessible properties to truetype() #1123
@@ -2538,7 +2538,7 @@ Changelog (Pillow)
 - Add more detailed error messages to Image.py #566
   [larsmans]
 
-- Avoid conflicting _expand functions in PIL & MINGW, fixes #538
+- Avoid conflicting _expand functions in PIL2 & MINGW, fixes #538
   [aclark4life]
 
 - Merge from Philippe Lagadec’s OleFileIO_PL fork #512
@@ -2694,7 +2694,7 @@ Changelog (Pillow)
 - Added more raw decoder 16 bit pixel formats #379
   [svanheulen]
 
-- Document remaining Image* modules listed in PIL handbook
+- Document remaining Image* modules listed in PIL2 handbook
   [irksep]
 
 - Document ImageEnhance, ImageFile, ImageFilter, ImageFont, ImageGrab, ImageMath, and ImageOps
@@ -2709,7 +2709,7 @@ Changelog (Pillow)
 - Respect CFLAGS/LDFLAGS when searching for headers/libs
   [iElectric]
 
-- Port PIL Handbook tutorial and appendices
+- Port PIL2 Handbook tutorial and appendices
   [irksep]
 
 - Alpha Premultiplication support for transform and resize #364
@@ -2852,7 +2852,7 @@ Changelog (Pillow)
 
 - Changed PY_VERSION_HEX #190 (fixes #166)
 
-- Changes to put everything under the PIL namespace #191
+- Changes to put everything under the PIL2 namespace #191
   [wiredfool]
 
 - Changing StringIO to BytesIO.
@@ -2922,7 +2922,7 @@ Changelog (Pillow)
 - Add Tiff G3/G4 support (experimental)
   [wiredfool]
 
-- Backport PIL's PNG/Zip improvements #95, #97
+- Backport PIL2's PNG/Zip improvements #95, #97
   [olt]
 
 - Various 64-bit and Windows fixes.
@@ -2957,7 +2957,7 @@ Changelog (Pillow)
 - Bug fix: freetype not found on Mac OS X with case-sensitive filesystem
   [gjo]
 
-- Bug fix: Backport fix to split() after open() (regression introduced in PIL 1.1.7).
+- Bug fix: Backport fix to split() after open() (regression introduced in PIL2 1.1.7).
   [sfllaw]
 
 1.7.5 (2011-09-07)
@@ -3050,8 +3050,8 @@ Changelog (Pillow)
 1.0 (07/30/2010)
 ----------------
 
-- Remove support for ``import Image``, etc. from the standard namespace. ``from PIL import Image`` etc. now required.
-- Forked PIL based on `Hanno Schlichting's re-packaging <https://dist.plone.org/thirdparty/PIL-1.1.7.tar.gz>`_
+- Remove support for ``import Image``, etc. from the standard namespace. ``from PIL2 import Image`` etc. now required.
+- Forked PIL2 based on `Hanno Schlichting's re-packaging <https://dist.plone.org/thirdparty/PIL2-1.1.7.tar.gz>`_
   [aclark4life]
 
 Pre-fork
@@ -3067,7 +3067,7 @@ Pre-fork
     The Python Imaging Library
     $Id$
 
-    ACKNOWLEDGEMENTS: PIL wouldn't be what it is without the help of:
+    ACKNOWLEDGEMENTS: PIL2 wouldn't be what it is without the help of:
     David Ascher, Phil Austin, Douglas Bagnall, Larry Bates, Anthony
     Baxter, William Baxter, Denis Benoit, Jan Blom, Duncan Booth, Alexey
     Borzenkov, Jeff Breidenbach, Roger Burnham, Zac Burns, Gene Cash,
@@ -3130,7 +3130,7 @@ Pre-fork
     + Handle repeated IPTC tags (adapted from a patch by Eric Bruning).
 
       Eric writes: According to the specification, some IPTC tags can be
-      repeated, e.g., tag 2:25 (keywords). PIL 1.1.6 only retained the last
+      repeated, e.g., tag 2:25 (keywords). PIL2 1.1.6 only retained the last
       instance of that tag. Below is a patch to store all tags. If there are
       multiple tag instances, they are stored in a (python) list. Single tag
       instances remain as strings.
@@ -3170,7 +3170,7 @@ Pre-fork
     + Added Kevin Cazabon's pyCMS package.
 
       The C code has been moved to _imagingcms.c, the Python interface
-      module is installed as PIL.ImageCMS.
+      module is installed as PIL2.ImageCMS.
 
       Added support for in-memory ICC profiles.
 
@@ -3228,7 +3228,7 @@ Pre-fork
 
     + Added Chroma subsampling support for JPEG (from Justin Huff).
 
-      Justin writes: Attached is a patch (against PIL 1.1.6) to provide
+      Justin writes: Attached is a patch (against PIL2 1.1.6) to provide
       control over the chroma subsampling done by the JPEG encoder.  This
       is often useful for reducing compression artifacts around edges of
       clipart and text.
@@ -3288,7 +3288,7 @@ Pre-fork
     + Fixed truetype positioning when first character has a negative left
       bearing (from Ned Batchelder):
 
-      Ned writes: In PIL 1.1.6, ImageDraw.text will position the string
+      Ned writes: In PIL2 1.1.6, ImageDraw.text will position the string
       incorrectly if the first character has a negative left bearing.  To
       see the problem, show a string like "///" in an italic font.  The
       first slash will be clipped at the left, and the string will be
@@ -3305,7 +3305,7 @@ Pre-fork
 
     + Fixed potential crash in ImageFont.getname method (from Donn Ingle).
 
-    + Fixed encoding issue in PIL/WalImageFile (from Santiago M. Mola).
+    + Fixed encoding issue in PIL2/WalImageFile (from Santiago M. Mola).
 
     *** Changes from release 1.1.5 to 1.1.6 ***
 
@@ -3322,20 +3322,20 @@ Pre-fork
 
     + The default arguments for "frombuffer" doesn't match "fromstring"
       and the documentation; this is a bug, and will most likely be fixed
-      in a future version.  In this release, PIL prints a warning message
+      in a future version.  In this release, PIL2 prints a warning message
       instead.  To silence the warning, change any calls of the form
       "frombuffer(mode, size, data)" to
 
           frombuffer(mode, size, data, "raw", mode, 0, 1)
 
     + Added "fromarray" function, which takes an object implementing the
-      NumPy array interface and creates a PIL Image from it. (from Travis
+      NumPy array interface and creates a PIL2 Image from it. (from Travis
       Oliphant).
 
     + Added NumPy array interface support (__array_interface__) to the
       Image class (based on code by Travis Oliphant).
 
-      This allows you to easily convert between PIL image memories and
+      This allows you to easily convert between PIL2 image memories and
       NumPy arrays:
 
         import numpy, Image
@@ -3363,7 +3363,7 @@ Pre-fork
       level _imagingft module.  (based on input from Adam Twardoch and
       others).
 
-    + Added ImageQt wrapper module, for converting PIL Image objects to
+    + Added ImageQt wrapper module, for converting PIL2 Image objects to
       QImage objects in an efficient way.
 
     + Fixed 'getmodebands' to return the number of bands also for "PA"
@@ -3480,7 +3480,7 @@ Pre-fork
     + Added "ModeFilter" support to the ImageFilter module.
 
     + Added support for Spider images (from William Baxter).  See the
-      comments in PIL/SpiderImagePlugin.py for more information on this
+      comments in PIL2/SpiderImagePlugin.py for more information on this
       format.
 
     (1.1.5b1 released)
@@ -3584,7 +3584,7 @@ Pre-fork
       encoder uses the "dpi" option.
 
     + Disable interlacing for small (or narrow) GIF images, to
-      work around what appears to be a hard-to-find bug in PIL's
+      work around what appears to be a hard-to-find bug in PIL2's
       GIF encoder.
 
     + Fixed writing of mode "P" PDF images.  Made mode "1" PDF
@@ -3645,7 +3645,7 @@ Pre-fork
     + Added "RankFilter", "MinFilter", "MedianFilter", and "MaxFilter"
       classes to the ImageFilter module.
 
-    + Improved support for applications using multiple threads; PIL
+    + Improved support for applications using multiple threads; PIL2
       now releases the global interpreter lock for many CPU-intensive
       operations (based on work by Kevin Cazabon).
 
@@ -3680,7 +3680,7 @@ Pre-fork
     + Fixed some Python 1.5.2 issues (to build under 1.5.2, use the
       Makefile.pre.in/Setup.in approach)
 
-    + Added support for the TIFF FillOrder tag.  PIL can read mode "1",
+    + Added support for the TIFF FillOrder tag.  PIL2 can read mode "1",
       "L", "P" and "RGB" images with non-standard FillOrder (based on
       input from Jeff Breidenbach).
 
@@ -3896,7 +3896,7 @@ Pre-fork
     + Added TransposedFont wrapper to ImageFont module
 
     + Added "optimize" flag to GIF encoder.  If optimize is present
-      and non-zero, PIL will work harder to create a small file.
+      and non-zero, PIL2 will work harder to create a small file.
 
     + Raise "EOFError" (not IndexError) when reading beyond the
       end of a TIFF sequence.
@@ -3913,7 +3913,7 @@ Pre-fork
           dpi = im.info["dpi"] # raises KeyError if DPI not known
           im.save("out.jpg", dpi=dpi)
 
-      Note that PIL doesn't always preserve the "info" attribute
+      Note that PIL2 doesn't always preserve the "info" attribute
       for normal image operations.
 
     (1.1.2c1 and 1.1.2 final released)
@@ -3929,7 +3929,7 @@ Pre-fork
 
     + Fixed Image.transform(EXTENT) for negative xoffsets
 
-    + Fixed loading of image plugins if PIL is installed as a package.
+    + Fixed loading of image plugins if PIL2 is installed as a package.
       (The plugin loader now always looks in the directory where the
       Image.py module itself is found, even if that directory isn't on
       the standard search path)
@@ -3950,7 +3950,7 @@ Pre-fork
       change, any attempt to modify a memory-mapped image resulted in a
       core dump...)
 
-    + Added special cases for lists everywhere PIL expects a sequence.
+    + Added special cases for lists everywhere PIL2 expects a sequence.
       This should speed up things like "putdata" and drawing operations.
 
     + The Image.offset method is deprecated.  Use the ImageChops.offset
@@ -3963,7 +3963,7 @@ Pre-fork
 
     + Additional fixes for Python 1.6/2.0, including TIFF "save" bug.
 
-    + Changed "init" to properly load plugins when PIL is used as a
+    + Changed "init" to properly load plugins when PIL2 is used as a
       package.
 
     + Fixed broken "show" method (on Unix)
@@ -3975,7 +3975,7 @@ Pre-fork
     + Fixed Image.paste when pasting with solid colour and matte
       layers ("L" or "RGBA" masks) (bug reported by Robert Kern)
 
-    + To make it easier to distribute prebuilt versions of PIL,
+    + To make it easier to distribute prebuilt versions of PIL2,
       the tkinit binding stuff has been moved to a separate
       extension module, named "_imagingtk".
 
@@ -3989,7 +3989,7 @@ Pre-fork
 
     (1.0c2 released)
 
-    + If PIL is built with the WITH_TKINTER flag, ImageTk can
+    + If PIL2 is built with the WITH_TKINTER flag, ImageTk can
       automatically hook into a standard Tkinter build.  You
       no longer need to build your own Tkinter to use the
       ImageTk module.
@@ -4006,7 +4006,7 @@ Pre-fork
     (1.0c1 released)
 
     + The TIFF plugin has been rewritten.  The new plugin fully
-      supports all major PIL image modes (including F and I).
+      supports all major PIL2 image modes (including F and I).
 
     + The ImageFile module now includes a Parser class, which can
       be used to incrementally decode an image file (while down-
@@ -4025,13 +4025,13 @@ Pre-fork
     + Modified ImageDraw to be compatible with the Arrow graphics
       interface.  See the handbook for details.
 
-    + PIL now automatically loads file codecs when used as a package
+    + PIL2 now automatically loads file codecs when used as a package
       (from The Dragon De Monsyne).  Also included an __init__.py file
       in the standard distribution.
 
     + The GIF encoder has been modified to produce much smaller files.
 
-      PIL now uses a run-length encoding method to encode GIF files.
+      PIL2 now uses a run-length encoding method to encode GIF files.
       On a random selection of GIF images grabbed from the web, this
       version makes the images about twice as large as the original
       LZW files, where the earlier version made them over 5 times
@@ -4070,7 +4070,7 @@ Pre-fork
     + Added experimental "RGBa" mode support.
 
       An "RGBa" image is an RGBA image where the colour components
-      have have been premultiplied with the alpha value.  PIL allows
+      have have been premultiplied with the alpha value.  PIL2 allows
       you to convert an RGBA image to an RGBa image, and to paste
       RGBa images on top of RGB images.  Since this saves a bunch
       of multiplications and shifts, it is typically about twice
@@ -4106,7 +4106,7 @@ Pre-fork
       Note: ADAPTIVE currently maps to median cut quantization
       with 256 colours.  The quantization package also contains
       a maximum coverage quantizer, which will be supported by
-      future versions of PIL.
+      future versions of PIL2.
 
     + Added Eric S. Raymond's "pildriver" image calculator to the
       distribution.  See the docstring for more information.
@@ -4137,11 +4137,11 @@ Pre-fork
     + Fixed Path constructor to handle arbitrary sequence objects.  This
       also affects the ImageDraw class (from Richard Jones).
 
-    + Fixed a bug in JpegDecode that caused PIL to report "decoder error
+    + Fixed a bug in JpegDecode that caused PIL2 to report "decoder error
       -2" for some progressive JPEG files (reported by Magnus Källström,
       who also provided samples).
 
-    + Fixed a bug in JpegImagePlugin that caused PIL to hang when loading
+    + Fixed a bug in JpegImagePlugin that caused PIL2 to hang when loading
       JPEG files using 16-bit quantization tables.
 
     + The Image "transform" method now supports Image.QUAD transforms.
@@ -4189,7 +4189,7 @@ Pre-fork
       possible.
 
     + The Image "histogram" method now works for "I" and "F" images.
-      For these modes, PIL divides the range between the min and
+      For these modes, PIL2 divides the range between the min and
       max values used in the image into 256 bins.  You can also
       pass in your own min and max values via the "extrema" option:
 
@@ -4224,7 +4224,7 @@ Pre-fork
 
     The test suite includes 750 individual tests.
 
-    + The "pilfont" package is now included in the standard PIL
+    + The "pilfont" package is now included in the standard PIL2
       distribution.  The pilfont utility can be used to convert
       X BDF and PCF raster font files to a format understood by
       the ImageFont module.
@@ -4256,9 +4256,9 @@ Pre-fork
     + "new" now adds a default palette object to "P" images.
 
     + You can now convert directly between all modes supported by
-      PIL.  When converting colour images to "P", PIL defaults to
+      PIL2.  When converting colour images to "P", PIL2 defaults to
       a "web" palette and dithering.  When converting greyscale
-      images to "1", PIL uses a thresholding and dithering.
+      images to "1", PIL2 uses a thresholding and dithering.
 
     + Added a "dither" option to "convert".  By default, "convert"
       uses floyd-steinberg error diffusion for "P" and "1" targets,
@@ -4298,7 +4298,7 @@ Pre-fork
 
     + Eliminated some more bogus compiler warnings.
 
-    + Various fixes to make PIL compile and run smoother on Macs
+    + Various fixes to make PIL2 compile and run smoother on Macs
       (from Jack Jansen).
 
     + Fixed "fromstring" and "tostring" for mode "I" images.
@@ -4364,7 +4364,7 @@ Pre-fork
 
     + Changed ImPlatform.h to work on CRAY's (don't have one at home, so I
       haven't tried it).  The previous version assumed that either "short"
-      or "int" were 16-bit wide. PIL still won't compile on platforms where
+      or "int" were 16-bit wide. PIL2 still won't compile on platforms where
       neither "short", "int" nor "long" are 32-bit wide.
 
     + Added file= and data= keyword arguments to PhotoImage and BitmapImage.
@@ -4407,7 +4407,7 @@ Pre-fork
 
     + The PhotoImage code in ImageTk now uses a Tcl command ("PyImagingPaste")
       instead of a special image type.  This gives somewhat better performance,
-      and also allows PIL to support transparency.
+      and also allows PIL2 to support transparency.
       *** WARNING: TKAPPINIT MUST BE MODIFIED ***
 
     + ImageTk now honours the alpha layer in RGBA images.  Only fully
@@ -4418,7 +4418,7 @@ Pre-fork
 
     + Added McIdas reader (supports 8-bit images only).
 
-    + PIL now preloads drivers for BMP, GIF, JPEG, PPM, and TIFF.  As
+    + PIL2 now preloads drivers for BMP, GIF, JPEG, PPM, and TIFF.  As
       long as you only load and save these formats, you don't have to
       wait for a full scan for drivers.  To force scanning, call the
       Image.init() function.
@@ -4471,9 +4471,9 @@ Pre-fork
       colour.
 
     + Fixed the PDF encoder to produce a valid header; Acrobat no longer
-      complains when you load PDF images created by PIL.
+      complains when you load PDF images created by PIL2.
 
-    + PIL only scans fully-qualified directory names in the path when
+    + PIL2 only scans fully-qualified directory names in the path when
       looking for plugins.
       *** WARNING: MAY BREAK EXISTING CODE ***
 
@@ -4618,14 +4618,14 @@ Pre-fork
     + Added support for interlaced GIF images.
 
     + Added PNG read support -- if linked with the ZLIB compression library,
-      PIL reads all kinds of PNG images, except interlaced files.
+      PIL2 reads all kinds of PNG images, except interlaced files.
 
     + Improved PNG identification support -- doesn't mess up on unknown
       chunks, identifies all possible PNG modes, and verifies checksum
       on PNG header chunks.
 
     + Added an experimental reader for placable Windows Meta Files (WMF).
-      This reader is still very incomplete, but it illustrates how PIL's
+      This reader is still very incomplete, but it illustrates how PIL2's
       drawing capabilities can be used to render vector and metafile
       formats.
 
@@ -4667,7 +4667,7 @@ Pre-fork
     + Adapted to Python 1.4.
 
     + Added a project makefile for Visual C++ 4.x.  This allows you to
-      easily build a dynamically linked version of PIL for Windows 95
+      easily build a dynamically linked version of PIL2 for Windows 95
       and NT.
 
     + A Tk "booster" patch for Windows is available.  It gives dramatic

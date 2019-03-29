@@ -2,9 +2,9 @@ from helper import unittest, PillowTestCase, hopper, fromstring, tostring
 
 from io import BytesIO
 
-from PIL import Image
-from PIL import ImageFile
-from PIL import EpsImagePlugin
+from PIL2 import Image
+from PIL2 import ImageFile
+from PIL2 import EpsImagePlugin
 
 
 codecs = dir(Image.core)

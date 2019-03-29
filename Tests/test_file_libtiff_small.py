@@ -1,6 +1,6 @@
 from helper import unittest
 
-from PIL import Image
+from PIL2 import Image
 
 from test_file_libtiff import LibTiffTestCase
 

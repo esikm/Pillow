@@ -1,8 +1,8 @@
 from __future__ import print_function
 from helper import unittest, PillowTestCase
 
-from PIL import Image
-from PIL import ImageMath
+from PIL2 import Image
+from PIL2 import ImageMath
 
 
 def pixel(im):

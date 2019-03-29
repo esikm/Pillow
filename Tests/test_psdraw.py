@@ -1,6 +1,6 @@
 from helper import unittest, PillowTestCase
 
-from PIL import Image, PSDraw
+from PIL2 import Image, PSDraw
 import os
 import sys
 

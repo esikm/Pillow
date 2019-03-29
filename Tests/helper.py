@@ -7,8 +7,8 @@ import tempfile
 import os
 import unittest
 
-from PIL import Image, ImageMath
-from PIL._util import py3
+from PIL2 import Image, ImageMath
+from PIL2._util import py3
 
 import logging
 logger = logging.getLogger(__name__)

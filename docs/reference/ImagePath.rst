@@ -1,14 +1,14 @@
-.. py:module:: PIL.ImagePath
-.. py:currentmodule:: PIL.ImagePath
+.. py:module:: PIL2.ImagePath
+.. py:currentmodule:: PIL2.ImagePath
 
 :py:mod:`ImagePath` Module
 ==========================
 
 The :py:mod:`ImagePath` module is used to store and manipulate 2-dimensional
 vector data. Path objects can be passed to the methods on the
-:py:mod:`~PIL.ImageDraw` module.
+:py:mod:`~PIL2.ImageDraw` module.
 
-.. py:class:: PIL.ImagePath.Path
+.. py:class:: PIL2.ImagePath.Path
 
     A path object. The coordinate list can be any sequence object containing
     either 2-tuples [(x, y), …] or numeric values [x, y, …].
@@ -27,7 +27,7 @@ vector data. Path objects can be passed to the methods on the
     :param xy: A sequence. The sequence can contain 2-tuples [(x, y), ...]
                or a flat list of numbers [x, y, ...].
 
-.. py:method:: PIL.ImagePath.Path.compact(distance=2)
+.. py:method:: PIL2.ImagePath.Path.compact(distance=2)
 
     Compacts the path, by removing points that are close to each other. This
     method modifies the path in place, and returns the number of points left in
@@ -38,17 +38,17 @@ vector data. Path objects can be passed to the methods on the
 
 .. _Manhattan distance: https://en.wikipedia.org/wiki/Manhattan_distance
 
-.. py:method:: PIL.ImagePath.Path.getbbox()
+.. py:method:: PIL2.ImagePath.Path.getbbox()
 
     Gets the bounding box of the path.
 
     :return: ``(x0, y0, x1, y1)``
 
-.. py:method:: PIL.ImagePath.Path.map(function)
+.. py:method:: PIL2.ImagePath.Path.map(function)
 
     Maps the path through a function.
 
-.. py:method:: PIL.ImagePath.Path.tolist(flat=0)
+.. py:method:: PIL2.ImagePath.Path.tolist(flat=0)
 
     Converts the path to a Python list [(x, y), …].
 
@@ -57,7 +57,7 @@ vector data. Path objects can be passed to the methods on the
                  returns a flat list [x, y, ...] instead.
     :return: A list of coordinates. See **flat**.
 
-.. py:method:: PIL.ImagePath.Path.transform(matrix)
+.. py:method:: PIL2.ImagePath.Path.transform(matrix)
 
     Transforms the path in place, using an affine transform. The matrix is a
     6-tuple (a, b, c, d, e, f), and each point is mapped as follows:

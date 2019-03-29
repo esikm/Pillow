@@ -3,8 +3,8 @@ import struct
 
 from helper import unittest, PillowTestCase, hopper
 
-from PIL import Image, TiffImagePlugin, TiffTags
-from PIL.TiffImagePlugin import _limit_rational, IFDRational
+from PIL2 import Image, TiffImagePlugin, TiffTags
+from PIL2.TiffImagePlugin import _limit_rational, IFDRational
 
 tag_ids = {info.name: info.value for info in TiffTags.TAGS_V2.values()}
 
